@@ -1,0 +1,627 @@
+/*==================================================
+OUR VALUES
+==================================================*/
+
+.our-values{
+
+    padding:120px 0;
+
+    background:linear-gradient(
+        180deg,
+        #FCFAF7 0%,
+        #F6F1EB 100%
+    );
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.our-values::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-180px;
+
+    left:-180px;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(200,155,106,.08);
+}
+
+.our-values::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-150px;
+
+    bottom:-150px;
+
+    width:360px;
+
+    height:360px;
+
+    border-radius:50%;
+
+    background:rgba(43,33,28,.04);
+}
+
+.our-values .container{
+
+    width:92%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+}
+
+/*==================================================
+SECTION HEADER
+==================================================*/
+
+.values-header{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:0 auto 90px;
+}
+
+.section-subtitle{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 30px;
+
+    border-radius:50px;
+
+    border:1px solid #DDBA96;
+
+    background:#FFFFFF;
+
+    color:#B8734C;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:24px;
+}
+
+.values-header h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:68px;
+
+    font-weight:700;
+
+    line-height:1.08;
+
+    color:#2B211C;
+
+    margin-bottom:20px;
+}
+
+.values-header h2 span{
+
+    display:block;
+
+    color:#C89B6A;
+}
+
+.heading-line{
+
+    width:90px;
+
+    height:4px;
+
+    background:#C89B6A;
+
+    border-radius:50px;
+
+    margin:0 auto 28px;
+}
+
+.values-header p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#666666;
+}
+
+/*==================================================
+VALUES GRID
+==================================================*/
+
+.values-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:34px;
+
+    align-items:stretch;
+}
+/*==================================================
+VALUE CARD
+==================================================*/
+
+.value-card{
+
+    position:relative;
+
+    background:#FFFFFF;
+
+    border-radius:30px;
+
+    padding:85px 35px 40px;
+
+    min-height:500px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:visible;
+
+    border:1px solid rgba(200,155,106,.18);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.06),
+        0 35px 80px rgba(0,0,0,.04);
+
+    transition:all .45s ease;
+}
+
+.value-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #B8734C,
+        #D9A979
+    );
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.4s;
+}
+
+.value-card:hover::before{
+
+    transform:scaleX(1);
+}
+
+.value-card:hover{
+
+    transform:translateY(-15px);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.12);
+}
+
+/*==================================================
+FLOATING ICON
+==================================================*/
+
+.value-icon{
+
+    position:absolute;
+
+    top:-48px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100px;
+
+    height:100px;
+
+    border-radius:50%;
+
+    background:#B8734C;
+
+    border:6px solid #FFFFFF;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    transition:.4s ease;
+}
+
+.value-icon i{
+
+    font-size:42px;
+
+    color:#FFFFFF;
+}
+
+.value-card:hover .value-icon{
+
+    transform:translateX(-50%) rotate(8deg) scale(1.08);
+
+    background:#2B211C;
+}
+
+/*==================================================
+TITLE
+==================================================*/
+
+.value-card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:38px;
+
+    color:#2B211C;
+
+    margin-bottom:18px;
+
+    min-height:55px;
+}
+
+/*==================================================
+DIVIDER
+==================================================*/
+
+.card-line{
+
+    width:75px;
+
+    height:4px;
+
+    border-radius:50px;
+
+    background:#C89B6A;
+
+    margin-bottom:28px;
+
+    transition:.35s;
+}
+
+.value-card:hover .card-line{
+
+    width:120px;
+}
+
+/*==================================================
+DESCRIPTION
+==================================================*/
+
+.value-card p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:#666666;
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:35px;
+}
+
+/*==================================================
+BOTTOM ICON
+==================================================*/
+
+.building-art{
+
+    width:100%;
+
+    padding-top:25px;
+
+    border-top:1px solid #EFE5DB;
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.building-art i{
+
+    font-size:52px;
+
+    color:#C89B6A;
+
+    transition:.4s;
+}
+
+.value-card:hover .building-art i{
+
+    transform:translateY(-6px);
+
+    color:#B8734C;
+}
+/*==================================================
+QUOTE SECTION
+==================================================*/
+
+.values-quote{
+
+    position:relative;
+
+    margin-top:90px;
+
+    padding:70px 60px;
+
+    background:linear-gradient(
+        135deg,
+        #2B211C 0%,
+        #3B2D26 100%
+    );
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.18);
+}
+
+.values-quote::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    top:-160px;
+
+    right:-120px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+}
+
+.values-quote::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+
+    height:240px;
+
+    left:-80px;
+
+    bottom:-120px;
+
+    border-radius:50%;
+
+    background:rgba(200,155,106,.12);
+}
+
+.quote-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 30px;
+
+    border-radius:50%;
+
+    background:#C89B6A;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
+
+.quote-icon i{
+
+    font-size:38px;
+
+    color:#FFFFFF;
+}
+
+.values-quote blockquote{
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:38px;
+
+    line-height:1.6;
+
+    color:#FFFFFF;
+
+    font-style:italic;
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px){
+
+    .values-grid{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:992px){
+
+    .our-values{
+
+        padding:90px 0;
+    }
+
+    .values-header h2{
+
+        font-size:52px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .values-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .value-card{
+
+        min-height:auto;
+    }
+
+    .values-header{
+
+        margin-bottom:60px;
+    }
+
+    .values-header h2{
+
+        font-size:42px;
+    }
+
+    .values-quote{
+
+        padding:50px 30px;
+    }
+
+    .values-quote blockquote{
+
+        font-size:28px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .our-values{
+
+        padding:70px 0;
+    }
+
+    .our-values .container{
+
+        width:94%;
+    }
+
+    .section-subtitle{
+
+        font-size:13px;
+
+        padding:10px 22px;
+    }
+
+    .values-header h2{
+
+        font-size:34px;
+    }
+
+    .values-header p{
+
+        font-size:16px;
+    }
+
+    .value-card{
+
+        padding:80px 25px 35px;
+    }
+
+    .value-icon{
+
+        width:85px;
+
+        height:85px;
+    }
+
+    .value-icon i{
+
+        font-size:34px;
+    }
+
+    .value-card h3{
+
+        font-size:30px;
+    }
+
+    .value-card p{
+
+        font-size:16px;
+    }
+
+    .values-quote blockquote{
+
+        font-size:24px;
+    }
+
+}

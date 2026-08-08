@@ -1,0 +1,120 @@
+<section class="apartment-why-choose">
+
+    <div class="container">
+
+        <div class="why-wrapper">
+
+            <!-- Left Side -->
+
+            <div class="why-left">
+
+                <span class="section-subtitle">
+
+                    Why Choose Us
+
+                </span>
+
+                <h2>
+
+                    Why Choose Our Apartments
+
+                </h2>
+
+                <div class="title-line"></div>
+
+                <p>
+
+                    We offer more than just a home. Experience unmatched comfort,
+                    premium amenities, elegant interiors and a luxurious lifestyle
+                    crafted for modern living.
+
+                </p>
+
+                <!-- Apartment Image -->
+
+                <div class="why-image">
+
+                    <img
+                        src="/image/apartment-why-choose-us.png"
+                        alt="Luxury Apartment">
+
+                </div>
+
+                <!-- Button -->
+
+                <button class="experience-btn">
+
+                    <i class="bi bi-building"></i>
+
+                    Experience Premium Living
+
+                </button>
+
+            </div>
+
+            <!-- Right Side -->
+
+            <div class="why-right">
+
+                @for(feature of features; track feature.title){
+
+                <div class="feature-card">
+
+                    <div class="icon-box">
+
+                        <i class="bi" [class]="feature.icon"></i>
+
+                    </div>
+
+                    <h3>
+
+                        {{ feature.title }}
+
+                    </h3>
+
+                    <p>
+
+                        {{ feature.description }}
+
+                    </p>
+
+                    <div class="card-line"></div>
+
+                </div>
+
+                }
+
+            </div>
+
+        </div>
+                <!-- Bottom Banner -->
+
+        <div class="why-footer">
+
+            <div class="footer-icon">
+
+                <i class="bi bi-stars"></i>
+
+            </div>
+
+            <div class="footer-content">
+
+                <h3>
+
+                    Your Dream Home, Our Commitment
+
+                </h3>
+
+                <p>
+
+                    Quality • Trust • Comfort • Luxury
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

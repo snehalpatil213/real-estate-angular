@@ -1,0 +1,89 @@
+<section class="luxury-amenities">
+
+    <div class="container">
+
+        <!-- Section Header -->
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+
+                Luxury Amenities
+
+            </span>
+
+            <h2>
+
+                Experience Premium Living
+
+            </h2>
+
+            <p>
+
+                Discover world-class amenities and facilities designed
+                to elevate your lifestyle every day.
+
+            </p>
+
+        </div>
+
+        <!-- Amenities Grid -->
+
+        <div class="amenities-grid">
+
+            @for(item of amenities; track item.title){
+
+            <div class="amenity-card">
+
+                <!-- Icon -->
+
+                <div class="icon-box">
+
+                    <i class="bi" [class]="item.icon"></i>
+
+                </div>
+
+                <!-- Title -->
+
+                <h3>
+
+                    {{ item.title }}
+
+                </h3>
+
+                <div class="card-line"></div>
+
+                <!-- Description -->
+
+                <p>
+
+                    {{ item.description }}
+
+                </p>
+
+            </div>
+
+            }
+
+        </div>
+                <!-- Bottom Banner -->
+
+        <div class="amenities-footer">
+
+            <div class="footer-icon">
+
+                <i class="bi bi-stars"></i>
+
+            </div>
+
+            <h4>
+
+                Premium Amenities for a Comfortable & Luxurious Lifestyle
+
+            </h4>
+
+        </div>
+
+    </div>
+
+</section>

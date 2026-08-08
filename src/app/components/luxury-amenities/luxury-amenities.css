@@ -1,0 +1,443 @@
+/*=========================================
+LUXURY AMENITIES
+=========================================*/
+
+.luxury-amenities{
+    padding:120px 0;
+    background:#F8F5F1;
+    position:relative;
+    overflow:hidden;
+}
+
+.luxury-amenities .container{
+    width:90%;
+    max-width:1320px;
+    margin:auto;
+}
+
+/*=========================================
+SECTION HEADER
+=========================================*/
+
+.section-header{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-subtitle{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 28px;
+
+    border:2px solid #E7D5C4;
+
+    border-radius:50px;
+
+    background:#FFFDFB;
+
+    color:#B8734C;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+}
+
+.section-header h2{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:58px;
+
+    color:#2B211C;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+}
+
+.section-header p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#6B625C;
+}
+
+/*=========================================
+AMENITIES GRID
+=========================================*/
+
+.amenities-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+}
+/*=========================================
+AMENITY CARD
+=========================================*/
+
+.amenity-card{
+
+    background:#FFFFFF;
+
+    border:1px solid #E7D5C4;
+
+    border-radius:24px;
+
+    padding:35px 30px;
+
+    text-align:center;
+
+    transition:all .4s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+}
+
+.amenity-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#B8734C;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
+
+/*=========================================
+ICON BOX
+=========================================*/
+
+.icon-box{
+
+    width:85px;
+
+    height:85px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#FDF6F0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:2px solid #E7D5C4;
+
+    transition:.4s;
+}
+
+.icon-box i{
+
+    font-size:38px;
+
+    color:#B8734C;
+
+    transition:.4s;
+}
+
+.amenity-card:hover .icon-box{
+
+    background:#B8734C;
+
+    border-color:#B8734C;
+
+    transform:rotate(10deg) scale(1.08);
+}
+
+.amenity-card:hover .icon-box i{
+
+    color:#FFFFFF;
+}
+
+/*=========================================
+TITLE
+=========================================*/
+
+.amenity-card h3{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:28px;
+
+    color:#2B211C;
+
+    margin-bottom:18px;
+
+    font-weight:700;
+}
+
+/*=========================================
+LINE
+=========================================*/
+
+.card-line{
+
+    width:60px;
+
+    height:3px;
+
+    background:#B8734C;
+
+    margin:0 auto 20px;
+
+    border-radius:50px;
+
+    transition:.3s;
+}
+
+.amenity-card:hover .card-line{
+
+    width:90px;
+}
+
+/*=========================================
+DESCRIPTION
+=========================================*/
+
+.amenity-card p{
+
+    color:#6B625C;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin:0;
+}
+/*=========================================
+FOOTER BANNER
+=========================================*/
+
+.amenities-footer{
+
+    margin-top:70px;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    background:linear-gradient(135deg,#2B211C,#4A3428);
+
+    text-align:center;
+
+    color:#FFFFFF;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.footer-icon{
+
+    width:70px;
+
+    height:70px;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:1px solid rgba(255,255,255,.2);
+}
+
+.footer-icon i{
+
+    font-size:32px;
+
+    color:#F4D8B8;
+}
+
+.amenities-footer h4{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:34px;
+
+    color:#FFFFFF;
+
+    margin:0;
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:1200px){
+
+    .amenities-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .luxury-amenities{
+
+        padding:90px 0;
+
+    }
+
+    .section-header h2{
+
+        font-size:46px;
+
+    }
+
+    .amenities-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:25px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .section-header{
+
+        margin-bottom:50px;
+
+    }
+
+    .section-header h2{
+
+        font-size:38px;
+
+    }
+
+    .section-header p{
+
+        font-size:15px;
+
+    }
+
+    .amenities-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .amenity-card{
+
+        padding:30px 24px;
+
+    }
+
+    .icon-box{
+
+        width:75px;
+
+        height:75px;
+
+    }
+
+    .icon-box i{
+
+        font-size:32px;
+
+    }
+
+    .amenity-card h3{
+
+        font-size:24px;
+
+    }
+
+    .amenities-footer{
+
+        padding:28px 20px;
+
+    }
+
+    .amenities-footer h4{
+
+        font-size:26px;
+
+        line-height:1.5;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .luxury-amenities{
+
+        padding:70px 0;
+
+    }
+
+    .luxury-amenities .container{
+
+        width:94%;
+
+    }
+
+    .section-subtitle{
+
+        font-size:13px;
+
+        padding:10px 20px;
+
+    }
+
+    .section-header h2{
+
+        font-size:32px;
+
+    }
+
+    .footer-icon{
+
+        width:60px;
+
+        height:60px;
+
+    }
+
+    .footer-icon i{
+
+        font-size:28px;
+
+    }
+
+}

@@ -1,0 +1,492 @@
+/*=========================================*
+* FEATURED VILLAS
+*=========================================*/
+
+.featured-villas{
+
+    padding:120px 0;
+
+    background:#F8F5F1;
+}
+
+.featured-villas .container{
+
+    max-width:1320px;
+
+    margin:auto;
+
+    padding:0 20px;
+}
+
+/*=========================================*
+* SECTION HEADER
+*=========================================*/
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.section-subtitle{
+
+    display:inline-block;
+
+    padding:12px 30px;
+
+    border:2px solid #D8C2AE;
+
+    border-radius:50px;
+
+    color:#8A5A3B;
+
+    background:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+}
+
+.section-header h2{
+
+    font-size:54px;
+
+    font-weight:700;
+
+    color:#2B211C;
+
+    margin-bottom:18px;
+}
+
+.section-header p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#6B625C;
+}
+
+/*=========================================*
+* SLIDER
+*=========================================*/
+
+.slider-wrapper{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+}
+
+.slider-container{
+
+    flex:1;
+
+    overflow:hidden;
+}
+
+.slider-track{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+}
+
+/*=========================================*
+* CARD
+*=========================================*/
+
+.villa-card{
+
+    background:#fff;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.4s;
+}
+
+.villa-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+}
+/*=========================================*
+* IMAGE
+*=========================================*/
+
+.card-image{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.card-image img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.villa-card:hover .card-image img{
+
+    transform:scale(1.08);
+}
+
+/*=========================================*
+* BADGE
+*=========================================*/
+
+.badge{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    background:#8A5A3B;
+
+    color:#FFFFFF;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+}
+
+/*=========================================*
+* CARD CONTENT
+*=========================================*/
+
+.card-content{
+
+    padding:28px;
+}
+
+.card-content h3{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#2B211C;
+
+    margin-bottom:15px;
+}
+
+.location{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#6B625C;
+
+    font-size:15px;
+
+    margin-bottom:22px;
+}
+
+.location i{
+
+    color:#8A5A3B;
+}
+
+/*=========================================*
+* PROPERTY INFO
+*=========================================*/
+
+.property-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding:18px 0;
+
+    border-top:1px solid #ECE4DB;
+
+    border-bottom:1px solid #ECE4DB;
+
+    margin-bottom:25px;
+}
+
+.property-info div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:14px;
+
+    color:#555;
+}
+
+.property-info i{
+
+    color:#8A5A3B;
+
+    font-size:17px;
+}
+
+/*=========================================*
+* PRICE BOX
+*=========================================*/
+
+.price-box{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.price-box h4{
+
+    color:#8A5A3B;
+
+    font-size:32px;
+
+    font-weight:700;
+}
+
+.details-btn{
+
+    border:none;
+
+    background:#8A5A3B;
+
+    color:#FFFFFF;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.details-btn:hover{
+
+    background:#6F452B;
+
+    transform:translateY(-2px);
+}
+/*=========================================*
+* SLIDER BUTTONS
+*=========================================*/
+
+.slider-btn{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#FFFFFF;
+
+    color:#8A5A3B;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    flex-shrink:0;
+}
+
+.slider-btn i{
+
+    font-size:24px;
+}
+
+.slider-btn:hover{
+
+    background:#8A5A3B;
+
+    color:#FFFFFF;
+
+    transform:scale(1.08);
+}
+
+/*=========================================*
+* SLIDER DOTS
+*=========================================*/
+
+.slider-dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:45px;
+}
+
+.dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#D8C2AE;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.dot.active{
+
+    width:35px;
+
+    border-radius:30px;
+
+    background:#8A5A3B;
+}
+
+/*=========================================*
+* RESPONSIVE
+*=========================================*/
+
+@media(max-width:991px){
+
+    .slider-track{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .section-header h2{
+
+        font-size:42px;
+    }
+
+    .card-image img{
+
+        height:270px;
+    }
+
+}
+
+@media(max-width:767px){
+
+    .featured-villas{
+
+        padding:80px 0;
+    }
+
+    .slider-track{
+
+        grid-template-columns:1fr;
+    }
+
+    .slider-wrapper{
+
+        gap:12px;
+    }
+
+    .slider-btn{
+
+        width:45px;
+
+        height:45px;
+    }
+
+    .slider-btn i{
+
+        font-size:20px;
+    }
+
+    .card-image img{
+
+        height:240px;
+    }
+
+    .card-content{
+
+        padding:22px;
+    }
+
+    .card-content h3{
+
+        font-size:24px;
+    }
+
+    .property-info{
+
+        flex-direction:column;
+
+        gap:12px;
+    }
+
+    .price-box{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+    }
+
+    .section-header h2{
+
+        font-size:34px;
+    }
+
+    .section-header p{
+
+        font-size:15px;
+    }
+
+}

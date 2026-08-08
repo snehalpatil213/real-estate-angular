@@ -1,0 +1,166 @@
+
+
+<header class="header">
+
+    <div class="nav-container">
+
+        <!-- ==========================
+             LOGO
+        =========================== -->
+
+        <div class="logo">
+
+            <a href="#" class="logo-link">
+
+                <div class="logo-icon">
+                    <i class="bi bi-buildings"></i>
+                </div>
+
+                <div class="logo-text">
+                    <h2>HORIZON</h2>
+                    <span>PROPERTIES</span>
+                </div>
+
+            </a>
+
+        </div>
+
+        <!-- ==========================
+             NAVIGATION
+        =========================== -->
+
+        <nav class="navbar" [class.active]="isMenuOpen">
+
+    <ul>
+
+        <li>
+            <a
+                routerLink="/"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a
+                routerLink="/about"
+                routerLinkActive="active-link">
+                About Us
+            </a>
+        </li>
+
+        <li class="dropdown">
+
+    <a
+        routerLink="/properties"
+        routerLinkActive="active-link">
+        Properties
+        <i class="bi bi-chevron-down"></i>
+    </a>
+
+    <ul class="dropdown-menu">
+
+        <li>
+            <a routerLink="/properties">
+                All Properties
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/apartments">
+                Apartments
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/villas">
+                Villas
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/luxury-homes">
+                Luxury Homes
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/commercial">
+                Commercial
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/plots">
+                Plots & Land
+            </a>
+        </li>
+
+    </ul>
+
+</li>
+
+        <li>
+            <a
+                routerLink="/services"
+                routerLinkActive="active-link">
+                Services
+            </a>
+        </li>
+
+        <li>
+            <a
+                routerLink="/blog"
+                routerLinkActive="active-link">
+                Blog
+            </a>
+        </li>
+
+        <li>
+            <a
+                routerLink="/contact"
+                routerLinkActive="active-link">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+        <!-- ==========================
+             RIGHT SIDE
+        =========================== -->
+
+        <div class="header-actions">
+
+            <!-- Button -->
+
+            <div class="header-btn">
+
+                <button>
+
+                    Get In Touch
+
+                    <i class="bi bi-telephone-fill"></i>
+
+                </button>
+
+            </div>
+
+            <!-- Hamburger -->
+
+            <button class="menu-btn" (click)="toggleMenu()">
+
+                <i
+                    class="bi"
+                    [ngClass]="isMenuOpen ? 'bi-x-lg' : 'bi-list'">
+                </i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>

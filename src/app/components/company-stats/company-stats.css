@@ -1,0 +1,550 @@
+/*==================================================
+COMPANY STATS
+==================================================*/
+
+.company-stats{
+
+    position:relative;
+
+    padding:120px 0;
+
+    background:#F8F5F1;
+
+    overflow:hidden;
+}
+
+.company-stats .container{
+
+    width:90%;
+
+    max-width:1350px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+}
+
+/*==================================================
+HEADING
+==================================================*/
+
+.stats-heading{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:0 auto 90px;
+}
+
+.stats-heading .section-subtitle{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 30px;
+
+    border:2px solid #E4D4C3;
+
+    border-radius:50px;
+
+    background:#fff;
+
+    color:#B8734C;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:28px;
+}
+
+.stats-heading h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:64px;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    color:#2B211C;
+
+    margin-bottom:22px;
+}
+
+.stats-heading h2 span{
+
+    color:#C89B6A;
+}
+
+.heading-line{
+
+    width:90px;
+
+    height:4px;
+
+    border-radius:20px;
+
+    background:#B8734C;
+
+    margin:0 auto 28px;
+}
+
+.stats-heading p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#666;
+
+    max-width:720px;
+
+    margin:auto;
+}
+
+/*==================================================
+GRID
+==================================================*/
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:35px;
+
+    align-items:flex-start;
+}
+
+/*==================================================
+CARD
+==================================================*/
+
+.stat-card{
+
+    position:relative;
+
+    padding:80px 35px 40px;
+
+    border-radius:28px;
+
+    background:#fff;
+
+    text-align:center;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+    overflow:visible;
+
+    border:1px solid #EFE8E1;
+}
+
+.stat-card:hover{
+
+    transform:translateY(-12px);
+}
+
+/*==================================================
+DARK CARD
+==================================================*/
+
+.dark-card{
+
+    background:#2B211C;
+
+    border:none;
+
+    height: 440px;
+}
+/*==================================================
+FLOATING ICON
+==================================================*/
+
+.stat-icon{
+
+    position:absolute;
+
+    top:-45px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:95px;
+
+    height:95px;
+
+    border-radius:50%;
+
+    background:#C89B6A;
+
+    border:5px solid #FFFFFF;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+    z-index:5;
+}
+
+.stat-icon i{
+
+    font-size:42px;
+
+    color:#FFFFFF;
+}
+
+/*==================================================
+DARK CARD ICON
+==================================================*/
+
+.dark-card .stat-icon{
+
+    background:#4A352A;
+}
+
+.dark-card .stat-icon i{
+
+    color:#FFFFFF;
+}
+
+/*==================================================
+NUMBER
+==================================================*/
+
+.stat-card h3{
+
+    margin-top:10px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:70px;
+
+    font-weight:700;
+
+    line-height:1;
+
+    color:#2B211C;
+
+    margin-bottom:22px;
+}
+
+.dark-card h3{
+
+    color:#FFFFFF !important;
+}
+
+/*==================================================
+GOLD DIVIDER
+==================================================*/
+
+.card-line{
+
+    width:85px;
+
+    height:4px;
+
+    background:#C89B6A;
+
+    border-radius:30px;
+
+    margin:0 auto 25px;
+
+    position:relative;
+}
+
+.card-line::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#C89B6A;
+
+    border:3px solid #F8F5F1;
+}
+
+/*==================================================
+TITLE
+==================================================*/
+
+.stat-card h4{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    color:#2B211C;
+
+    margin-bottom:18px;
+}
+
+.dark-card h4{
+
+    color:#FFFFFF !important;
+}
+
+/*==================================================
+DESCRIPTION
+==================================================*/
+
+.stat-card p{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    color:#666;
+
+    margin:0;
+}
+
+.dark-card p{
+
+    color:#E8DDD2 !important;
+}
+
+/*==================================================
+HOVER
+==================================================*/
+
+.stat-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 35px 70px rgba(0,0,0,.15);
+}
+
+.stat-card:hover .stat-icon{
+
+    transform:translateX(-50%) scale(1.08) rotate(8deg);
+}
+/*==================================================
+BOTTOM FEATURE BAR
+==================================================*/
+
+.stats-bottom{
+
+    margin-top:80px;
+
+    background:#FFFFFF;
+
+    border-radius:30px;
+
+    padding:35px 40px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
+
+    border:1px solid #EEE5DB;
+}
+
+.bottom-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    transition:.35s;
+}
+
+.bottom-item:hover{
+
+    transform:translateY(-5px);
+}
+
+.bottom-item i{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#F8F0E8;
+
+    color:#B8734C;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    transition:.35s;
+}
+
+.bottom-item:hover i{
+
+    background:#B8734C;
+
+    color:#FFFFFF;
+
+    transform:rotate(12deg);
+}
+
+.bottom-item h5{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#2B211C;
+
+    margin-bottom:6px;
+}
+
+.bottom-item span{
+
+    font-size:15px;
+
+    color:#777;
+
+    line-height:1.6;
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px){
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats-bottom{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:992px){
+
+    .company-stats{
+
+        padding:90px 0;
+    }
+
+    .stats-heading h2{
+
+        font-size:50px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .stats-bottom{
+
+        grid-template-columns:1fr;
+    }
+
+    .bottom-item{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .stats-heading h2{
+
+        font-size:40px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .company-stats{
+
+        padding:70px 0;
+    }
+
+    .company-stats .container{
+
+        width:94%;
+    }
+
+    .stats-heading h2{
+
+        font-size:34px;
+    }
+
+    .stats-heading p{
+
+        font-size:16px;
+    }
+
+    .stat-card{
+
+        padding:75px 25px 35px;
+    }
+
+    .stat-card h3{
+
+        font-size:52px;
+    }
+
+    .stat-card h4{
+
+        font-size:28px;
+    }
+
+    .bottom-item h5{
+
+        font-size:20px;
+    }
+
+}

@@ -1,0 +1,68 @@
+/*=========================================
+PAGE BANNER
+=========================================*/
+
+.page-banner{
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.banner-content{
+    text-align: center;
+    color: #fff;
+}
+
+.banner-content h1{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.banner-content p{
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: rgba(255,255,255,.9);
+}
+
+.breadcrumb{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,.15);
+    backdrop-filter: blur(8px);
+    padding: 12px 24px;
+    border-radius: 50px;
+}
+
+.breadcrumb a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.breadcrumb a:hover{
+    color: #B8734C;
+}
+
+.breadcrumb span{
+    color: #fff;
+}

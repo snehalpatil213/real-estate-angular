@@ -1,0 +1,435 @@
+/*=========================================
+CONTACT FORM SECTION
+=========================================*/
+
+.contact-form-section{
+    padding:110px 0;
+    background:#FFFDF9;
+}
+
+.contact-form-section .container{
+    width:90%;
+    max-width:1320px;
+    margin:auto;
+}
+
+/*=========================================
+SECTION HEADING
+=========================================*/
+
+.section-heading{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-tag{
+    display:inline-block;
+    padding:10px 24px;
+    background:#F8F2EB;
+    color:#B8734C;
+    border-radius:50px;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.section-heading h2{
+    font-size:52px;
+    color:#2D211B;
+    margin-bottom:18px;
+    font-family:"Cormorant Garamond", serif;
+}
+
+.section-heading p{
+    max-width:700px;
+    margin:auto;
+    font-size:17px;
+    line-height:1.8;
+    color:#666;
+}
+
+/*=========================================
+CONTACT LAYOUT
+=========================================*/
+
+.contact-wrapper{
+    display:grid;
+    grid-template-columns:1.5fr 1fr;
+    gap:40px;
+    align-items:start;
+}
+
+/*=========================================
+LEFT CARD
+=========================================*/
+
+.form-card{
+    background:#fff;
+    border-radius:25px;
+    padding:45px;
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+    border:1px solid #EFE7DF;
+}
+
+.form-card h3{
+    font-size:32px;
+    color:#2D211B;
+    margin-bottom:35px;
+    font-family:"Cormorant Garamond", serif;
+}
+
+/*=========================================
+INPUT GRID
+=========================================*/
+
+.input-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+/*=========================================
+INPUT GROUP
+=========================================*/
+
+.input-group{
+    position:relative;
+}
+
+.input-group i{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#B8734C;
+    font-size:18px;
+}
+
+.input-group input{
+    width:100%;
+    height:60px;
+    padding:0 20px 0 55px;
+    border:1px solid #E8DDD4;
+    border-radius:14px;
+    background:#fff;
+    font-size:15px;
+    color:#2D211B;
+    outline:none;
+    transition:.35s;
+}
+
+.input-group input:focus{
+    border-color:#B8734C;
+    box-shadow:0 0 0 4px rgba(184,115,76,.12);
+}
+
+/*=========================================
+TEXTAREA
+=========================================*/
+
+.textarea-group{
+    position:relative;
+    margin-top:25px;
+}
+
+.textarea-group i{
+    position:absolute;
+    top:22px;
+    left:18px;
+    color:#B8734C;
+    font-size:18px;
+}
+
+.textarea-group textarea{
+    width:100%;
+    padding:18px 20px 18px 55px;
+    border:1px solid #E8DDD4;
+    border-radius:14px;
+    background:#fff;
+    resize:none;
+    outline:none;
+    font-size:15px;
+    color:#2D211B;
+    transition:.35s;
+}
+
+.textarea-group textarea:focus{
+    border-color:#B8734C;
+    box-shadow:0 0 0 4px rgba(184,115,76,.12);
+}
+
+/*=========================================
+BUTTON
+=========================================*/
+
+.send-btn{
+    margin-top:30px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:#2D211B;
+    color:#fff;
+    border:none;
+    padding:16px 34px;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.send-btn:hover{
+    background:#B8734C;
+    transform:translateY(-3px);
+}
+
+.send-btn i{
+    transition:.35s;
+}
+
+.send-btn:hover i{
+    transform:translateX(5px);
+}
+
+/*=========================================
+RIGHT CARD
+=========================================*/
+
+.info-card{
+    background:#F8F2EB;
+    border-radius:25px;
+    padding:45px 35px;
+    border:1px solid #E8DDD4;
+    height:100%;
+}
+
+.info-tag{
+    display:inline-block;
+    padding:8px 18px;
+    background:#fff;
+    color:#B8734C;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.info-card h3{
+    font-size:34px;
+    color:#2D211B;
+    font-family:"Cormorant Garamond",serif;
+    margin-bottom:18px;
+}
+
+.info-card > p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+/*=========================================
+INPUT GROUP
+=========================================*/
+
+.input-group{
+    position:relative;
+}
+
+.input-group i{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#B8734C;
+    font-size:18px;
+}
+
+.input-group input{
+    width:100%;
+    height:60px;
+    padding:0 20px 0 55px;
+    border:1px solid #E8DDD4;
+    border-radius:14px;
+    background:#fff;
+    font-size:15px;
+    color:#2D211B;
+    outline:none;
+    transition:.35s;
+}
+
+.input-group input:focus{
+    border-color:#B8734C;
+    box-shadow:0 0 0 4px rgba(184,115,76,.12);
+}
+
+/*=========================================
+TEXTAREA
+=========================================*/
+
+.textarea-group{
+    position:relative;
+    margin-top:25px;
+}
+
+.textarea-group i{
+    position:absolute;
+    top:22px;
+    left:18px;
+    color:#B8734C;
+    font-size:18px;
+}
+
+.textarea-group textarea{
+    width:100%;
+    padding:18px 20px 18px 55px;
+    border:1px solid #E8DDD4;
+    border-radius:14px;
+    background:#fff;
+    resize:none;
+    outline:none;
+    font-size:15px;
+    color:#2D211B;
+    transition:.35s;
+}
+
+.textarea-group textarea:focus{
+    border-color:#B8734C;
+    box-shadow:0 0 0 4px rgba(184,115,76,.12);
+}
+
+/*=========================================
+BUTTON
+=========================================*/
+
+.send-btn{
+    margin-top:30px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:#2D211B;
+    color:#fff;
+    border:none;
+    padding:16px 34px;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.send-btn:hover{
+    background:#B8734C;
+    transform:translateY(-3px);
+}
+
+.send-btn i{
+    transition:.35s;
+}
+
+.send-btn:hover i{
+    transform:translateX(5px);
+}
+
+/*=========================================
+RIGHT CARD
+=========================================*/
+
+.info-card{
+    background:#F8F2EB;
+    border-radius:25px;
+    padding:45px 35px;
+    border:1px solid #E8DDD4;
+    height:100%;
+}
+
+.info-tag{
+    display:inline-block;
+    padding:8px 18px;
+    background:#fff;
+    color:#B8734C;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.info-card h3{
+    font-size:34px;
+    color:#2D211B;
+    font-family:"Cormorant Garamond",serif;
+    margin-bottom:18px;
+}
+
+.info-card > p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+/*=========================================
+SOCIAL LINKS
+=========================================*/
+
+.social-links{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-top:35px;
+}
+
+.social-links a{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    background:#ffffff;
+    border:1px solid #E6D8CA;
+    color:#2D211B;
+    font-size:22px;
+    transition:all .35s ease;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+/* Facebook */
+
+.social-links a:nth-child(1):hover{
+    background:#1877F2;
+    color:#fff;
+    transform:translateY(-5px);
+}
+
+/* Instagram */
+
+.social-links a:nth-child(2):hover{
+    background:linear-gradient(
+        45deg,
+        #F58529,
+        #DD2A7B,
+        #8134AF,
+        #515BD4
+    );
+    color:#fff;
+    transform:translateY(-5px);
+}
+
+/* LinkedIn */
+
+.social-links a:nth-child(3):hover{
+    background:#0A66C2;
+    color:#fff;
+    transform:translateY(-5px);
+}
+
+/* X (Twitter) */
+
+.social-links a:nth-child(4):hover{
+    background:#000;
+    color:#fff;
+    transform:translateY(-5px);
+}

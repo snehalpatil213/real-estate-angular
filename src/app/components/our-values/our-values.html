@@ -1,0 +1,101 @@
+<section class="our-values">
+
+    <div class="container">
+
+        <!--=========================
+        SECTION HEADER
+        =========================-->
+
+        <div class="values-header">
+
+            <span class="section-subtitle">
+
+                Our Values
+
+            </span>
+
+            <h2>
+
+                Values That Build
+                <span>More Than Structures</span>
+
+            </h2>
+
+            <div class="heading-line"></div>
+
+            <p>
+
+                Our values are the foundation of everything we do.
+                They guide our decisions, shape our culture and define
+                the way we build lasting relationships.
+
+            </p>
+
+        </div>
+
+        <!--=========================
+        VALUES GRID
+        =========================-->
+
+        <div class="values-grid">
+
+            @for(value of values; track value.title){
+
+            <div class="value-card">
+
+                <div class="value-icon">
+
+                    <i class="bi" [class]="value.icon"></i>
+
+                </div>
+
+                <h3>
+
+                    {{ value.title }}
+
+                </h3>
+
+                <div class="card-line"></div>
+
+                <p>
+
+                    {{ value.description }}
+
+                </p>
+
+                <div class="building-art">
+
+                    <i class="bi bi-buildings"></i>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+                <!--=========================
+        QUOTE SECTION
+        =========================-->
+
+        <div class="values-quote">
+
+            <div class="quote-icon">
+
+                <i class="bi bi-quote"></i>
+
+            </div>
+
+            <blockquote>
+
+                "We don't just build properties,
+                we build trust, relationships,
+                and a better future."
+
+            </blockquote>
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,562 @@
+/*==================================================
+OUR JOURNEY
+==================================================*/
+
+.our-journey{
+
+    padding:120px 0;
+
+    background:#F8F5F1;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+.our-journey .container{
+
+    width:92%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    position:relative;
+}
+
+/*==================================================
+SECTION HEADER
+==================================================*/
+
+.journey-header{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:0 auto 90px;
+}
+
+.section-subtitle{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 30px;
+
+    background:#FFFFFF;
+
+    border:2px solid #E8D9C8;
+
+    border-radius:50px;
+
+    color:#B8734C;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+}
+
+.journey-header h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:64px;
+
+    line-height:1.1;
+
+    color:#2B211C;
+
+    font-weight:700;
+
+    margin-bottom:22px;
+}
+
+.journey-header h2 span{
+
+    display:block;
+
+    color:#C89B6A;
+}
+
+.heading-line{
+
+    width:90px;
+
+    height:4px;
+
+    background:#B8734C;
+
+    border-radius:30px;
+
+    margin:0 auto 28px;
+}
+
+.journey-header p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#666;
+
+    max-width:720px;
+
+    margin:auto;
+}
+
+/*==================================================
+TIMELINE
+==================================================*/
+
+.timeline-wrapper{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:25px;
+
+    margin-top:90px;
+}
+
+.timeline-line{
+
+    position:absolute;
+
+    left:5%;
+
+    right:5%;
+
+    top:95px;
+
+    height:4px;
+
+    background:#C89B6A;
+
+    border-radius:20px;
+
+    z-index:1;
+}
+
+.timeline-item{
+
+    position:relative;
+
+    text-align:center;
+
+    z-index:2;
+}
+/*==================================================
+TIMELINE ICON
+==================================================*/
+
+.timeline-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto;
+
+    border-radius:50%;
+
+    background:#FFFFFF;
+
+    border:4px solid #C89B6A;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
+
+    position:relative;
+
+    z-index:3;
+
+    transition:.4s ease;
+}
+
+.timeline-icon i{
+
+    font-size:38px;
+
+    color:#B8734C;
+}
+
+.timeline-item:hover .timeline-icon{
+
+    transform:translateY(-10px) rotate(8deg);
+
+    background:#C89B6A;
+}
+
+.timeline-item:hover .timeline-icon i{
+
+    color:#FFFFFF;
+}
+
+/*==================================================
+TIMELINE DOT
+==================================================*/
+
+.timeline-dot{
+
+    width:18px;
+
+    height:18px;
+
+    margin:18px auto 28px;
+
+    background:#C89B6A;
+
+    border-radius:50%;
+
+    border:5px solid #FFFFFF;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+    position:relative;
+
+    z-index:3;
+}
+
+/*==================================================
+TIMELINE CARD
+==================================================*/
+
+.timeline-card{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:30px 24px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    border:1px solid #EEE6DD;
+
+    transition:.35s ease;
+
+    height:370px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    text-align:center;
+}
+.timeline-item:hover .timeline-card{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+
+/*==================================================
+YEAR
+==================================================*/
+
+.timeline-year{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#F8F0E8;
+
+    color:#B8734C;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+}
+
+/*==================================================
+TITLE
+==================================================*/
+
+.timeline-card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:30px;
+
+    color:#2B211C;
+
+    margin-bottom:18px;
+
+    line-height:1.2;
+}
+
+/*==================================================
+LINE
+==================================================*/
+
+.card-line{
+
+    width:70px;
+
+    height:4px;
+
+    margin:0 auto 20px;
+
+    border-radius:30px;
+
+    background:#C89B6A;
+
+    transition:.35s;
+}
+
+.timeline-item:hover .card-line{
+
+    width:110px;
+}
+
+/*==================================================
+DESCRIPTION
+==================================================*/
+
+.timeline-card p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:#666;
+
+    margin:0;
+}
+/*==================================================
+JOURNEY QUOTE
+==================================================*/
+
+.journey-quote{
+
+    margin-top:90px;
+
+    background:#FFFFFF;
+
+    border-radius:30px;
+
+    padding:60px 50px;
+
+    text-align:center;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
+
+    border:1px solid #EEE6DD;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.journey-quote::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+
+    right:-120px;
+
+    width:260px;
+
+    height:260px;
+
+    background:rgba(200,155,106,.08);
+
+    border-radius:50%;
+}
+
+.quote-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#C89B6A;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.quote-icon i{
+
+    font-size:38px;
+
+    color:#FFFFFF;
+}
+
+.journey-quote blockquote{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+    line-height:1.5;
+
+    color:#2B211C;
+
+    font-style:italic;
+}
+
+.quote-line{
+
+    width:90px;
+
+    height:4px;
+
+    background:#C89B6A;
+
+    border-radius:30px;
+
+    margin:30px auto 0;
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px){
+
+    .timeline-wrapper{
+
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .timeline-line{
+
+        display:none;
+    }
+
+}
+
+@media(max-width:992px){
+
+    .our-journey{
+
+        padding:90px 0;
+    }
+
+    .journey-header h2{
+
+        font-size:50px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .timeline-wrapper{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:30px;
+    }
+
+    .journey-header h2{
+
+        font-size:40px;
+    }
+
+    .journey-quote{
+
+        padding:45px 30px;
+    }
+
+    .journey-quote blockquote{
+
+        font-size:28px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .our-journey{
+
+        padding:70px 0;
+    }
+
+    .our-journey .container{
+
+        width:94%;
+    }
+
+    .journey-header h2{
+
+        font-size:32px;
+    }
+
+    .journey-header p{
+
+        font-size:16px;
+    }
+
+    .timeline-wrapper{
+
+        grid-template-columns:1fr;
+    }
+
+    .timeline-card{
+
+        min-height:auto;
+    }
+
+    .timeline-icon{
+
+        width:75px;
+
+        height:75px;
+    }
+
+    .timeline-icon i{
+
+        font-size:30px;
+    }
+
+    .journey-quote blockquote{
+
+        font-size:24px;
+    }
+
+}

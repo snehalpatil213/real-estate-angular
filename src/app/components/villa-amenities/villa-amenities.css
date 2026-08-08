@@ -1,0 +1,456 @@
+/*=========================================*
+* VILLA AMENITIES
+*=========================================*/
+
+.villa-amenities{
+
+    padding:120px 0;
+
+    background:#F8F5F1;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.villa-amenities::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+
+    left:-120px;
+
+    width:320px;
+
+    height:320px;
+
+    background:radial-gradient(circle,
+        rgba(184,115,76,.08),
+        transparent 70%);
+
+    border-radius:50%;
+}
+
+.villa-amenities::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-120px;
+
+    bottom:-120px;
+
+    width:320px;
+
+    height:320px;
+
+    background:radial-gradient(circle,
+        rgba(184,115,76,.08),
+        transparent 70%);
+
+    border-radius:50%;
+}
+
+.villa-amenities .container{
+
+    max-width:1320px;
+
+    margin:auto;
+
+    padding:0 20px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+/*=========================================*
+* SECTION HEADER
+*=========================================*/
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+}
+
+.section-subtitle{
+
+    display:inline-block;
+
+    padding:12px 30px;
+
+    border:2px solid #D8C2AE;
+
+    border-radius:50px;
+
+    background:#FFFFFF;
+
+    color:#8A5A3B;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+}
+
+.section-header h2{
+
+    font-size:54px;
+
+    font-weight:700;
+
+    color:#2B211C;
+
+    margin-bottom:18px;
+}
+
+.section-header p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#6B625C;
+
+    font-size:17px;
+
+    line-height:1.9;
+}
+
+/*=========================================*
+* AMENITIES GRID
+*=========================================*/
+
+.amenities-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+}
+/*=========================================*
+* AMENITY CARD
+*=========================================*/
+
+.amenity-card{
+
+    background:#FFFFFF;
+
+    border-radius:30px;
+
+    padding:45px 35px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    border:1px solid #EFE6DD;
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.amenity-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:#B8734C;
+
+    transform:scaleX(0);
+
+    transition:.4s;
+}
+
+.amenity-card:hover::before{
+
+    transform:scaleX(1);
+}
+
+.amenity-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.15);
+}
+
+/*=========================================*
+* ICON
+*=========================================*/
+
+.amenity-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#F6EEE7;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.4s;
+}
+
+.amenity-icon i{
+
+    font-size:40px;
+
+    color:#B8734C;
+
+    transition:.4s;
+}
+
+.amenity-card:hover .amenity-icon{
+
+    background:#B8734C;
+
+    transform:rotate(8deg) scale(1.08);
+}
+
+.amenity-card:hover .amenity-icon i{
+
+    color:#FFFFFF;
+}
+
+/*=========================================*
+* CONTENT
+*=========================================*/
+
+.amenity-content h3{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#2B211C;
+
+    margin-bottom:18px;
+}
+
+.amenity-content p{
+
+    color:#6B625C;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+    min-height:85px;
+}
+
+/*=========================================*
+* LINE
+*=========================================*/
+
+.card-line{
+
+    display:block;
+
+    width:65px;
+
+    height:4px;
+
+    margin:0 auto;
+
+    background:#B8734C;
+
+    border-radius:20px;
+
+    transition:.35s;
+}
+
+.amenity-card:hover .card-line{
+
+    width:100px;
+}
+/*=========================================*
+* AMENITY CARD
+*=========================================*/
+
+.amenity-card{
+
+    background:#FFFFFF;
+
+    border-radius:30px;
+
+    padding:45px 35px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    border:1px solid #EFE6DD;
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.amenity-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:#B8734C;
+
+    transform:scaleX(0);
+
+    transition:.4s;
+}
+
+.amenity-card:hover::before{
+
+    transform:scaleX(1);
+}
+
+.amenity-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.15);
+}
+
+/*=========================================*
+* ICON
+*=========================================*/
+
+.amenity-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#F6EEE7;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.4s;
+}
+
+.amenity-icon i{
+
+    font-size:40px;
+
+    color:#B8734C;
+
+    transition:.4s;
+}
+
+.amenity-card:hover .amenity-icon{
+
+    background:#B8734C;
+
+    transform:rotate(8deg) scale(1.08);
+}
+
+.amenity-card:hover .amenity-icon i{
+
+    color:#FFFFFF;
+}
+
+/*=========================================*
+* CONTENT
+*=========================================*/
+
+.amenity-content h3{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#2B211C;
+
+    margin-bottom:18px;
+}
+
+.amenity-content p{
+
+    color:#6B625C;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+    min-height:85px;
+}
+
+/*=========================================*
+* LINE
+*=========================================*/
+
+.card-line{
+
+    display:block;
+
+    width:65px;
+
+    height:4px;
+
+    margin:0 auto;
+
+    background:#B8734C;
+
+    border-radius:20px;
+
+    transition:.35s;
+}
+
+.amenity-card:hover .card-line{
+
+    width:100px;
+}

@@ -1,0 +1,142 @@
+<section class="company-stats">
+
+    <div class="stats-overlay"></div>
+
+    <div class="container">
+
+        <!-- Section Heading -->
+
+        <div class="stats-heading">
+
+            <span class="section-subtitle">
+
+                Our Achievements
+
+            </span>
+
+            <h2>
+
+                Building Trust.
+                <span>Creating Landmarks.</span>
+
+            </h2>
+
+            <div class="heading-line"></div>
+
+            <p>
+
+                Over the years, we have delivered exceptional residential
+                and commercial developments while earning the trust of
+                thousands of happy families.
+
+            </p>
+
+        </div>
+
+        <!-- Statistics Cards -->
+
+        <div class="stats-grid">
+
+            @for(stat of stats; track stat.title){
+
+            <div
+                class="stat-card"
+                [class.dark-card]="stat.dark"
+            >
+
+                <div class="stat-icon">
+
+                    <i class="bi" [class]="stat.icon"></i>
+
+                </div>
+
+                <h3>
+
+                    {{ stat.number }}
+
+                </h3>
+
+                <div class="card-line"></div>
+
+                <h4>
+
+                    {{ stat.title }}
+
+                </h4>
+
+                <p>
+
+                    {{ stat.description }}
+
+                </p>
+
+            </div>
+
+            }
+                    </div>
+
+        <!-- Bottom Info Bar -->
+
+        <div class="stats-bottom">
+
+            <div class="bottom-item">
+
+                <i class="bi bi-person-badge"></i>
+
+                <div>
+
+                    <h5>Expert Team</h5>
+
+                    <span>Skilled & Dedicated Professionals</span>
+
+                </div>
+
+            </div>
+
+            <div class="bottom-item">
+
+                <i class="bi bi-shield-check"></i>
+
+                <div>
+
+                    <h5>Quality Construction</h5>
+
+                    <span>Built with Precision & Care</span>
+
+                </div>
+
+            </div>
+
+            <div class="bottom-item">
+
+                <i class="bi bi-gem"></i>
+
+                <div>
+
+                    <h5>Prime Locations</h5>
+
+                    <span>Perfect Places To Call Home</span>
+
+                </div>
+
+            </div>
+
+            <div class="bottom-item">
+
+                <i class="bi bi-headset"></i>
+
+                <div>
+
+                    <h5>24/7 Support</h5>
+
+                    <span>Always Here For You</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

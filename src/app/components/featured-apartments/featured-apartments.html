@@ -1,0 +1,152 @@
+<section class="featured-apartments">
+
+    <div class="container">
+
+        <!-- Section Header -->
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Featured Apartments
+            </span>
+
+            <h2>
+                Find Your Dream Apartment
+            </h2>
+
+            <p>
+                Explore our premium apartments with world-class amenities,
+                elegant interiors and prime locations.
+            </p>
+
+        </div>
+
+        <!-- Slider -->
+
+        <div class="slider-wrapper">
+
+            <!-- Previous -->
+
+            <button
+                class="slider-btn prev-btn"
+                (click)="prevSlide()">
+
+                <i class="bi bi-chevron-left"></i>
+
+            </button>
+
+            <!-- Cards -->
+
+            <div class="slider-container">
+
+            <div class="slider-track">
+
+                @for(apartment of apartments.slice(currentIndex, currentIndex + cardsToShow); track apartment.id){
+
+                <div class="apartment-card">
+
+                    <div class="card-image">
+
+                        <img
+                            [src]="apartment.image"
+                            [alt]="apartment.title">
+
+                        <span class="badge">
+
+                            {{ apartment.badge }}
+
+                        </span>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>{{ apartment.title }}</h3>
+
+                        <div class="location">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            {{ apartment.location }}
+
+                        </div>
+
+                        <div class="property-info">
+
+                            <div>
+
+                                <i class="bi bi-door-open"></i>
+
+                                {{ apartment.beds }} Beds
+
+                            </div>
+
+                            <div>
+
+                                <i class="bi bi-droplet"></i>
+
+                                {{ apartment.baths }} Baths
+
+                            </div>
+
+                            <div>
+
+                                <i class="bi bi-aspect-ratio"></i>
+
+                                {{ apartment.area }}
+
+                            </div>
+
+                        </div>
+
+                        <div class="price-box">
+
+                            <h4>{{ apartment.price }}</h4>
+
+                            <button class="details-btn">
+
+                                View Details
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                }
+
+            </div>
+            </div>
+
+            <!-- Next -->
+
+            <button
+                class="slider-btn next-btn"
+                (click)="nextSlide()">
+
+                <i class="bi bi-chevron-right"></i>
+
+            </button>
+
+        </div>
+
+        <!-- Dots -->
+
+        <div class="slider-dots">
+
+            @for(item of apartments; track item.id; let i = $index){
+
+            <span
+                class="dot"
+                [class.active]="i === currentIndex">
+            </span>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>

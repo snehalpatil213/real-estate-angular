@@ -1,0 +1,165 @@
+<section class="mission-vision">
+
+    <div class="container">
+
+        <!--=========================
+        SECTION HEADER
+        ==========================-->
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+
+                Mission & Vision
+
+            </span>
+
+            <h2>
+
+                Our Mission.
+                <span>Our Vision.</span>
+
+            </h2>
+
+            <div class="heading-line"></div>
+
+            <p>
+
+                We are driven by a strong purpose and a clear vision
+                to create lasting value for our customers and communities.
+
+            </p>
+
+        </div>
+
+        <!--=========================
+        MAIN CONTENT
+        ==========================-->
+
+        <div class="mission-wrapper">
+
+            <!-- LEFT CARD -->
+
+            <div class="mission-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-bullseye"></i>
+
+                </div>
+
+                <span class="card-subtitle">
+
+                    Our Mission
+
+                </span>
+
+                <h3>
+
+                    Building
+                    Better Living
+
+                </h3>
+
+                <div class="card-line"></div>
+
+                <p>
+
+                    Deliver premium real estate developments
+                    with innovation, quality and complete transparency.
+
+                </p>
+
+                <ul>
+
+                    @for(item of mission; track item.text){
+
+                    <li>
+
+                        <i class="bi" [class]="item.icon"></i>
+
+                        <span>
+
+                            {{ item.text }}
+
+                        </span>
+
+                    </li>
+
+                    }
+
+                </ul>
+
+            </div>
+                        <!-- CENTER CIRCLE -->
+
+            <div class="center-badge">
+
+                <div class="badge-circle">
+
+                    <i class="bi bi-buildings-fill"></i>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT CARD -->
+
+            <div class="vision-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-stars"></i>
+
+                </div>
+
+                <span class="card-subtitle">
+
+                    Our Vision
+
+                </span>
+
+                <h3>
+
+                    Creating
+                    Future Communities
+
+                </h3>
+
+                <div class="card-line"></div>
+
+                <p>
+
+                    To become India's most trusted real estate company,
+                    delivering sustainable communities and exceptional
+                    customer experiences.
+
+                </p>
+
+                <ul>
+
+                    @for(item of vision; track item.text){
+
+                    <li>
+
+                        <i class="bi" [class]="item.icon"></i>
+
+                        <span>
+
+                            {{ item.text }}
+
+                        </span>
+
+                    </li>
+
+                    }
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

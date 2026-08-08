@@ -1,0 +1,535 @@
+/*=========================================
+PROPERTY CONSULTATION
+=========================================*/
+
+.property-consultation{
+    padding:110px 0;
+    background:#FFFDFB;
+    position:relative;
+    overflow:hidden;
+}
+
+.property-consultation .container{
+    width:90%;
+    max-width:1320px;
+    margin:auto;
+}
+
+/*=========================================
+BACKGROUND EFFECT
+=========================================*/
+
+.property-consultation::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+    left:-120px;
+
+    width:350px;
+    height:350px;
+
+    border-radius:50%;
+
+    background:radial-gradient(rgba(184,115,76,.10),transparent 70%);
+
+}
+
+.property-consultation::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-150px;
+    bottom:-120px;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:radial-gradient(rgba(43,33,28,.05),transparent 70%);
+
+}
+
+/*=========================================
+SECTION HEADING
+=========================================*/
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    padding:10px 26px;
+
+    background:#F7F2EC;
+
+    color:#B8734C;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+.section-heading h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:58px;
+
+    color:#2B211C;
+
+    line-height:1.2;
+
+    margin-bottom:22px;
+
+}
+
+.section-heading h2 span{
+
+    color:#B8734C;
+
+}
+
+.section-heading p{
+
+    width:720px;
+
+    max-width:100%;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#6D6762;
+
+}
+
+/*=========================================
+GRID
+=========================================*/
+
+.consultation-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+/*=========================================
+CONSULTATION CARD
+=========================================*/
+
+.consult-card{
+
+    position:relative;
+
+    background:#ffffff;
+
+    padding:35px 30px;
+
+    border-radius:24px;
+
+    border:1px solid #EEE4DA;
+
+    overflow:hidden;
+
+    transition:.45s ease;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    z-index:2;
+
+}
+
+.consult-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 22px 45px rgba(0,0,0,.12);
+
+}
+
+/*=========================================
+GOLD CORNER
+=========================================*/
+
+.consult-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-45px;
+
+    bottom:-45px;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:rgba(184,115,76,.10);
+
+    transition:.45s;
+
+}
+
+.consult-card:hover::after{
+
+    transform:scale(1.3);
+
+    background:rgba(184,115,76,.18);
+
+}
+
+/*=========================================
+ICON
+=========================================*/
+
+.consult-icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    background:#2B211C;
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    margin-bottom:28px;
+
+    transition:.4s;
+
+}
+
+.consult-card:hover .consult-icon{
+
+    background:#B8734C;
+
+    transform:rotate(10deg) scale(1.08);
+
+}
+
+/*=========================================
+TITLE
+=========================================*/
+
+.consult-card h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:28px;
+
+    color:#2B211C;
+
+    margin-bottom:18px;
+
+    line-height:1.3;
+
+}
+
+/*=========================================
+DESCRIPTION
+=========================================*/
+
+.consult-card p{
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    color:#777;
+
+    margin-bottom:28px;
+
+}
+
+/*=========================================
+BUTTON
+=========================================*/
+
+.consult-card a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:#2B211C;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.consult-card a i{
+
+    transition:.35s;
+
+}
+
+.consult-card:hover a{
+
+    color:#B8734C;
+
+}
+
+.consult-card:hover a i{
+
+    transform:translateX(8px);
+
+}
+/*=========================================
+BOTTOM INFO STRIP
+=========================================*/
+
+.consult-bottom{
+
+    margin-top:80px;
+
+    background:#2B211C;
+
+    border-radius:28px;
+
+    padding:45px 35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.consult-bottom::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+
+    right:-120px;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.04);
+
+}
+
+.bottom-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.bottom-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#B8734C;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+    transition:.4s;
+
+}
+
+.bottom-item:hover .bottom-icon{
+
+    transform:rotate(10deg) scale(1.1);
+
+}
+
+.bottom-item h4{
+
+    color:#fff;
+
+    font-size:22px;
+
+    margin-bottom:8px;
+
+    font-family:"Cormorant Garamond",serif;
+
+}
+
+.bottom-item p{
+
+    color:rgba(255,255,255,.75);
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+/*=========================================
+TABLET
+=========================================*/
+
+@media(max-width:991px){
+
+    .consultation-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .consult-bottom{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .section-heading h2{
+
+        font-size:46px;
+
+    }
+
+}
+
+/*=========================================
+MOBILE
+=========================================*/
+
+@media(max-width:576px){
+
+    .property-consultation{
+
+        padding:70px 0;
+
+    }
+
+    .consultation-grid{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+    .consult-bottom{
+
+        grid-template-columns:1fr;
+
+        padding:30px 20px;
+
+        gap:25px;
+
+    }
+
+    .consult-card{
+
+        padding:25px;
+
+    }
+
+    .section-heading{
+
+        margin-bottom:50px;
+
+    }
+
+    .section-heading h2{
+
+        font-size:34px;
+
+    }
+
+    .section-heading p{
+
+        font-size:15px;
+
+    }
+
+    .consult-card h3{
+
+        font-size:24px;
+
+    }
+
+    .consult-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:24px;
+
+    }
+
+}

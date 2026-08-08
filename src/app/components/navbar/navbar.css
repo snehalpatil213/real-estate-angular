@@ -1,0 +1,653 @@
+/*=========================================
+HEADER
+=========================================*/
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:transparent;
+}
+
+.nav-container{
+    width:100%;
+    max-width:1920px;
+    margin:auto;
+    padding:20px 60px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:#2B211C;
+    box-shadow:0 12px 35px rgba(0,0,0,.18);
+}
+
+/*=========================================
+LOGO
+=========================================*/
+
+.logo{
+    flex-shrink:0;
+}
+
+.logo-link{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    text-decoration:none;
+}
+
+.logo-icon{
+    width:58px;
+    height:58px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:2px solid var(--accent);
+    border-radius:14px;
+
+    color:var(--accent);
+    font-size:30px;
+}
+
+.logo-text h2{
+    margin:0;
+    color:#fff;
+    font-size:42px;
+    font-weight:700;
+    line-height:1;
+    letter-spacing:2px;
+}
+
+.logo-text span{
+    color:var(--accent);
+    font-size:14px;
+    letter-spacing:6px;
+    font-weight:600;
+}
+
+/*=========================================
+NAVIGATION
+=========================================*/
+
+.navbar{
+    margin-left:auto;
+    margin-right:50px;
+}
+
+.navbar > ul{
+    display:flex;
+    align-items:center;
+    gap:45px;
+
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.navbar ul li{
+    position:relative;
+}
+
+.navbar ul li a{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    position:relative;
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:500;
+
+    transition:.35s;
+}
+
+.navbar ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:-8px;
+
+    width:0;
+    height:3px;
+
+    background:var(--accent);
+
+    border-radius:20px;
+
+    transform:translateX(-50%);
+
+    transition:.35s;
+}
+
+.navbar ul li a:hover{
+
+    color:var(--accent);
+
+}
+
+.navbar ul li a:hover::after{
+
+    width:100%;
+
+}
+
+/*=========================================
+ACTIVE MENU
+=========================================*/
+
+.navbar ul li a.active-link{
+
+    color:var(--accent);
+}
+
+.navbar ul li a.active-link::after{
+
+    width:100%;
+}
+
+/*=========================================
+PROPERTIES DROPDOWN
+=========================================*/
+
+.dropdown>a i{
+
+    font-size:12px;
+
+    transition:.35s;
+}
+
+.dropdown:hover>a i{
+
+    transform:rotate(180deg);
+}
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:135%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:250px;
+
+    padding:12px 0;
+
+    margin:0;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    list-style:none;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:0;
+
+    opacity:0;
+    visibility:hidden;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.15);
+
+    transition:.35s;
+
+    z-index:999;
+}
+
+.dropdown:hover .dropdown-menu{
+
+    opacity:1;
+
+    visibility:visible;
+
+    top:120%;
+}
+
+.dropdown-menu li{
+
+    width:100%;
+}
+
+.dropdown-menu li a{
+
+    display:block;
+
+    width:100%;
+
+    padding:14px 22px;
+
+    color:#2B211C !important;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.35s;
+}
+
+.dropdown-menu li a::after{
+
+    display:none;
+}
+
+.dropdown-menu li a:hover{
+
+    background:#F8F5F1;
+
+    color:var(--accent)!important;
+
+    padding-left:30px;
+}
+/*=========================================
+HEADER BUTTON
+=========================================*/
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.header-btn{
+    flex-shrink:0;
+}
+
+.header-btn button{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    border:none;
+    outline:none;
+
+    background:var(--accent);
+    color:#fff;
+
+    padding:16px 30px;
+
+    border-radius:12px;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+}
+
+.header-btn button:hover{
+
+    background:var(--hover);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 25px rgba(184,115,76,.35);
+}
+
+/*=========================================
+HAMBURGER
+=========================================*/
+
+.menu-btn{
+
+    display:none;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.menu-btn:hover{
+
+    color:var(--accent);
+}
+
+/*=========================================
+1400px
+=========================================*/
+
+@media(max-width:1400px){
+
+    .nav-container{
+
+        padding:20px 35px;
+    }
+
+    .navbar{
+
+        margin-right:35px;
+    }
+
+    .navbar>ul{
+
+        gap:35px;
+    }
+
+}
+
+/*=========================================
+1200px
+=========================================*/
+
+@media(max-width:1200px){
+
+    .nav-container{
+
+        padding:18px 25px;
+    }
+
+    .logo-icon{
+
+        width:52px;
+        height:52px;
+
+        font-size:26px;
+    }
+
+    .logo-text h2{
+
+        font-size:34px;
+    }
+
+    .logo-text span{
+
+        font-size:12px;
+
+        letter-spacing:4px;
+    }
+
+    .navbar{
+
+        margin-right:25px;
+    }
+
+    .navbar>ul{
+
+        gap:24px;
+    }
+
+    .navbar ul li a{
+
+        font-size:15px;
+    }
+
+    .header-btn button{
+
+        padding:13px 22px;
+
+        font-size:14px;
+    }
+
+}
+
+/*=========================================
+992px
+=========================================*/
+
+@media(max-width:992px){
+
+    .nav-container{
+
+        padding:16px 20px;
+    }
+
+    .logo-link{
+
+        gap:12px;
+    }
+
+    .logo-icon{
+
+        width:46px;
+        height:46px;
+
+        font-size:22px;
+    }
+
+    .logo-text h2{
+
+        font-size:28px;
+    }
+
+    .logo-text span{
+
+        font-size:11px;
+
+        letter-spacing:3px;
+    }
+
+    .navbar{
+
+        margin-right:18px;
+    }
+
+    .navbar>ul{
+
+        gap:18px;
+    }
+
+    .navbar ul li a{
+
+        font-size:14px;
+    }
+
+    .header-btn button{
+
+        padding:11px 18px;
+
+        font-size:13px;
+    }
+
+}
+
+/*=========================================
+TABLET & MOBILE MENU
+=========================================*/
+
+@media(max-width:991px){
+
+    .header-actions{
+        margin-left:auto;
+        display:flex;
+        align-items:center;
+        gap:12px;
+    }
+
+    .menu-btn{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .navbar{
+
+        display:none;
+
+        position:absolute;
+
+        top:100%;
+        left:0;
+
+        width:100%;
+
+        background:#2B211C;
+
+        border-radius:0 0 20px 20px;
+
+        padding:25px;
+
+        box-shadow:0 15px 35px rgba(0,0,0,.25);
+    }
+
+    .navbar.active{
+
+        display:block;
+    }
+
+    .navbar > ul{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:22px;
+    }
+
+    /* =========================
+       MOBILE DROPDOWN
+    ========================= */
+
+    .dropdown{
+
+        width:100%;
+    }
+
+    .dropdown > a{
+
+        justify-content:space-between;
+
+        width:100%;
+    }
+
+    .dropdown-menu{
+
+        position:static;
+
+        transform:none;
+
+        width:100%;
+
+        margin-top:12px;
+
+        background:#3B2E27;
+
+        border-radius:12px;
+
+        box-shadow:none;
+
+        display:none;
+
+        opacity:1;
+
+        visibility:visible;
+
+        padding:8px 0;
+    }
+
+    .dropdown:hover .dropdown-menu{
+
+        display:flex;
+
+        flex-direction:column;
+    }
+
+    .dropdown-menu li a{
+
+        color:#fff !important;
+
+        padding:14px 20px;
+    }
+
+    .dropdown-menu li a:hover{
+
+        background:rgba(255,255,255,.08);
+
+        color:var(--accent) !important;
+
+        padding-left:28px;
+    }
+
+}
+
+/*=========================================
+767px
+=========================================*/
+
+@media(max-width:767px){
+
+    .nav-container{
+
+        padding:14px 18px;
+    }
+
+    .logo-text h2{
+
+        font-size:24px;
+    }
+
+    .logo-text span{
+
+        font-size:10px;
+
+        letter-spacing:2px;
+    }
+
+    .header-btn button{
+
+        padding:10px 16px;
+
+        font-size:13px;
+    }
+
+}
+
+/*=========================================
+575px
+=========================================*/
+
+@media(max-width:575px){
+
+    .logo-text{
+
+        display:none;
+    }
+
+    .logo-icon{
+
+        width:44px;
+        height:44px;
+
+        font-size:20px;
+    }
+
+    .header-btn button{
+
+        padding:9px 14px;
+
+        font-size:12px;
+    }
+
+    .menu-btn{
+
+        font-size:28px;
+    }
+
+}

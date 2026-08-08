@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+@import 'swiper/css';
+
+/* Theme Colors */
+:root{
+  --primary:#2B211C;
+  --secondary:#3A2B25;
+  --accent:#B8734C;
+  --hover:#C8875E;
+  --bg:#F7F3EE;
+  --heading:#2C211D;
+  --text:#6B625C;
+  --border:#E8DDD3;
+}
+
+/* Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--heading);
+}
+
+.container{
+  max-width: 1320px;
+  margin: auto;
+  padding: 0 20px;
+}

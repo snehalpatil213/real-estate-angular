@@ -1,0 +1,177 @@
+<section class="featured-villas">
+
+    <div class="container">
+
+        <!--=========================================-->
+        <!-- SECTION HEADER -->
+        <!--=========================================-->
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+
+                Featured Villas
+
+            </span>
+
+            <h2>
+
+                Find Your Dream Villa
+
+            </h2>
+
+            <p>
+
+                Explore our premium villas featuring private pools,
+                spacious interiors, lush landscapes and breathtaking views.
+
+            </p>
+
+        </div>
+
+        <!--=========================================-->
+        <!-- SLIDER -->
+        <!--=========================================-->
+
+        <div class="slider-wrapper">
+
+            <!-- Previous Button -->
+
+            <button
+                class="slider-btn prev-btn"
+                (click)="prevSlide()">
+
+                <i class="bi bi-chevron-left"></i>
+
+            </button>
+
+            <!-- Cards -->
+
+            <div class="slider-container">
+
+                <div class="slider-track">
+
+                    @for(villa of villas.slice(currentIndex, currentIndex + cardsToShow); track villa.id){
+
+                    <div class="villa-card">
+
+                        <!-- Image -->
+
+                        <div class="card-image">
+
+                            <img
+                                [src]="villa.image"
+                                [alt]="villa.title">
+
+                            <span class="badge">
+
+                                {{ villa.badge }}
+
+                            </span>
+
+                        </div>
+
+                        <!-- Content -->
+
+                        <div class="card-content">
+
+                            <h3>
+
+                                {{ villa.title }}
+
+                            </h3>
+
+                            <div class="location">
+
+                                <i class="bi bi-geo-alt-fill"></i>
+
+                                {{ villa.location }}
+
+                            </div>
+
+                            <div class="property-info">
+
+                                <div>
+
+                                    <i class="bi bi-door-open"></i>
+
+                                    {{ villa.beds }} Beds
+
+                                </div>
+
+                                <div>
+
+                                    <i class="bi bi-droplet"></i>
+
+                                    {{ villa.baths }} Baths
+
+                                </div>
+
+                                <div>
+
+                                    <i class="bi bi-aspect-ratio"></i>
+
+                                    {{ villa.area }}
+
+                                </div>
+
+                            </div>
+
+                            <div class="price-box">
+
+                                <h4>
+
+                                    {{ villa.price }}
+
+                                </h4>
+
+                                <button class="details-btn">
+
+                                    View Details
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+
+            </div>
+
+            <!-- Next Button -->
+
+            <button
+                class="slider-btn next-btn"
+                (click)="nextSlide()">
+
+                <i class="bi bi-chevron-right"></i>
+
+            </button>
+
+        </div>
+
+        <!--=========================================-->
+        <!-- DOTS -->
+        <!--=========================================-->
+
+        <div class="slider-dots">
+
+            @for(item of villas; track item.id; let i = $index){
+
+            <span
+                class="dot"
+                [class.active]="i === currentIndex">
+            </span>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>

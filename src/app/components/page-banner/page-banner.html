@@ -1,0 +1,22 @@
+<section
+  class="page-banner"
+  [style.background-image]="'linear-gradient(rgba(43,33,28,0.55), rgba(43,33,28,0.55)), url(' + background() + ')'"
+>
+  <div class="container">
+
+    <div class="banner-content">
+
+      <h1>{{ title() }}</h1>
+
+      <p>{{ subtitle() }}</p>
+
+      <div class="breadcrumb">
+        <a routerLink="/">Home</a>
+        <span>/</span>
+        <span>{{ title() }}</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
