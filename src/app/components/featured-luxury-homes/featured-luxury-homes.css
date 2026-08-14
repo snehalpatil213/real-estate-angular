@@ -1,0 +1,919 @@
+/*==================================================
+        FEATURED LUXURY HOMES
+==================================================*/
+
+.featured-luxury-homes {
+    padding: 120px 0;
+    background: #F8F5F1;
+    overflow: hidden;
+}
+
+.featured-luxury-homes .container {
+    width: 100%;
+    max-width: 1320px;
+    margin: auto;
+    padding: 0 60px;
+}
+
+
+/*==================================================
+        SECTION HEADER
+==================================================*/
+
+.featured-luxury-homes .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.featured-luxury-homes .section-subtitle {
+    display: inline-block;
+    padding: 11px 28px;
+    margin-bottom: 18px;
+
+    border: 1px solid #D8C2AE;
+    border-radius: 50px;
+
+    background: #FFFFFF;
+    color: #B8734C;
+
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.featured-luxury-homes .section-header h2 {
+    margin: 0 0 18px;
+
+    color: #2B211C;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.featured-luxury-homes .section-header p {
+    max-width: 700px;
+    margin: auto;
+
+    color: #6B625C;
+
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/*==================================================
+        SLIDER
+==================================================*/
+
+.featured-luxury-homes .slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.featured-luxury-homes .slider-container {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.featured-luxury-homes .slider-track {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/*==================================================
+        LUXURY HOME CARD
+==================================================*/
+
+.featured-luxury-homes .luxury-home-card {
+    background: #FFFFFF;
+    border-radius: 25px;
+    overflow: hidden;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+
+    transition: .4s ease;
+}
+
+.featured-luxury-homes .luxury-home-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,.15);
+}
+
+
+/*==================================================
+        IMAGE
+==================================================*/
+
+.featured-luxury-homes .card-image {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+.featured-luxury-homes .card-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+
+    transition: .5s ease;
+}
+
+.featured-luxury-homes .luxury-home-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+
+/*==================================================
+        BADGE
+==================================================*/
+
+.featured-luxury-homes .badge {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    background: #B8734C;
+    color: #FFFFFF;
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/*==================================================
+        CARD CONTENT
+==================================================*/
+
+.featured-luxury-homes .card-content {
+    padding: 28px;
+}
+
+.featured-luxury-homes .card-content h3 {
+    margin: 0 0 15px;
+
+    color: #2B211C;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/*==================================================
+        LOCATION
+==================================================*/
+
+.featured-luxury-homes .location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 22px;
+
+    color: #6B625C;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.featured-luxury-homes .location i {
+    color: #B8734C;
+    flex-shrink: 0;
+}
+
+
+/*==================================================
+        PROPERTY INFO
+==================================================*/
+
+.featured-luxury-homes .property-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 18px 0;
+    margin-bottom: 25px;
+
+    border-top: 1px solid #ECE4DB;
+    border-bottom: 1px solid #ECE4DB;
+}
+
+.featured-luxury-homes .property-info div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #555;
+
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+}
+
+.featured-luxury-homes .property-info i {
+    color: #B8734C;
+    font-size: 16px;
+}
+
+
+/*==================================================
+        PRICE
+==================================================*/
+
+.featured-luxury-homes .price-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.featured-luxury-homes .price-box h4 {
+    margin: 0;
+
+    color: #B8734C;
+
+    font-family: "Inter", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/*==================================================
+        DETAILS BUTTON
+==================================================*/
+
+.featured-luxury-homes .details-btn {
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #B8734C;
+    color: #FFFFFF;
+
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    white-space: nowrap;
+
+    transition: .35s ease;
+}
+
+.featured-luxury-homes .details-btn:hover {
+    background: #9E5F3D;
+    transform: translateY(-2px);
+}
+
+
+/*==================================================
+        SLIDER BUTTON
+==================================================*/
+
+.featured-luxury-homes .slider-btn {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #FFFFFF;
+    color: #B8734C;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+
+    cursor: pointer;
+
+    transition: .35s ease;
+}
+
+.featured-luxury-homes .slider-btn i {
+    font-size: 22px;
+}
+
+.featured-luxury-homes .slider-btn:hover {
+    background: #B8734C;
+    color: #FFFFFF;
+    transform: scale(1.08);
+}
+
+
+/*==================================================
+        DOTS
+==================================================*/
+
+.featured-luxury-homes .slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 40px;
+}
+
+.featured-luxury-homes .dot {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    background: #D8C2AE;
+
+    cursor: pointer;
+
+    transition: .35s ease;
+}
+
+.featured-luxury-homes .dot.active {
+    width: 34px;
+    border-radius: 30px;
+    background: #B8734C;
+}
+
+
+/*==================================================
+        LARGE DESKTOP
+        1201px - 1400px
+==================================================*/
+
+@media (max-width: 1400px) {
+
+    .featured-luxury-homes .container {
+        max-width: 1200px;
+        padding: 0 50px;
+    }
+
+    .featured-luxury-homes .slider-track {
+        gap: 20px;
+    }
+
+    .featured-luxury-homes .card-content {
+        padding: 24px;
+    }
+
+    .featured-luxury-homes .card-content h3 {
+        font-size: 25px;
+    }
+
+    .featured-luxury-homes .price-box h4 {
+        font-size: 24px;
+    }
+}
+
+
+/*==================================================
+        LAPTOP
+        1025px - 1200px
+==================================================*/
+
+@media (max-width: 1200px) {
+
+    .featured-luxury-homes {
+        padding: 90px 0;
+    }
+
+    .featured-luxury-homes .container {
+        padding: 0 40px;
+    }
+
+    .featured-luxury-homes .section-header {
+        margin-bottom: 50px;
+    }
+
+    .featured-luxury-homes .section-header h2 {
+        font-size: 46px;
+    }
+
+    .featured-luxury-homes .section-header p {
+        font-size: 16px;
+    }
+
+    .featured-luxury-homes .slider-wrapper {
+        gap: 18px;
+    }
+
+    .featured-luxury-homes .card-image {
+        height: 230px;
+    }
+
+    .featured-luxury-homes .card-content {
+        padding: 22px;
+    }
+
+    .featured-luxury-homes .property-info {
+        gap: 8px;
+    }
+
+    .featured-luxury-homes .property-info div {
+        font-size: 12px;
+    }
+
+    .featured-luxury-homes .slider-btn {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/*==================================================
+        TABLET
+        769px - 1024px
+==================================================*/
+
+@media (max-width: 1024px) {
+
+    .featured-luxury-homes {
+        padding: 80px 0;
+    }
+
+    .featured-luxury-homes .container {
+        padding: 0 35px;
+    }
+
+    .featured-luxury-homes .section-header {
+        margin-bottom: 45px;
+    }
+
+    .featured-luxury-homes .section-header h2 {
+        font-size: 42px;
+    }
+
+    .featured-luxury-homes .section-header p {
+        font-size: 15px;
+    }
+
+    .featured-luxury-homes .slider-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .featured-luxury-homes .card-image {
+        height: 240px;
+    }
+
+    .featured-luxury-homes .card-content {
+        padding: 22px;
+    }
+
+    .featured-luxury-homes .card-content h3 {
+        font-size: 24px;
+    }
+
+    .featured-luxury-homes .property-info {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .featured-luxury-homes .price-box {
+        flex-wrap: wrap;
+    }
+
+    .featured-luxury-homes .slider-btn {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+
+/*==================================================
+        MOBILE TABLET
+        601px - 768px
+==================================================*/
+
+@media (max-width: 768px) {
+
+    .featured-luxury-homes {
+        padding: 70px 0;
+    }
+
+    .featured-luxury-homes .container {
+        padding: 0 25px;
+    }
+
+    .featured-luxury-homes .section-header {
+        margin-bottom: 40px;
+    }
+
+    .featured-luxury-homes .section-subtitle {
+        padding: 9px 20px;
+        font-size: 11px;
+    }
+
+    .featured-luxury-homes .section-header h2 {
+        font-size: 38px;
+    }
+
+    .featured-luxury-homes .section-header p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .featured-luxury-homes .slider-wrapper {
+        gap: 10px;
+    }
+
+    .featured-luxury-homes .slider-track {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .featured-luxury-homes .card-image {
+        height: 280px;
+    }
+
+    .featured-luxury-homes .card-content {
+        padding: 24px;
+    }
+
+    .featured-luxury-homes .card-content h3 {
+        font-size: 26px;
+    }
+
+    .featured-luxury-homes .property-info {
+        justify-content: flex-start;
+        gap: 18px;
+    }
+
+    .featured-luxury-homes .price-box {
+        flex-wrap: nowrap;
+    }
+
+    .featured-luxury-homes .slider-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .featured-luxury-homes .slider-btn i {
+        font-size: 18px;
+    }
+}
+
+
+/*==================================================
+        MOBILE
+        600px
+==================================================*/
+
+@media (max-width: 600px) {
+
+    .featured-luxury-homes {
+        padding: 60px 0;
+    }
+
+    .featured-luxury-homes .container {
+        padding: 0 20px;
+    }
+
+    .featured-luxury-homes .section-header {
+        margin-bottom: 35px;
+    }
+
+    .featured-luxury-homes .section-subtitle {
+        padding: 8px 17px;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .featured-luxury-homes .section-header h2 {
+        font-size: 32px;
+    }
+
+    .featured-luxury-homes .section-header p {
+        font-size: 13px;
+    }
+
+    .featured-luxury-homes .slider-wrapper {
+        display: block;
+        position: relative;
+    }
+
+    .featured-luxury-homes .slider-track {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-luxury-homes .card-image {
+        height: 240px;
+    }
+
+    .featured-luxury-homes .luxury-home-card {
+        border-radius: 20px;
+    }
+
+    .featured-luxury-homes .badge {
+        top: 15px;
+        left: 15px;
+        padding: 7px 15px;
+        font-size: 10px;
+    }
+
+    .featured-luxury-homes .card-content {
+        padding: 20px;
+    }
+
+    .featured-luxury-homes .card-content h3 {
+        font-size: 23px;
+    }
+
+    .featured-luxury-homes .location {
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+
+    .featured-luxury-homes .property-info {
+        gap: 12px;
+        padding: 15px 0;
+        margin-bottom: 20px;
+    }
+
+    .featured-luxury-homes .property-info div {
+        font-size: 10px;
+    }
+
+    .featured-luxury-homes .property-info i {
+        font-size: 14px;
+    }
+
+    .featured-luxury-homes .price-box {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .featured-luxury-homes .price-box h4 {
+        font-size: 21px;
+    }
+
+    .featured-luxury-homes .details-btn {
+        width: 100%;
+        padding: 11px 18px;
+        font-size: 12px;
+    }
+
+    .featured-luxury-homes .slider-btn {
+        position: absolute;
+        top: 120px;
+        z-index: 5;
+
+        width: 40px;
+        height: 40px;
+    }
+
+    .featured-luxury-homes .prev-btn {
+        left: 8px;
+    }
+
+    .featured-luxury-homes .next-btn {
+        right: 8px;
+    }
+
+    .featured-luxury-homes .slider-btn i {
+        font-size: 16px;
+    }
+
+    .featured-luxury-homes .slider-dots {
+        margin-top: 25px;
+        gap: 8px;
+    }
+
+    .featured-luxury-homes .dot {
+        width: 9px;
+        height: 9px;
+    }
+
+    .featured-luxury-homes .dot.active {
+        width: 28px;
+    }
+}
+
+
+/*==================================================
+        MOBILE
+        430px
+==================================================*/
+
+@media (max-width: 430px) {
+
+    .featured-luxury-homes {
+        padding: 55px 0;
+    }
+
+    .featured-luxury-homes .container {
+        padding: 0 17px;
+    }
+
+    .featured-luxury-homes .section-header h2 {
+        font-size: 29px;
+    }
+
+    .featured-luxury-homes .section-header p {
+        font-size: 12px;
+    }
+
+    .featured-luxury-homes .card-image {
+        height: 220px;
+    }
+
+    .featured-luxury-homes .card-content {
+        padding: 18px;
+    }
+
+    .featured-luxury-homes .card-content h3 {
+        font-size: 21px;
+    }
+
+    .featured-luxury-homes .location {
+        font-size: 11px;
+    }
+
+    .featured-luxury-homes .property-info {
+        gap: 9px;
+    }
+
+    .featured-luxury-homes .property-info div {
+        font-size: 9px;
+    }
+
+    .featured-luxury-homes .price-box h4 {
+        font-size: 19px;
+    }
+
+    .featured-luxury-homes .details-btn {
+        font-size: 11px;
+    }
+
+    .featured-luxury-homes .slider-btn {
+        top: 105px;
+        width: 37px;
+        height: 37px;
+    }
+}
+
+
+/*==================================================
+        SMALL MOBILE
+        375px
+==================================================*/
+
+@media (max-width: 375px) {
+
+    .featured-luxury-homes {
+        padding: 50px 0;
+    }
+
+    .featured-luxury-homes .container {
+        padding: 0 14px;
+    }
+
+    .featured-luxury-homes .section-header h2 {
+        font-size: 26px;
+    }
+
+    .featured-luxury-homes .section-header p {
+        font-size: 11px;
+    }
+
+    .featured-luxury-homes .card-image {
+        height: 200px;
+    }
+
+    .featured-luxury-homes .card-content {
+        padding: 16px;
+    }
+
+    .featured-luxury-homes .card-content h3 {
+        font-size: 19px;
+    }
+
+    .featured-luxury-homes .location {
+        font-size: 10px;
+    }
+
+    .featured-luxury-homes .property-info {
+        gap: 7px;
+    }
+
+    .featured-luxury-homes .property-info div {
+        font-size: 8px;
+    }
+
+    .featured-luxury-homes .price-box h4 {
+        font-size: 17px;
+    }
+
+    .featured-luxury-homes .details-btn {
+        padding: 9px 14px;
+        font-size: 10px;
+    }
+
+    .featured-luxury-homes .slider-btn {
+        top: 95px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .featured-luxury-homes .slider-btn i {
+        font-size: 14px;
+    }
+}
+
+
+/*==================================================
+        VERY SMALL MOBILE
+        320px
+==================================================*/
+
+@media (max-width: 320px) {
+
+    .featured-luxury-homes {
+        padding: 45px 0;
+    }
+
+    .featured-luxury-homes .container {
+        padding: 0 12px;
+    }
+
+    .featured-luxury-homes .section-header h2 {
+        font-size: 23px;
+    }
+
+    .featured-luxury-homes .section-header p {
+        font-size: 10px;
+    }
+
+    .featured-luxury-homes .card-image {
+        height: 180px;
+    }
+
+    .featured-luxury-homes .card-content {
+        padding: 14px;
+    }
+
+    .featured-luxury-homes .card-content h3 {
+        font-size: 17px;
+    }
+
+    .featured-luxury-homes .location {
+        font-size: 9px;
+    }
+
+    .featured-luxury-homes .property-info {
+        gap: 5px;
+    }
+
+    .featured-luxury-homes .property-info div {
+        font-size: 7px;
+    }
+
+    .featured-luxury-homes .price-box h4 {
+        font-size: 15px;
+    }
+
+    .featured-luxury-homes .details-btn {
+        padding: 8px 11px;
+        font-size: 9px;
+    }
+
+    .featured-luxury-homes .slider-btn {
+        top: 85px;
+        width: 31px;
+        height: 31px;
+    }
+
+    .featured-luxury-homes .slider-btn i {
+        font-size: 12px;
+    }
+
+    .featured-luxury-homes .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .featured-luxury-homes .dot.active {
+        width: 23px;
+    }
+}

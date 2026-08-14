@@ -1,0 +1,177 @@
+<section class="featured-plots">
+
+    <div class="container">
+
+        <!--=========================================-->
+        <!-- SECTION HEADER -->
+        <!--=========================================-->
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Featured Plots
+            </span>
+
+            <h2>
+                Handpicked Plots for You
+            </h2>
+
+            <p>
+                Explore our premium plots in prime locations,
+                with clear titles and excellent investment potential.
+            </p>
+
+        </div>
+
+        <!--=========================================-->
+        <!-- SLIDER -->
+        <!--=========================================-->
+
+        <div class="slider-wrapper">
+
+            <!-- Previous Button -->
+
+            <button
+                class="slider-btn prev-btn"
+                (click)="prevSlide()">
+
+                <i class="bi bi-chevron-left"></i>
+
+            </button>
+
+
+            <!-- Cards -->
+
+            <div class="slider-container">
+
+                <div class="slider-track">
+
+                    @for(plot of plots.slice(currentIndex, currentIndex + cardsToShow); track plot.id){
+
+                    <div class="plot-card">
+
+                        <!-- Image -->
+
+                        <div class="card-image">
+
+                            <img
+                                [src]="plot.image"
+                                [alt]="plot.title">
+
+                            <span class="badge">
+
+                                {{ plot.badge }}
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- Card Content -->
+
+                        <div class="card-content">
+
+                            <h3>
+                                {{ plot.title }}
+                            </h3>
+
+
+                            <!-- Location -->
+
+                            <div class="location">
+
+                                <i class="bi bi-geo-alt-fill"></i>
+
+                                {{ plot.location }}
+
+                            </div>
+
+
+                            <!-- Plot Information -->
+
+                            <div class="property-info">
+
+                                <div>
+
+                                    <i class="bi bi-bounding-box"></i>
+
+                                    {{ plot.size }}
+
+                                </div>
+
+
+                                <div>
+
+                                    <i class="bi bi-file-earmark-check"></i>
+
+                                    {{ plot.titleStatus }}
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Price -->
+
+                            <div class="price-box">
+
+                                <h4>
+                                    {{ plot.price }}
+                                </h4>
+
+                                <span class="price-label">
+                                    per Guntha
+                                </span>
+
+                                <button class="details-btn">
+
+                                    View Details
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    }
+
+                </div>
+
+            </div>
+
+
+            <!-- Next Button -->
+
+            <button
+                class="slider-btn next-btn"
+                (click)="nextSlide()">
+
+                <i class="bi bi-chevron-right"></i>
+
+            </button>
+
+        </div>
+
+
+        <!--=========================================-->
+        <!-- SLIDER DOTS -->
+        <!--=========================================-->
+
+        <div class="slider-dots">
+
+            @for(item of plots; track item.id; let i = $index){
+
+            <span
+                class="dot"
+                [class.active]="i === currentIndex">
+            </span>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>

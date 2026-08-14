@@ -1,0 +1,90 @@
+<section class="villa-lifestyle">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Experience Luxury
+            </span>
+
+            <h2>
+                Live the Villa Lifestyle
+            </h2>
+
+            <p>
+                Every villa is crafted to offer the perfect blend of
+                elegance, comfort and privacy. Step into a world where
+                every day feels like a retreat.
+            </p>
+
+        </div>
+
+
+        <div class="lifestyle-content">
+
+            <div class="villa-image">
+
+                <img
+                    src="/image/villa-lifestyle.png"
+                    alt="Luxury Villa">
+
+            </div>
+
+
+            <div class="features-grid">
+
+                @for(feature of features; track feature.title) {
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="bi {{ feature.icon }}"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                {{ feature.title }}
+                            </h3>
+
+                            <p>
+                                {{ feature.description }}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                }
+
+            </div>
+
+        </div>
+
+
+        <div class="lifestyle-cta">
+
+            <div class="cta-icon">
+
+                <i class="bi bi-gem"></i>
+
+            </div>
+
+            <h3>
+                Luxury is not just about a home,
+                it’s about the life you deserve.
+            </h3>
+
+            <button>
+                Explore Villas
+                <i class="bi bi-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>

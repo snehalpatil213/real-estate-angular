@@ -1,0 +1,714 @@
+/*==================================================
+WHY INVEST IN PLOTS
+==================================================*/
+
+.why-invest-plots{
+
+    position:relative;
+
+    padding:120px 0;
+
+    background:#F8F5F1;
+
+    overflow:hidden;
+}
+
+
+/*==================================================
+DECORATIVE BACKGROUND
+==================================================*/
+
+.why-invest-plots::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    top:-180px;
+
+    left:-150px;
+
+    border-radius:50%;
+
+    background:rgba(200,155,106,.08);
+}
+
+.why-invest-plots::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    right:-140px;
+
+    bottom:-150px;
+
+    border-radius:50%;
+
+    background:rgba(184,115,76,.06);
+}
+
+
+/*==================================================
+CONTAINER
+==================================================*/
+
+.why-invest-plots .container{
+
+    width:92%;
+
+    max-width:1320px;
+
+    margin:0 auto;
+
+    position:relative;
+
+    z-index:2;
+}
+
+
+/*==================================================
+SECTION HEADER
+==================================================*/
+
+.why-invest-plots .section-header{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:0 auto 70px;
+}
+
+
+/*==================================================
+SUBTITLE
+==================================================*/
+
+.why-invest-plots .section-subtitle{
+
+    display:inline-block;
+
+    padding:11px 28px;
+
+    background:#FFFFFF;
+
+    border:2px solid #D8C2AE;
+
+    border-radius:50px;
+
+    color:#B8734C;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+}
+
+
+/*==================================================
+MAIN HEADING
+==================================================*/
+
+.why-invest-plots .section-header h2{
+
+    margin:0 0 20px;
+
+    color:#2B211C;
+
+    font-size:54px;
+
+    font-weight:700;
+
+    line-height:1.2;
+}
+
+
+/*==================================================
+DESCRIPTION
+==================================================*/
+
+.why-invest-plots .section-header p{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    color:#6B625C;
+
+    font-size:17px;
+
+    line-height:1.8;
+}
+
+
+/*==================================================
+BENEFITS GRID
+==================================================*/
+
+.benefits-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+    align-items:stretch;
+}
+
+
+/*==================================================
+BENEFIT CARD
+==================================================*/
+
+.benefit-card{
+
+    position:relative;
+
+    min-height:330px;
+
+    padding:45px 28px 35px;
+
+    background:#FFFFFF;
+
+    border:1px solid #E9DED3;
+
+    border-radius:26px;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.07);
+
+    transition:all .4s ease;
+}
+
+
+/*==================================================
+TOP ACCENT
+==================================================*/
+
+.benefit-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:#B8734C;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.4s ease;
+}
+
+.benefit-card:hover::before{
+
+    transform:scaleX(1);
+}
+
+
+/*==================================================
+CARD HOVER
+==================================================*/
+
+.benefit-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#D8C2AE;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.13);
+}
+
+
+/*==================================================
+ICON
+==================================================*/
+
+.benefit-icon{
+
+    width:85px;
+
+    height:85px;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    background:#F6EEE7;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:all .4s ease;
+}
+
+
+/*==================================================
+ICON SYMBOL
+==================================================*/
+
+.benefit-icon i{
+
+    font-size:38px;
+
+    color:#B8734C;
+
+    transition:.4s ease;
+}
+
+
+/*==================================================
+ICON HOVER
+==================================================*/
+
+.benefit-card:hover .benefit-icon{
+
+    background:#B8734C;
+
+    transform:scale(1.08) rotate(6deg);
+
+    box-shadow:0 12px 25px rgba(184,115,76,.25);
+}
+
+.benefit-card:hover .benefit-icon i{
+
+    color:#FFFFFF;
+}
+
+
+/*==================================================
+CARD CONTENT
+==================================================*/
+
+.benefit-content{
+
+    width:100%;
+}
+
+.benefit-content h3{
+
+    margin:0 0 15px;
+
+    color:#2B211C;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    line-height:1.3;
+}
+
+.benefit-content p{
+
+    margin:0;
+
+    color:#6B625C;
+
+    font-size:15px;
+
+    line-height:1.8;
+}
+
+
+/*==================================================
+BOTTOM LINE
+==================================================*/
+
+.benefit-line{
+
+    display:block;
+
+    width:55px;
+
+    height:3px;
+
+    margin-top:25px;
+
+    background:#B8734C;
+
+    border-radius:50px;
+
+    transition:.4s ease;
+}
+
+.benefit-card:hover .benefit-line{
+
+    width:95px;
+}
+
+
+/*==================================================
+INVESTMENT BANNER
+==================================================*/
+
+.investment-banner{
+
+    position:relative;
+
+    margin-top:75px;
+
+    padding:60px 40px;
+
+    background:#2B211C;
+
+    border-radius:32px;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.16);
+}
+
+
+/*==================================================
+BANNER DECORATION
+==================================================*/
+
+.investment-banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    top:-150px;
+
+    right:-100px;
+
+    border-radius:50%;
+
+    background:rgba(200,155,106,.10);
+}
+
+.investment-banner::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    left:-80px;
+
+    bottom:-110px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.04);
+}
+
+
+/*==================================================
+BANNER ICON
+==================================================*/
+
+.investment-banner-icon{
+
+    position:relative;
+
+    z-index:2;
+
+    width:78px;
+
+    height:78px;
+
+    margin:0 auto 22px;
+
+    border-radius:50%;
+
+    background:#C89B6A;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
+}
+
+.investment-banner-icon i{
+
+    font-size:34px;
+
+    color:#FFFFFF;
+}
+
+
+/*==================================================
+BANNER TITLE
+==================================================*/
+
+.investment-banner h3{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:0 0 15px;
+
+    color:#FFFFFF;
+
+    font-size:38px;
+
+    font-weight:700;
+
+    line-height:1.3;
+}
+
+
+/*==================================================
+BANNER TEXT
+==================================================*/
+
+.investment-banner p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:680px;
+
+    margin:0 auto;
+
+    color:#E8DED6;
+
+    font-size:16px;
+
+    line-height:1.8;
+}
+
+
+/*==================================================
+TABLET
+==================================================*/
+
+@media(max-width:1100px){
+
+    .benefits-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:25px;
+    }
+
+}
+
+
+/*==================================================
+TABLET / SMALL LAPTOP
+==================================================*/
+
+@media(max-width:992px){
+
+    .why-invest-plots{
+
+        padding:90px 0;
+    }
+
+    .why-invest-plots .section-header h2{
+
+        font-size:46px;
+    }
+
+}
+
+
+/*==================================================
+MOBILE
+==================================================*/
+
+@media(max-width:768px){
+
+    .why-invest-plots{
+
+        padding:80px 0;
+    }
+
+    .why-invest-plots .container{
+
+        width:94%;
+
+        padding:0;
+    }
+
+    .why-invest-plots .section-header{
+
+        margin-bottom:50px;
+    }
+
+    .why-invest-plots .section-header h2{
+
+        font-size:38px;
+    }
+
+    .why-invest-plots .section-header p{
+
+        font-size:16px;
+    }
+
+    .benefits-grid{
+
+        grid-template-columns:1fr;
+
+        gap:22px;
+    }
+
+    .benefit-card{
+
+        min-height:auto;
+
+        padding:40px 28px;
+    }
+
+    .investment-banner{
+
+        margin-top:55px;
+
+        padding:50px 25px;
+
+        border-radius:26px;
+    }
+
+    .investment-banner h3{
+
+        font-size:30px;
+    }
+
+}
+
+
+/*==================================================
+SMALL MOBILE
+==================================================*/
+
+@media(max-width:576px){
+
+    .why-invest-plots{
+
+        padding:70px 0;
+    }
+
+    .why-invest-plots .section-subtitle{
+
+        padding:9px 20px;
+
+        font-size:12px;
+
+        letter-spacing:1.5px;
+    }
+
+    .why-invest-plots .section-header h2{
+
+        font-size:32px;
+    }
+
+    .why-invest-plots .section-header p{
+
+        font-size:15px;
+
+        line-height:1.7;
+    }
+
+    .benefit-card{
+
+        border-radius:22px;
+
+        padding:35px 22px;
+    }
+
+    .benefit-icon{
+
+        width:75px;
+
+        height:75px;
+    }
+
+    .benefit-icon i{
+
+        font-size:32px;
+    }
+
+    .benefit-content h3{
+
+        font-size:23px;
+    }
+
+    .benefit-content p{
+
+        font-size:15px;
+    }
+
+    .investment-banner{
+
+        padding:45px 20px;
+    }
+
+    .investment-banner-icon{
+
+        width:70px;
+
+        height:70px;
+    }
+
+    .investment-banner-icon i{
+
+        font-size:30px;
+    }
+
+    .investment-banner h3{
+
+        font-size:26px;
+    }
+
+    .investment-banner p{
+
+        font-size:14px;
+
+        line-height:1.7;
+    }
+
+}

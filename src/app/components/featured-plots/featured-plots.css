@@ -1,0 +1,1011 @@
+/*==================================================
+                FEATURED PLOTS
+==================================================*/
+
+.featured-plots {
+    padding: 120px 0;
+    background: #F8F5F1;
+    overflow: hidden;
+}
+
+.featured-plots .container {
+    width: 100%;
+    max-width: 1320px;
+    margin: auto;
+    padding: 0 60px;
+}
+
+
+/*==================================================
+                SECTION HEADER
+==================================================*/
+
+.featured-plots .section-header {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.featured-plots .section-subtitle {
+    display: inline-block;
+
+    padding: 12px 30px;
+    margin-bottom: 18px;
+
+    background: #fff;
+
+    border: 2px solid #D8C2AE;
+    border-radius: 50px;
+
+    color: #B8734C;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.featured-plots .section-header h2 {
+    margin: 0 0 20px;
+
+    color: #2B211C;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.featured-plots .section-header p {
+    max-width: 700px;
+    margin: auto;
+
+    color: #6B625C;
+
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/*==================================================
+                SLIDER
+==================================================*/
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    position: relative;
+}
+
+.slider-container {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+
+/*==================================================
+                PLOT CARD
+==================================================*/
+
+.plot-card {
+    background: #fff;
+
+    border-radius: 25px;
+    overflow: hidden;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+
+    transition: .4s ease;
+}
+
+.plot-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,.15);
+}
+
+
+/*==================================================
+                IMAGE
+==================================================*/
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 260px;
+
+    display: block;
+    object-fit: cover;
+
+    transition: .5s ease;
+}
+
+.plot-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+
+/*==================================================
+                BADGE
+==================================================*/
+
+.plot-card .badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    padding: 8px 18px;
+
+    background: #B8734C;
+    color: #fff;
+
+    border-radius: 30px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/*==================================================
+                CARD CONTENT
+==================================================*/
+
+.plot-card .card-content {
+    padding: 28px;
+}
+
+.plot-card .card-content h3 {
+    margin: 0 0 15px;
+
+    color: #2B211C;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/*==================================================
+                LOCATION
+==================================================*/
+
+.plot-card .location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 22px;
+
+    color: #6B625C;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.plot-card .location i {
+    color: #B8734C;
+    flex-shrink: 0;
+}
+
+
+/*==================================================
+                PROPERTY INFO
+==================================================*/
+
+.plot-card .property-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 18px 0;
+    margin-bottom: 25px;
+
+    border-top: 1px solid #ECE4DB;
+    border-bottom: 1px solid #ECE4DB;
+}
+
+.plot-card .property-info div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #555;
+
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+}
+
+.plot-card .property-info i {
+    color: #B8734C;
+    font-size: 16px;
+}
+
+
+/*==================================================
+                PRICE
+==================================================*/
+
+.plot-card .price-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.plot-card .price-box h4 {
+    margin: 0;
+
+    color: #B8734C;
+
+    font-family: "Inter", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.plot-card .price-label {
+    margin-right: auto;
+
+    color: #6B625C;
+
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+/*==================================================
+                DETAILS BUTTON
+==================================================*/
+
+.plot-card .details-btn {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #B8734C;
+    color: #fff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: .35s ease;
+}
+
+.plot-card .details-btn:hover {
+    background: #9E5F3D;
+    transform: translateY(-2px);
+}
+
+
+/*==================================================
+                SLIDER BUTTONS
+==================================================*/
+
+.slider-btn {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #fff;
+    color: #B8734C;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+
+    cursor: pointer;
+
+    transition: .35s ease;
+}
+
+.slider-btn i {
+    font-size: 22px;
+}
+
+.slider-btn:hover {
+    background: #B8734C;
+    color: #fff;
+
+    transform: scale(1.08);
+}
+
+
+/*==================================================
+                SLIDER DOTS
+==================================================*/
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 40px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+
+    background: #D8C2AE;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: .35s ease;
+}
+
+.dot.active {
+    width: 35px;
+
+    background: #B8734C;
+
+    border-radius: 30px;
+}
+
+
+/*==================================================
+                LARGE DESKTOP
+                1401px+
+==================================================*/
+
+@media (min-width: 1401px) {
+
+    .featured-plots .container {
+        max-width: 1400px;
+    }
+}
+
+
+/*==================================================
+                DESKTOP
+                1201px - 1400px
+==================================================*/
+
+@media (max-width: 1400px) {
+
+    .featured-plots .container {
+        max-width: 1200px;
+        padding: 0 50px;
+    }
+
+    .slider-track {
+        gap: 25px;
+    }
+
+    .plot-card .card-content {
+        padding: 25px;
+    }
+
+    .plot-card .card-content h3 {
+        font-size: 25px;
+    }
+
+    .plot-card .price-box h4 {
+        font-size: 24px;
+    }
+}
+
+
+/*==================================================
+                LAPTOP
+                1025px - 1200px
+==================================================*/
+
+@media (max-width: 1200px) {
+
+    .featured-plots {
+        padding: 90px 0;
+    }
+
+    .featured-plots .container {
+        padding: 0 40px;
+    }
+
+    .featured-plots .section-header {
+        margin-bottom: 50px;
+    }
+
+    .featured-plots .section-header h2 {
+        font-size: 46px;
+    }
+
+    .featured-plots .section-header p {
+        font-size: 16px;
+    }
+
+    .slider-wrapper {
+        gap: 18px;
+    }
+
+    .slider-track {
+        gap: 20px;
+    }
+
+    .slider-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-image img {
+        height: 230px;
+    }
+
+    .plot-card .card-content {
+        padding: 22px;
+    }
+
+    .plot-card .card-content h3 {
+        font-size: 23px;
+    }
+
+    .plot-card .property-info {
+        gap: 12px;
+    }
+
+    .plot-card .price-box {
+        flex-wrap: wrap;
+    }
+
+    .plot-card .price-label {
+        margin-right: 0;
+    }
+}
+
+
+/*==================================================
+                TABLET
+                769px - 1024px
+==================================================*/
+
+@media (max-width: 1024px) {
+
+    .featured-plots {
+        padding: 80px 0;
+    }
+
+    .featured-plots .container {
+        padding: 0 35px;
+    }
+
+    .featured-plots .section-header {
+        margin-bottom: 45px;
+    }
+
+    .featured-plots .section-header h2 {
+        font-size: 43px;
+    }
+
+    .slider-wrapper {
+        gap: 15px;
+    }
+
+    .slider-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .card-image img {
+        height: 240px;
+    }
+
+    .plot-card .card-content {
+        padding: 24px;
+    }
+
+    .plot-card .card-content h3 {
+        font-size: 25px;
+    }
+
+    .plot-card .property-info {
+        gap: 15px;
+    }
+
+    .plot-card .price-box {
+        flex-wrap: wrap;
+    }
+
+    .plot-card .details-btn {
+        width: 100%;
+    }
+
+    .plot-card .price-label {
+        margin-right: 0;
+    }
+
+    .slider-btn {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+
+/*==================================================
+                SMALL TABLET
+                601px - 768px
+==================================================*/
+
+@media (max-width: 768px) {
+
+    .featured-plots {
+        padding: 70px 0;
+    }
+
+    .featured-plots .container {
+        padding: 0 25px;
+    }
+
+    .featured-plots .section-header {
+        margin-bottom: 40px;
+    }
+
+    .featured-plots .section-subtitle {
+        padding: 10px 22px;
+        font-size: 12px;
+    }
+
+    .featured-plots .section-header h2 {
+        font-size: 39px;
+    }
+
+    .featured-plots .section-header p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .slider-wrapper {
+        gap: 10px;
+    }
+
+    .slider-track {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card-image img {
+        height: 280px;
+    }
+
+    .plot-card .card-content {
+        padding: 25px;
+    }
+
+    .plot-card .card-content h3 {
+        font-size: 27px;
+    }
+
+    .plot-card .property-info {
+        gap: 20px;
+    }
+
+    .plot-card .price-box {
+        flex-wrap: nowrap;
+    }
+
+    .plot-card .price-label {
+        margin-right: auto;
+    }
+
+    .plot-card .details-btn {
+        width: auto;
+    }
+
+    .slider-btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .slider-btn i {
+        font-size: 19px;
+    }
+}
+
+
+/*==================================================
+                MOBILE
+                600px
+==================================================*/
+
+@media (max-width: 600px) {
+
+    .featured-plots {
+        padding: 60px 0;
+    }
+
+    .featured-plots .container {
+        padding: 0 20px;
+    }
+
+    .featured-plots .section-header {
+        margin-bottom: 35px;
+    }
+
+    .featured-plots .section-subtitle {
+        padding: 8px 18px;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .featured-plots .section-header h2 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .featured-plots .section-header p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .slider-wrapper {
+        display: block;
+    }
+
+    .slider-container {
+        width: 100%;
+    }
+
+    .slider-track {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image img {
+        height: 240px;
+    }
+
+    .plot-card {
+        border-radius: 20px;
+    }
+
+    .plot-card .badge {
+        top: 15px;
+        left: 15px;
+
+        padding: 7px 15px;
+        font-size: 10px;
+    }
+
+    .plot-card .card-content {
+        padding: 20px;
+    }
+
+    .plot-card .card-content h3 {
+        font-size: 24px;
+    }
+
+    .plot-card .location {
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+
+    .plot-card .property-info {
+        gap: 12px;
+        padding: 15px 0;
+        margin-bottom: 20px;
+    }
+
+    .plot-card .property-info div {
+        font-size: 11px;
+    }
+
+    .plot-card .property-info i {
+        font-size: 14px;
+    }
+
+    .plot-card .price-box {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .plot-card .price-box h4 {
+        font-size: 22px;
+    }
+
+    .plot-card .price-label {
+        font-size: 10px;
+    }
+
+    .plot-card .details-btn {
+        width: 100%;
+        padding: 11px 18px;
+        font-size: 12px;
+    }
+
+    .slider-btn {
+        position: absolute;
+        top: 120px;
+        z-index: 5;
+
+        width: 42px;
+        height: 42px;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+
+    .slider-btn i {
+        font-size: 17px;
+    }
+
+    .slider-dots {
+        margin-top: 25px;
+        gap: 8px;
+    }
+
+    .dot {
+        width: 9px;
+        height: 9px;
+    }
+
+    .dot.active {
+        width: 28px;
+    }
+}
+
+
+/*==================================================
+                MOBILE
+                430px
+==================================================*/
+
+@media (max-width: 430px) {
+
+    .featured-plots {
+        padding: 55px 0;
+    }
+
+    .featured-plots .container {
+        padding: 0 17px;
+    }
+
+    .featured-plots .section-subtitle {
+        padding: 7px 15px;
+        font-size: 9px;
+    }
+
+    .featured-plots .section-header h2 {
+        font-size: 30px;
+    }
+
+    .featured-plots .section-header p {
+        font-size: 12px;
+    }
+
+    .card-image img {
+        height: 220px;
+    }
+
+    .plot-card .card-content {
+        padding: 18px;
+    }
+
+    .plot-card .card-content h3 {
+        font-size: 22px;
+    }
+
+    .plot-card .location {
+        font-size: 11px;
+    }
+
+    .plot-card .property-info {
+        gap: 10px;
+    }
+
+    .plot-card .property-info div {
+        font-size: 10px;
+    }
+
+    .plot-card .price-box h4 {
+        font-size: 20px;
+    }
+
+    .plot-card .details-btn {
+        font-size: 11px;
+    }
+
+    .slider-btn {
+        top: 110px;
+
+        width: 38px;
+        height: 38px;
+    }
+
+    .slider-btn i {
+        font-size: 15px;
+    }
+}
+
+
+/*==================================================
+                SMALL MOBILE
+                375px
+==================================================*/
+
+@media (max-width: 375px) {
+
+    .featured-plots {
+        padding: 50px 0;
+    }
+
+    .featured-plots .container {
+        padding: 0 14px;
+    }
+
+    .featured-plots .section-header h2 {
+        font-size: 27px;
+    }
+
+    .featured-plots .section-header p {
+        font-size: 11px;
+    }
+
+    .card-image img {
+        height: 200px;
+    }
+
+    .plot-card .card-content {
+        padding: 16px;
+    }
+
+    .plot-card .card-content h3 {
+        font-size: 20px;
+    }
+
+    .plot-card .location {
+        font-size: 10px;
+    }
+
+    .plot-card .property-info {
+        gap: 8px;
+    }
+
+    .plot-card .property-info div {
+        font-size: 9px;
+    }
+
+    .plot-card .price-box h4 {
+        font-size: 18px;
+    }
+
+    .plot-card .price-label {
+        font-size: 9px;
+    }
+
+    .plot-card .details-btn {
+        padding: 10px 15px;
+        font-size: 10px;
+    }
+
+    .slider-btn {
+        top: 100px;
+
+        width: 35px;
+        height: 35px;
+    }
+
+    .slider-dots {
+        margin-top: 20px;
+    }
+}
+
+
+/*==================================================
+                VERY SMALL MOBILE
+                320px
+==================================================*/
+
+@media (max-width: 320px) {
+
+    .featured-plots {
+        padding: 45px 0;
+    }
+
+    .featured-plots .container {
+        padding: 0 12px;
+    }
+
+    .featured-plots .section-subtitle {
+        padding: 6px 12px;
+        font-size: 8px;
+    }
+
+    .featured-plots .section-header h2 {
+        font-size: 24px;
+    }
+
+    .featured-plots .section-header p {
+        font-size: 10px;
+    }
+
+    .card-image img {
+        height: 180px;
+    }
+
+    .plot-card .card-content {
+        padding: 14px;
+    }
+
+    .plot-card .card-content h3 {
+        font-size: 18px;
+    }
+
+    .plot-card .location {
+        font-size: 9px;
+    }
+
+    .plot-card .property-info {
+        gap: 6px;
+    }
+
+    .plot-card .property-info div {
+        font-size: 8px;
+    }
+
+    .plot-card .price-box h4 {
+        font-size: 16px;
+    }
+
+    .plot-card .price-label {
+        font-size: 8px;
+    }
+
+    .plot-card .details-btn {
+        padding: 9px 12px;
+        font-size: 9px;
+    }
+
+    .slider-btn {
+        top: 90px;
+
+        width: 32px;
+        height: 32px;
+    }
+
+    .slider-btn i {
+        font-size: 13px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .dot.active {
+        width: 24px;
+    }
+}

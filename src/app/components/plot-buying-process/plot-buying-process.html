@@ -1,0 +1,54 @@
+<section class="plot-buying-process">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-subtitle">
+                Plot Buying Process
+            </span>
+
+            <h2>
+                Simple &amp; Transparent Process
+            </h2>
+
+            <p>
+                Find Your Plot. Follow the Simple Steps.
+            </p>
+
+        </div>
+
+
+        <div class="process-wrapper">
+
+            @for(step of steps; track step.number){
+
+                <div class="process-card">
+
+                    <div class="step-number">
+                        {{ step.number }}
+                    </div>
+
+                    <div class="process-icon">
+                        <i class="bi {{ step.icon }}"></i>
+                    </div>
+
+                    <h3>
+                        {{ step.title }}
+                    </h3>
+
+                    <span class="process-line"></span>
+
+                    <p>
+                        {{ step.description }}
+                    </p>
+
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>
