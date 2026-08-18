@@ -1,361 +1,223 @@
-/*=========================================
+/*==================================================
 PLOT BUYING PROCESS
-=========================================*/
+==================================================*/
 
-.plot-buying-process{
+.plot-buying-process {
+    padding: 120px 0;
+    background: #FFFFFF;
+}
 
-    padding:120px 0;
-
-    background:#FFFFFF;
+.plot-buying-process .container {
+    width: 92%;
+    max-width: 1320px;
+    margin: auto;
 }
 
 
-.plot-buying-process .container{
+/*==================================================
+PROCESS
+==================================================*/
 
-    width:92%;
-
-    max-width:1320px;
-
-    margin:auto;
+.plot-process-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
 }
 
 
-/*=========================================
-SECTION HEADER
-=========================================*/
-
-.section-header{
-
-    text-align:center;
-
-    margin-bottom:65px;
-}
-
-
-.section-subtitle{
-
-    display:inline-block;
-
-    padding:11px 28px;
-
-    border:2px solid #D8C2AE;
-
-    border-radius:50px;
-
-    color:#B8734C;
-
-    background:#F8F5F1;
-
-    font-size:14px;
-
-    font-weight:600;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    margin-bottom:18px;
-}
-
-
-.section-header h2{
-
-    margin:0 0 15px;
-
-    color:#2B211C;
-
-    font-size:52px;
-
-    font-weight:700;
-}
-
-
-.section-header p{
-
-    margin:0;
-
-    color:#6B625C;
-
-    font-size:17px;
-
-    line-height:1.8;
-}
-
-
-/*=========================================
-PROCESS WRAPPER
-=========================================*/
-
-.process-wrapper{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:25px;
-}
-
-
-/*=========================================
+/*==================================================
 PROCESS CARD
-=========================================*/
+==================================================*/
 
-.process-card{
+.plot-process-card {
+    position: relative;
 
-    position:relative;
+    min-height: 300px;
+    padding: 40px 28px;
 
-    padding:40px 28px;
+    background: #F8F5F1;
+    border: 1px solid #E9DED3;
+    border-radius: 25px;
 
-    background:#F8F5F1;
+    text-align: center;
 
-    border:1px solid #E9DED3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    border-radius:25px;
+    transition: .4s ease;
+}
 
-    text-align:center;
+.plot-process-card:hover {
+    transform: translateY(-10px);
 
-    min-height:300px;
+    background: #FFFFFF;
 
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
-
-    transition:.4s ease;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .10);
 }
 
 
-.process-card:hover{
-
-    transform:translateY(-10px);
-
-    background:#FFFFFF;
-
-    box-shadow:0 20px 45px rgba(0,0,0,.10);
-}
-
-
-/*=========================================
+/*==================================================
 STEP NUMBER
-=========================================*/
+==================================================*/
 
-.step-number{
+.plot-step-number {
+    position: absolute;
 
-    position:absolute;
+    top: 18px;
+    right: 20px;
 
-    top:18px;
+    color: #D8C2AE;
 
-    right:20px;
+    font-size: 15px;
+    font-weight: 700;
 
-    color:#D8C2AE;
-
-    font-size:15px;
-
-    font-weight:700;
-
-    letter-spacing:1px;
+    letter-spacing: 1px;
 }
 
 
-/*=========================================
+/*==================================================
 ICON
-=========================================*/
+==================================================*/
 
-.process-icon{
+.plot-process-icon {
+    width: 82px;
+    height: 82px;
 
-    width:82px;
+    margin-bottom: 22px;
 
-    height:82px;
+    border-radius: 50%;
 
-    margin-bottom:22px;
+    background: #FFFFFF;
 
-    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    background:#FFFFFF;
+    transition: .4s ease;
+}
 
-    display:flex;
+.plot-process-icon i {
+    color: #B8734C;
+    font-size: 36px;
 
-    align-items:center;
+    transition: .4s ease;
+}
 
-    justify-content:center;
+.plot-process-card:hover .plot-process-icon {
+    background: #B8734C;
+    transform: scale(1.08);
+}
 
-    transition:.4s ease;
+.plot-process-card:hover .plot-process-icon i {
+    color: #FFFFFF;
 }
 
 
-.process-icon i{
-
-    color:#B8734C;
-
-    font-size:36px;
-
-    transition:.4s ease;
-}
-
-
-.process-card:hover .process-icon{
-
-    background:#B8734C;
-
-    transform:scale(1.08);
-}
-
-
-.process-card:hover .process-icon i{
-
-    color:#FFFFFF;
-}
-
-
-/*=========================================
+/*==================================================
 TITLE
-=========================================*/
+==================================================*/
 
-.process-card h3{
-
-    margin:0 0 14px;
-
-    color:#2B211C;
-
-    font-size:24px;
-
-    font-weight:700;
+.plot-process-card .common-card-title {
+    margin-bottom: 14px;
 }
 
 
-/*=========================================
+/*==================================================
 LINE
-=========================================*/
+==================================================*/
 
-.process-line{
+.plot-process-line {
+    width: 50px;
+    height: 3px;
 
-    width:50px;
+    margin-bottom: 18px;
 
-    height:3px;
+    background: #B8734C;
 
-    margin-bottom:18px;
+    border-radius: 20px;
 
-    background:#B8734C;
+    transition: .35s ease;
+}
 
-    border-radius:20px;
-
-    transition:.35s;
+.plot-process-card:hover .plot-process-line {
+    width: 80px;
 }
 
 
-.process-card:hover .process-line{
-
-    width:80px;
-}
-
-
-/*=========================================
+/*==================================================
 DESCRIPTION
-=========================================*/
+==================================================*/
 
-.process-card p{
-
-    margin:0;
-
-    color:#6B625C;
-
-    font-size:15px;
-
-    line-height:1.7;
+.plot-process-card .common-card-subtitle {
+    margin: 0;
 }
 
 
-/*=========================================
+/*==================================================
 TABLET
-=========================================*/
+==================================================*/
 
-@media(max-width:1100px){
+@media (max-width: 1100px) {
 
-    .process-wrapper{
-
-        grid-template-columns:repeat(2,1fr);
-
+    .plot-process-wrapper {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
 
-/*=========================================
+/*==================================================
 MOBILE
-=========================================*/
+==================================================*/
 
-@media(max-width:768px){
+@media (max-width: 768px) {
 
-    .plot-buying-process{
-
-        padding:80px 0;
-
+    .plot-buying-process {
+        padding: 80px 0;
     }
 
-    .section-header{
-
-        margin-bottom:50px;
-
+    .plot-process-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .section-header h2{
-
-        font-size:40px;
-
-    }
-
-    .process-wrapper{
-
-        grid-template-columns:1fr;
-
-        gap:20px;
-
-    }
-
-    .process-card{
-
-        min-height:auto;
-
-        padding:35px 25px;
-
+    .plot-process-card {
+        min-height: auto;
+        padding: 35px 25px;
     }
 
 }
 
 
-/*=========================================
+/*==================================================
 SMALL MOBILE
-=========================================*/
+==================================================*/
 
-@media(max-width:480px){
+@media (max-width: 480px) {
 
-    .plot-buying-process{
-
-        padding:70px 0;
-
+    .plot-buying-process {
+        padding: 70px 0;
     }
 
-    .section-header h2{
-
-        font-size:32px;
-
+    .plot-process-card {
+        padding: 32px 22px;
     }
 
-    .section-header p{
-
-        font-size:15px;
-
+    .plot-step-number {
+        top: 15px;
+        right: 17px;
+        font-size: 13px;
     }
 
-    .section-subtitle{
+    .plot-process-icon {
+        width: 75px;
+        height: 75px;
+    }
 
-        font-size:12px;
-
-        padding:9px 20px;
-
+    .plot-process-icon i {
+        font-size: 32px;
     }
 
 }

@@ -2,72 +2,60 @@
 
     <div class="container">
 
-        <!--=========================================-->
         <!-- SECTION HEADER -->
-        <!--=========================================-->
 
-        <div class="section-header">
+        <div class="common-section-header">
 
-            <span class="section-subtitle">
-
+            <span class="common-subtitle">
                 Villa Amenities
-
             </span>
 
-            <h2>
-
+            <h2 class="common-title">
                 Experience Premium Living
-
             </h2>
 
-            <p>
-
+            <p class="common-description">
                 Discover world-class amenities thoughtfully designed
                 to bring comfort, convenience and luxury into your everyday life.
-
             </p>
 
         </div>
 
-        <!--=========================================-->
-        <!-- AMENITIES GRID -->
-        <!--=========================================-->
 
-        <div class="amenities-grid">
+        <!-- AMENITIES GRID -->
+
+        <div class="villa-amenities-grid">
 
             @for(item of amenities; track item.title){
 
-            <div class="amenity-card">
+                <div class="villa-amenity-card">
 
-                <!-- Icon -->
+                    <!-- ICON -->
 
-                <div class="amenity-icon">
+                    <div class="villa-amenity-icon">
 
-                    <i class="bi {{ item.icon }}"></i>
+                        <i class="bi {{ item.icon }}"></i>
+
+                    </div>
+
+
+                    <!-- CONTENT -->
+
+                    <div class="villa-amenity-content">
+
+                        <h3 class="common-card-title">
+                            {{ item.title }}
+                        </h3>
+
+                        <p class="common-card-subtitle">
+                            {{ item.description }}
+                        </p>
+
+                        <span class="common-card-line"></span>
+
+                    </div>
 
                 </div>
-
-                <!-- Content -->
-
-                <div class="amenity-content">
-
-                    <h3>
-
-                        {{ item.title }}
-
-                    </h3>
-
-                    <p>
-
-                        {{ item.description }}
-
-                    </p>
-
-                    <span class="card-line"></span>
-
-                </div>
-
-            </div>
 
             }
 

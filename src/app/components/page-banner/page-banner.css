@@ -1,68 +1,210 @@
-/*=========================================
-PAGE BANNER
-=========================================*/
+/* =========================================================
+   PAGE BANNER
+   ========================================================= */
 
-.page-banner{
-    position: relative;
-    width: 100%;
-    min-height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: 0;
+.page-banner {
+  position: relative;
+
+  width: 100%;
+  min-height: 450px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.container{
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+
+/* =========================================================
+   BANNER CONTENT
+   ========================================================= */
+
+.banner-content {
+  text-align: center;
 }
 
-.banner-content{
-    text-align: center;
-    color: #fff;
+.page-banner-title {
+  margin-bottom: 20px;
+
+  font-size: 64px;
+  letter-spacing: 1px;
+
+  color: var(--white);
 }
 
-.banner-content h1{
-    font-family: "Cormorant Garamond", serif;
-    font-size: 64px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
+.page-banner-description {
+  max-width: 650px;
+  margin: 0 auto 30px;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.banner-content p{
-    font-size: 18px;
-    line-height: 1.8;
-    max-width: 650px;
-    margin: 0 auto 30px;
-    color: rgba(255,255,255,.9);
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 24px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+
+  border-radius: 50px;
 }
 
-.breadcrumb{
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(255,255,255,.15);
-    backdrop-filter: blur(8px);
-    padding: 12px 24px;
-    border-radius: 50px;
+.breadcrumb a {
+  color: var(--white);
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
 }
 
-.breadcrumb a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    transition: .3s;
+.breadcrumb a:hover {
+  color: var(--accent);
 }
 
-.breadcrumb a:hover{
-    color: #B8734C;
+.breadcrumb span {
+  color: var(--white);
 }
 
-.breadcrumb span{
-    color: #fff;
+
+/* =========================================================
+   TABLET - 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .page-banner {
+    min-height: 400px;
+  }
+
+  .page-banner-title {
+    font-size: 56px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET - 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .page-banner {
+    min-height: 350px;
+  }
+
+  .page-banner-title {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+
+  .page-banner-description {
+    max-width: 550px;
+    margin-bottom: 25px;
+
+    font-size: 15px;
+  }
+
+  .breadcrumb {
+    padding: 10px 20px;
+    gap: 8px;
+
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE - 600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .page-banner {
+    min-height: 320px;
+  }
+
+  .page-banner-title {
+    font-size: 40px;
+  }
+
+  .page-banner-description {
+    padding: 0 15px;
+
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .breadcrumb {
+    padding: 9px 17px;
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE - 430px
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  .page-banner {
+    min-height: 290px;
+  }
+
+  .page-banner-title {
+    font-size: 34px;
+  }
+
+  .page-banner-description {
+    font-size: 13px;
+  }
+
+  .breadcrumb {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE - 375px
+   ========================================================= */
+
+@media (max-width: 375px) {
+
+  .page-banner {
+    min-height: 270px;
+  }
+
+  .page-banner-title {
+    font-size: 30px;
+  }
+
+  .page-banner-description {
+    font-size: 12px;
+  }
+
+  .breadcrumb {
+    padding: 7px 13px;
+    font-size: 11px;
+  }
+
 }

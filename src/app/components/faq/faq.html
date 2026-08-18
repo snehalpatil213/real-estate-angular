@@ -1,162 +1,161 @@
 <section class="faq-section">
 
-    <div class="container">
+  <div class="container">
 
-        <!--==========================
-            SECTION HEADER
-        ===========================-->
+    <!-- Section Header -->
+    <div class="faq-header">
 
-        <div class="faq-header">
+      <span class="common-subtitle">
+       
+        FREQUENTLY ASKED QUESTIONS
+        
+      </span>
 
-            <span class="section-tag">
-                <span class="line"></span>
-                FREQUENTLY ASKED QUESTIONS
-                <span class="line"></span>
-            </span>
+      <h2 class="common-title">
+        Everything You Need To Know
+        <br>
+        Before Investing
+      </h2>
 
-            <!-- <div class="diamond">
-                <i class="bi bi-diamond-fill"></i>
-            </div> -->
-
-            <h2>
-                Everything You Need To Know
-                <br>
-                Before Investing
-            </h2>
-
-            <p>
-                Find answers to the most common questions about our
-                properties, investment process, and services.
-            </p>
-
-        </div>
-
-        <!--==========================
-            FAQ CONTENT
-        ===========================-->
-
-        <div class="faq-wrapper">
-
-            <!--==========================
-                LEFT SIDE
-            ===========================-->
-
-            <div class="faq-left">
-
-                <div
-                    class="faq-item"
-                    *ngFor="let faq of faqs; let i = index"
-                    [class.active]="activeIndex === i">
-
-                    <div
-                        class="faq-question"
-                        (click)="toggleFAQ(i)">
-
-                        <div class="question-left">
-
-                            <button
-                                type="button"
-                                class="faq-toggle">
-
-                                <i
-                                    class="bi"
-                                    [ngClass]="activeIndex === i ? 'bi-dash-lg' : 'bi-plus-lg'">
-                                </i>
-
-                            </button>
-
-                            <h3>
-                                {{ faq.question }}
-                            </h3>
-
-                        </div>
-
-                        <i
-                            class="bi faq-icon"
-                            [ngClass]="faq.icon">
-                        </i>
-
-                    </div>
-
-                    <div
-                        class="faq-answer"
-                        *ngIf="activeIndex === i">
-
-                        <p>
-                            {{ faq.answer }}
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!--==========================
-                RIGHT SIDE
-            ===========================-->
-
-            <div class="faq-right">
-
-                <div class="help-card">
-
-                    <img
-                        src="/image/faq.png"
-                        alt="Luxury House">
-
-                    <div class="help-content">
-
-                        <div class="help-icon">
-                            <i class="bi bi-headset"></i>
-                        </div>
-
-                        <h3>
-                            Need Expert Help?
-                        </h3>
-
-                        <div class="divider">
-                            <span></span>
-                            <i class="bi bi-diamond-fill"></i>
-                            <span></span>
-                        </div>
-
-                        <p>
-                            Our property experts are here to help you
-                            make the right investment decision.
-                        </p>
-
-                        <button type="button">
-                            <i class="bi bi-calendar-event"></i>
-                            Book Free Consultation
-                        </button>
-
-                        <div class="help-features">
-
-                            <div>
-                                <i class="bi bi-shield-check"></i>
-                                <span>100% Secure</span>
-                            </div>
-
-                            <div>
-                                <i class="bi bi-person-check"></i>
-                                <span>Expert Guidance</span>
-                            </div>
-
-                            <div>
-                                <i class="bi bi-clock-history"></i>
-                                <span>Quick Response</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
+      <p class="common-description">
+        Find answers to the most common questions about our
+        properties, investment process, and services.
+      </p>
 
     </div>
+
+
+    <!-- FAQ Content -->
+    <div class="faq-wrapper">
+
+      <!-- FAQ List -->
+      <div class="faq-left">
+
+        <div
+          class="faq-item"
+          *ngFor="let faq of faqs; let i = index"
+          [class.active]="activeIndex === i">
+
+          <div
+            class="faq-question"
+            (click)="toggleFAQ(i)">
+
+            <div class="question-left">
+
+              <button
+                type="button"
+                class="faq-toggle"
+                aria-label="Toggle FAQ">
+
+                <i
+                  class="bi"
+                  [ngClass]="
+                    activeIndex === i
+                      ? 'bi-dash-lg'
+                      : 'bi-plus-lg'
+                  ">
+                </i>
+
+              </button>
+
+              <h3 class="common-title faq-question-title">
+                {{ faq.question }}
+              </h3>
+
+            </div>
+
+            <i
+              class="bi faq-icon"
+              [ngClass]="faq.icon">
+            </i>
+
+          </div>
+
+
+          <!-- FAQ Answer -->
+          <div
+            class="faq-answer"
+            *ngIf="activeIndex === i">
+
+            <p class="common-description">
+              {{ faq.answer }}
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Help Card -->
+      <div class="faq-right">
+
+        <div class="help-card">
+
+          <img
+            src="/image/faq.png"
+            alt="Luxury House">
+
+          <div class="help-content">
+
+            <div class="help-icon">
+              <i class="bi bi-headset"></i>
+            </div>
+
+            <h3 class="common-title help-title">
+              Need Expert Help?
+            </h3>
+
+            <div class="divider">
+              <span></span>
+              <i class="bi bi-diamond-fill"></i>
+              <span></span>
+            </div>
+
+            <p class="common-description">
+              Our property experts are here to help you
+              make the right investment decision.
+            </p>
+
+            <button
+              type="button"
+              class="common-btn">
+
+              <i class="bi bi-calendar-event"></i>
+              Book Free Consultation
+
+            </button>
+
+
+            <!-- Help Features -->
+            <div class="help-features">
+
+              <div>
+                <i class="bi bi-shield-check"></i>
+                <span>100% Secure</span>
+              </div>
+
+              <div>
+                <i class="bi bi-person-check"></i>
+                <span>Expert Guidance</span>
+              </div>
+
+              <div>
+                <i class="bi bi-clock-history"></i>
+                <span>Quick Response</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>

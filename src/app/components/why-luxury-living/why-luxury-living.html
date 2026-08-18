@@ -2,17 +2,19 @@
 
     <div class="container">
 
-        <div class="section-header">
+        <!-- SECTION HEADER -->
 
-            <span class="section-subtitle">
+        <div class="common-section-header">
+
+            <span class="common-subtitle">
                 Why Choose Luxury Living
             </span>
 
-            <h2>
+            <h2 class="common-title">
                 More Than a Home. It's a Lifestyle.
             </h2>
 
-            <p>
+            <p class="common-description">
                 Experience refined living with exceptional design,
                 premium quality and complete comfort.
             </p>
@@ -20,25 +22,27 @@
         </div>
 
 
-        <div class="benefits-grid">
+        <!-- BENEFITS -->
+
+        <div class="why-luxury-benefits">
 
             @for(benefit of benefits; track benefit.title) {
 
-                <div class="benefit-card">
+                <div class="why-luxury-benefit-card">
 
-                    <div class="benefit-icon">
+                    <div class="why-luxury-benefit-icon">
 
                         <i class="bi {{ benefit.icon }}"></i>
 
                     </div>
 
-                    <h3>
+                    <h3 class="common-card-title">
                         {{ benefit.title }}
                     </h3>
 
-                    <span class="benefit-line"></span>
+                    <span class="why-luxury-benefit-line"></span>
 
-                    <p>
+                    <p class="common-card-subtitle">
                         {{ benefit.description }}
                     </p>
 

@@ -1,177 +1,189 @@
 <section class="featured-plots">
 
-    <div class="container">
+  <div class="container">
 
-        <!--=========================================-->
-        <!-- SECTION HEADER -->
-        <!--=========================================-->
+    <!-- =========================
+         SECTION HEADER
+    ========================== -->
 
-        <div class="section-header">
+    <div class="common-section-header">
 
-            <span class="section-subtitle">
-                Featured Plots
-            </span>
+      <span class="common-subtitle">
+        Featured Plots
+      </span>
 
-            <h2>
-                Handpicked Plots for You
-            </h2>
+      <h2 class="common-title">
+        Handpicked Plots for You
+      </h2>
 
-            <p>
-                Explore our premium plots in prime locations,
-                with clear titles and excellent investment potential.
-            </p>
+      <p class="common-description">
+        Explore our premium plots in prime locations,
+        with clear titles and excellent investment potential.
+      </p>
 
-        </div>
-
-        <!--=========================================-->
-        <!-- SLIDER -->
-        <!--=========================================-->
-
-        <div class="slider-wrapper">
-
-            <!-- Previous Button -->
-
-            <button
-                class="slider-btn prev-btn"
-                (click)="prevSlide()">
-
-                <i class="bi bi-chevron-left"></i>
-
-            </button>
+    </div>
 
 
-            <!-- Cards -->
+    <!-- =========================
+         SLIDER
+    ========================== -->
 
-            <div class="slider-container">
+    <div class="plot-slider-wrapper">
 
-                <div class="slider-track">
+      <!-- Previous Button -->
 
-                    @for(plot of plots.slice(currentIndex, currentIndex + cardsToShow); track plot.id){
+      <button
+        class="plot-slider-btn plot-prev-btn"
+        (click)="prevSlide()">
 
-                    <div class="plot-card">
+        <i class="bi bi-chevron-left"></i>
 
-                        <!-- Image -->
-
-                        <div class="card-image">
-
-                            <img
-                                [src]="plot.image"
-                                [alt]="plot.title">
-
-                            <span class="badge">
-
-                                {{ plot.badge }}
-
-                            </span>
-
-                        </div>
+      </button>
 
 
-                        <!-- Card Content -->
+      <!-- Cards -->
 
-                        <div class="card-content">
+      <div class="plot-slider-container">
 
-                            <h3>
-                                {{ plot.title }}
-                            </h3>
+        <div class="plot-slider-track">
 
+          @for(
+            plot of plots.slice(
+              currentIndex,
+              currentIndex + cardsToShow
+            );
+            track plot.id
+          ) {
 
-                            <!-- Location -->
+            <div class="plot-card">
 
-                            <div class="location">
+              <!-- IMAGE -->
 
-                                <i class="bi bi-geo-alt-fill"></i>
+              <div class="plot-card-image">
 
-                                {{ plot.location }}
+                <img
+                  [src]="plot.image"
+                  [alt]="plot.title">
 
-                            </div>
+                <span class="common-label plot-badge">
+                  {{ plot.badge }}
+                </span>
 
-
-                            <!-- Plot Information -->
-
-                            <div class="property-info">
-
-                                <div>
-
-                                    <i class="bi bi-bounding-box"></i>
-
-                                    {{ plot.size }}
-
-                                </div>
+              </div>
 
 
-                                <div>
+              <!-- CONTENT -->
 
-                                    <i class="bi bi-file-earmark-check"></i>
+              <div class="plot-card-content">
 
-                                    {{ plot.titleStatus }}
-
-                                </div>
-
-                            </div>
+                <h3 class="common-card-title">
+                  {{ plot.title }}
+                </h3>
 
 
-                            <!-- Price -->
+                <!-- LOCATION -->
 
-                            <div class="price-box">
+                <div class="plot-location">
 
-                                <h4>
-                                    {{ plot.price }}
-                                </h4>
+                  <i class="bi bi-geo-alt-fill"></i>
 
-                                <span class="price-label">
-                                    per Guntha
-                                </span>
-
-                                <button class="details-btn">
-
-                                    View Details
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    }
+                  <span>
+                    {{ plot.location }}
+                  </span>
 
                 </div>
 
+
+                <!-- PROPERTY INFO -->
+
+                <div class="plot-property-info">
+
+                  <div>
+
+                    <i class="bi bi-bounding-box"></i>
+
+                    <span>
+                      {{ plot.size }}
+                    </span>
+
+                  </div>
+
+                  <div>
+
+                    <i class="bi bi-file-earmark-check"></i>
+
+                    <span>
+                      {{ plot.titleStatus }}
+                    </span>
+
+                  </div>
+
+                </div>
+
+
+                <!-- PRICE -->
+
+                <div class="plot-price-box">
+
+                  <h4 class="common-card-title">
+                    {{ plot.price }}
+                  </h4>
+
+                  <button class="common-btn">
+
+                    View Details
+
+                    <i class="bi bi-arrow-right"></i>
+
+                  </button>
+
+                </div>
+
+              </div>
+
             </div>
 
-
-            <!-- Next Button -->
-
-            <button
-                class="slider-btn next-btn"
-                (click)="nextSlide()">
-
-                <i class="bi bi-chevron-right"></i>
-
-            </button>
+          }
 
         </div>
 
+      </div>
 
-        <!--=========================================-->
-        <!-- SLIDER DOTS -->
-        <!--=========================================-->
 
-        <div class="slider-dots">
+      <!-- Next Button -->
 
-            @for(item of plots; track item.id; let i = $index){
+      <button
+        class="plot-slider-btn plot-next-btn"
+        (click)="nextSlide()">
 
-            <span
-                class="dot"
-                [class.active]="i === currentIndex">
-            </span>
+        <i class="bi bi-chevron-right"></i>
 
-            }
-
-        </div>
+      </button>
 
     </div>
+
+
+    <!-- =========================
+         DOTS
+    ========================== -->
+
+    <div class="plot-slider-dots">
+
+      @for(
+        item of plots;
+        track item.id;
+        let i = $index
+      ) {
+
+        <span
+          class="plot-dot"
+          [class.active]="i === currentIndex">
+        </span>
+
+      }
+
+    </div>
+
+  </div>
 
 </section>

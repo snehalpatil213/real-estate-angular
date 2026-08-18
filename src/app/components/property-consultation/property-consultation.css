@@ -2,534 +2,449 @@
 PROPERTY CONSULTATION
 =========================================*/
 
-.property-consultation{
-    padding:110px 0;
-    background:#FFFDFB;
-    position:relative;
-    overflow:hidden;
+.property-consultation {
+  padding: 110px 0;
+  background: #FFFDFB;
+  position: relative;
+  overflow: hidden;
 }
 
-.property-consultation .container{
-    width:90%;
-    max-width:1320px;
-    margin:auto;
+.property-consultation .container {
+  width: 90%;
+  max-width: 1320px;
+  margin: auto;
 }
+
 
 /*=========================================
 BACKGROUND EFFECT
 =========================================*/
 
-.property-consultation::before{
+.property-consultation::before {
+  content: "";
 
-    content:"";
+  position: absolute;
 
-    position:absolute;
+  top: -120px;
+  left: -120px;
 
-    top:-120px;
-    left:-120px;
+  width: 350px;
+  height: 350px;
 
-    width:350px;
-    height:350px;
+  border-radius: 50%;
 
-    border-radius:50%;
-
-    background:radial-gradient(rgba(184,115,76,.10),transparent 70%);
-
+  background: radial-gradient(
+    rgba(184, 115, 76, .10),
+    transparent 70%
+  );
 }
 
-.property-consultation::after{
+.property-consultation::after {
+  content: "";
 
-    content:"";
+  position: absolute;
 
-    position:absolute;
+  right: -150px;
+  bottom: -120px;
 
-    right:-150px;
-    bottom:-120px;
+  width: 420px;
+  height: 420px;
 
-    width:420px;
-    height:420px;
+  border-radius: 50%;
 
-    border-radius:50%;
-
-    background:radial-gradient(rgba(43,33,28,.05),transparent 70%);
-
+  background: radial-gradient(
+    rgba(43, 33, 28, .05),
+    transparent 70%
+  );
 }
+
 
 /*=========================================
 SECTION HEADING
 =========================================*/
 
-.section-heading{
+.section-heading {
+  text-align: center;
 
-    text-align:center;
+  max-width: 750px;
 
-    margin-bottom:70px;
+  margin: 0 auto 70px;
 
+  position: relative;
+
+  z-index: 2;
 }
 
-.section-tag{
 
-    display:inline-block;
+/* Global subtitle */
 
-    padding:10px 26px;
+.section-heading .common-subtitle {
+  display: inline-block;
 
-    background:#F7F2EC;
+  padding: 10px 26px;
 
-    color:#B8734C;
+  background: #F7F2EC;
 
-    border-radius:50px;
+  border: 1px solid rgba(184, 115, 76, .25);
 
-    font-size:14px;
+  border-radius: 50px;
 
-    font-weight:600;
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
-
-    margin-bottom:20px;
-
+  margin-bottom: 20px;
 }
 
-.section-heading h2{
 
-    font-family:"Cormorant Garamond",serif;
+/* Global title spacing */
 
-    font-size:58px;
-
-    color:#2B211C;
-
-    line-height:1.2;
-
-    margin-bottom:22px;
-
+.section-heading .common-title {
+  margin-bottom: 22px;
 }
 
-.section-heading h2 span{
 
-    color:#B8734C;
+/* Global description spacing */
 
+.section-heading .common-description {
+  max-width: 720px;
+
+  margin: auto;
+
+  line-height: 1.8;
 }
 
-.section-heading p{
-
-    width:720px;
-
-    max-width:100%;
-
-    margin:auto;
-
-    font-size:18px;
-
-    line-height:1.8;
-
-    color:#6D6762;
-
-}
 
 /*=========================================
-GRID
+CONSULTATION GRID
 =========================================*/
 
-.consultation-grid{
+.consultation-grid {
+  display: grid;
 
-    display:grid;
+  grid-template-columns: repeat(4, 1fr);
 
-    grid-template-columns:repeat(4,1fr);
+  gap: 30px;
 
-    gap:30px;
+  margin-top: 60px;
 
-    margin-top:60px;
+  position: relative;
 
+  z-index: 2;
 }
+
 
 /*=========================================
 CONSULTATION CARD
 =========================================*/
 
-.consult-card{
+.consult-card {
+  position: relative;
 
-    position:relative;
+  background: var(--white);
 
-    background:#ffffff;
+  padding: 35px 30px;
 
-    padding:35px 30px;
+  border-radius: 24px;
 
-    border-radius:24px;
+  border: 1px solid var(--border);
 
-    border:1px solid #EEE4DA;
+  overflow: hidden;
 
-    overflow:hidden;
+  transition: .45s ease;
 
-    transition:.45s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .06);
 
-    box-shadow:0 12px 30px rgba(0,0,0,.06);
-
-    z-index:2;
-
+  z-index: 2;
 }
 
-.consult-card:hover{
+.consult-card:hover {
+  transform: translateY(-12px);
 
-    transform:translateY(-12px);
-
-    box-shadow:0 22px 45px rgba(0,0,0,.12);
-
+  box-shadow: 0 22px 45px rgba(0, 0, 0, .12);
 }
+
 
 /*=========================================
 GOLD CORNER
 =========================================*/
 
-.consult-card::after{
+.consult-card::after {
+  content: "";
 
-    content:"";
+  position: absolute;
 
-    position:absolute;
+  right: -45px;
+  bottom: -45px;
 
-    right:-45px;
+  width: 120px;
+  height: 120px;
 
-    bottom:-45px;
+  border-radius: 50%;
 
-    width:120px;
+  background: rgba(184, 115, 76, .10);
 
-    height:120px;
-
-    border-radius:50%;
-
-    background:rgba(184,115,76,.10);
-
-    transition:.45s;
-
+  transition: .45s;
 }
 
-.consult-card:hover::after{
+.consult-card:hover::after {
+  transform: scale(1.3);
 
-    transform:scale(1.3);
-
-    background:rgba(184,115,76,.18);
-
+  background: rgba(184, 115, 76, .18);
 }
+
 
 /*=========================================
 ICON
 =========================================*/
 
-.consult-icon{
+.consult-icon {
+  width: 72px;
+  height: 72px;
 
-    width:72px;
+  border-radius: 50%;
 
-    height:72px;
+  background: var(--primary);
 
-    border-radius:50%;
+  color: var(--white);
 
-    background:#2B211C;
+  display: flex;
 
-    color:#ffffff;
+  align-items: center;
+  justify-content: center;
 
-    display:flex;
+  font-size: 30px;
 
-    align-items:center;
+  margin-bottom: 28px;
 
-    justify-content:center;
-
-    font-size:30px;
-
-    margin-bottom:28px;
-
-    transition:.4s;
-
+  transition: .4s;
 }
 
-.consult-card:hover .consult-icon{
+.consult-card:hover .consult-icon {
+  background: var(--accent);
 
-    background:#B8734C;
-
-    transform:rotate(10deg) scale(1.08);
-
+  transform: rotate(10deg) scale(1.08);
 }
+
 
 /*=========================================
-TITLE
+CARD TITLE
+GLOBAL TYPOGRAPHY
 =========================================*/
 
-.consult-card h3{
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:28px;
-
-    color:#2B211C;
-
-    margin-bottom:18px;
-
-    line-height:1.3;
-
+.consult-card .common-card-title {
+  margin-bottom: 18px;
 }
+
 
 /*=========================================
-DESCRIPTION
+CARD DESCRIPTION
+GLOBAL TYPOGRAPHY
 =========================================*/
 
-.consult-card p{
+.consult-card .common-card-subtitle {
+  margin-bottom: 28px;
 
-    font-size:15px;
-
-    line-height:1.9;
-
-    color:#777;
-
-    margin-bottom:28px;
-
+  line-height: 1.9;
 }
+
 
 /*=========================================
-BUTTON
+CARD LINK
 =========================================*/
 
-.consult-card a{
+.consult-link {
+  display: inline-flex;
 
-    display:inline-flex;
+  align-items: center;
 
-    align-items:center;
+  gap: 10px;
 
-    gap:10px;
+  text-decoration: none;
 
-    text-decoration:none;
-
-    color:#2B211C;
-
-    font-weight:600;
-
-    transition:.35s;
-
+  transition: .35s;
 }
 
-.consult-card a i{
-
-    transition:.35s;
-
+.consult-link i {
+  transition: .35s;
 }
 
-.consult-card:hover a{
-
-    color:#B8734C;
-
+.consult-card:hover .consult-link {
+  color: var(--accent);
 }
 
-.consult-card:hover a i{
-
-    transform:translateX(8px);
-
+.consult-card:hover .consult-link i {
+  transform: translateX(8px);
 }
+
+
 /*=========================================
 BOTTOM INFO STRIP
 =========================================*/
 
-.consult-bottom{
+.consult-bottom {
+  margin-top: 80px;
 
-    margin-top:80px;
+  background: var(--primary);
 
-    background:#2B211C;
+  border-radius: 28px;
 
-    border-radius:28px;
+  padding: 45px 35px;
 
-    padding:45px 35px;
+  display: grid;
 
-    display:grid;
+  grid-template-columns: repeat(4, 1fr);
 
-    grid-template-columns:repeat(4,1fr);
+  gap: 30px;
 
-    gap:30px;
+  position: relative;
 
-    position:relative;
+  overflow: hidden;
 
-    overflow:hidden;
-
+  z-index: 2;
 }
 
-.consult-bottom::before{
+.consult-bottom::before {
+  content: "";
 
-    content:"";
+  position: absolute;
 
-    position:absolute;
+  top: -120px;
+  right: -120px;
 
-    top:-120px;
+  width: 260px;
+  height: 260px;
 
-    right:-120px;
+  border-radius: 50%;
 
-    width:260px;
-
-    height:260px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.04);
-
+  background: rgba(255, 255, 255, .04);
 }
 
-.bottom-item{
 
-    display:flex;
+/*=========================================
+BOTTOM ITEM
+=========================================*/
 
-    align-items:flex-start;
+.bottom-item {
+  display: flex;
 
-    gap:18px;
+  align-items: flex-start;
 
-    position:relative;
+  gap: 18px;
 
-    z-index:2;
+  position: relative;
 
+  z-index: 2;
 }
 
-.bottom-icon{
 
-    width:60px;
+/*=========================================
+BOTTOM ICON
+=========================================*/
 
-    height:60px;
+.bottom-icon {
+  width: 60px;
+  height: 60px;
 
-    border-radius:50%;
+  min-width: 60px;
 
-    background:#B8734C;
+  border-radius: 50%;
 
-    color:#fff;
+  background: var(--accent);
 
-    display:flex;
+  color: var(--white);
 
-    align-items:center;
+  display: flex;
 
-    justify-content:center;
+  align-items: center;
+  justify-content: center;
 
-    font-size:24px;
+  font-size: 24px;
 
-    flex-shrink:0;
+  flex-shrink: 0;
 
-    transition:.4s;
-
+  transition: .4s;
 }
 
-.bottom-item:hover .bottom-icon{
-
-    transform:rotate(10deg) scale(1.1);
-
+.bottom-item:hover .bottom-icon {
+  transform: rotate(10deg) scale(1.1);
 }
 
-.bottom-item h4{
 
-    color:#fff;
+/*=========================================
+BOTTOM TITLE
+GLOBAL TYPOGRAPHY
+=========================================*/
 
-    font-size:22px;
+.bottom-item .common-card-title {
+  color: var(--white);
 
-    margin-bottom:8px;
-
-    font-family:"Cormorant Garamond",serif;
-
+  margin-bottom: 8px;
 }
 
-.bottom-item p{
 
-    color:rgba(255,255,255,.75);
+/*=========================================
+BOTTOM DESCRIPTION
+GLOBAL TYPOGRAPHY
+=========================================*/
 
-    font-size:15px;
+.bottom-item .common-card-subtitle {
+  color: rgba(255, 255, 255, .75);
 
-    line-height:1.7;
-
+  line-height: 1.7;
 }
+
 
 /*=========================================
 TABLET
 =========================================*/
 
-@media(max-width:991px){
+@media (max-width: 991px) {
 
-    .consultation-grid{
+  .consultation-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-    .consult-bottom{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-    .section-heading h2{
-
-        font-size:46px;
-
-    }
+  .consult-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
 }
+
 
 /*=========================================
 MOBILE
 =========================================*/
 
-@media(max-width:576px){
+@media (max-width: 576px) {
 
-    .property-consultation{
+  .property-consultation {
+    padding: 70px 0;
+  }
 
-        padding:70px 0;
+  .consultation-grid {
+    grid-template-columns: 1fr;
 
-    }
+    gap: 20px;
+  }
 
-    .consultation-grid{
+  .consult-bottom {
+    grid-template-columns: 1fr;
 
-        grid-template-columns:1fr;
+    padding: 30px 20px;
 
-        gap:20px;
+    gap: 25px;
+  }
 
-    }
+  .consult-card {
+    padding: 25px;
+  }
 
-    .consult-bottom{
+  .section-heading {
+    margin-bottom: 50px;
+  }
 
-        grid-template-columns:1fr;
+  .consult-icon {
+    width: 60px;
+    height: 60px;
 
-        padding:30px 20px;
-
-        gap:25px;
-
-    }
-
-    .consult-card{
-
-        padding:25px;
-
-    }
-
-    .section-heading{
-
-        margin-bottom:50px;
-
-    }
-
-    .section-heading h2{
-
-        font-size:34px;
-
-    }
-
-    .section-heading p{
-
-        font-size:15px;
-
-    }
-
-    .consult-card h3{
-
-        font-size:24px;
-
-    }
-
-    .consult-icon{
-
-        width:60px;
-
-        height:60px;
-
-        font-size:24px;
-
-    }
+    font-size: 24px;
+  }
 
 }

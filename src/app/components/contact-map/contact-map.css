@@ -1,140 +1,172 @@
-/*=========================================
-CONTACT MAP SECTION
-=========================================*/
+/* =========================================================
+   CONTACT MAP SECTION
+   ========================================================= */
 
-.contact-map-section{
-    padding:110px 0;
-    background:#FFFDF9;
+.contact-map-section {
+  padding: 110px 0;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
 }
 
-.contact-map-section .container{
-    width:90%;
-    max-width:1320px;
-    margin:auto;
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.contact-map-section .container {
+  max-width: 1320px;
 }
 
-/*=========================================
-SECTION HEADING
-=========================================*/
 
-.section-heading{
-    text-align:center;
-    margin-bottom:60px;
+/* =========================================================
+   SECTION HEADER
+   GLOBAL CLASSES USED
+   ========================================================= */
+
+.contact-map-section .common-section-header {
+  max-width: 750px;
+  margin: 0 auto 60px;
 }
 
-.section-tag{
-    display:inline-block;
-    padding:10px 24px;
-    background:#F8F2EB;
-    color:#B8734C;
-    border-radius:50px;
-    font-size:14px;
-    font-weight:600;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:20px;
+
+/* =========================================================
+   MAP WRAPPER
+   ========================================================= */
+
+.map-wrapper {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 50px rgba(43, 33, 28, 0.08);
+
+  transition: all 0.4s ease;
 }
 
-.section-heading h2{
-    font-size:52px;
-    color:#2D211B;
-    margin-bottom:18px;
-    font-family:"Cormorant Garamond", serif;
+
+.map-wrapper:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 25px 60px rgba(43, 33, 28, 0.12);
 }
 
-.section-heading p{
-    max-width:720px;
-    margin:auto;
-    font-size:17px;
-    color:#666;
-    line-height:1.8;
+
+/* =========================================================
+   GOOGLE MAP
+   ========================================================= */
+
+.map-wrapper iframe {
+  width: 100%;
+
+  height: 550px;
+
+  border: 0;
+
+  display: block;
 }
 
-/*=========================================
-MAP
-=========================================*/
 
-.map-wrapper{
-    overflow:hidden;
-    border-radius:25px;
-    border:1px solid #E8DDD4;
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
-    transition:.4s ease;
-}
+/* =========================================================
+   TABLET - 991px
+   ========================================================= */
 
-.map-wrapper:hover{
-    transform:translateY(-6px);
-    box-shadow:0 25px 60px rgba(0,0,0,.12);
-}
+@media (max-width: 991px) {
 
-.map-wrapper iframe{
-    width:100%;
-    height:550px;
-    border:0;
-    display:block;
-}
+  .contact-map-section {
+    padding: 90px 0;
+  }
 
-/*=========================================
-RESPONSIVE
-=========================================*/
-
-@media(max-width:991px){
-
-    .contact-map-section{
-        padding:90px 0;
-    }
-
-    .section-heading h2{
-        font-size:42px;
-    }
-
-    .map-wrapper iframe{
-        height:450px;
-    }
+  .map-wrapper iframe {
+    height: 450px;
+  }
 
 }
 
-@media(max-width:768px){
 
-    .contact-map-section{
-        padding:80px 0;
-    }
+/* =========================================================
+   TABLET - 768px
+   ========================================================= */
 
-    .section-heading{
-        margin-bottom:40px;
-    }
+@media (max-width: 768px) {
 
-    .section-heading h2{
-        font-size:34px;
-    }
+  .contact-map-section {
+    padding: 80px 0;
+  }
 
-    .section-heading p{
-        font-size:15px;
-    }
+  .contact-map-section .common-section-header {
+    margin-bottom: 45px;
+  }
 
-    .map-wrapper{
-        border-radius:18px;
-    }
+  .map-wrapper {
+    border-radius: 22px;
+  }
 
-    .map-wrapper iframe{
-        height:350px;
-    }
+  .map-wrapper iframe {
+    height: 350px;
+  }
 
 }
 
-@media(max-width:576px){
 
-    .section-tag{
-        font-size:12px;
-        padding:8px 18px;
-    }
+/* =========================================================
+   MOBILE - 576px
+   ========================================================= */
 
-    .section-heading h2{
-        font-size:28px;
-    }
+@media (max-width: 576px) {
 
-    .map-wrapper iframe{
-        height:300px;
-    }
+  .contact-map-section {
+    padding: 70px 0;
+  }
+
+  .contact-map-section .common-section-header {
+    margin-bottom: 35px;
+  }
+
+  .map-wrapper {
+    border-radius: 18px;
+  }
+
+  .map-wrapper iframe {
+    height: 300px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE - 430px
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  .contact-map-section {
+    padding: 60px 0;
+  }
+
+  .map-wrapper iframe {
+    height: 280px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE - 375px
+   ========================================================= */
+
+@media (max-width: 375px) {
+
+  .map-wrapper iframe {
+    height: 260px;
+  }
 
 }

@@ -1,177 +1,199 @@
 <section class="featured-villas">
 
-    <div class="container">
+  <div class="container">
 
-        <!--=========================================-->
-        <!-- SECTION HEADER -->
-        <!--=========================================-->
+    <!-- =========================
+         SECTION HEADER
+    ========================== -->
 
-        <div class="section-header">
+    <div class="common-section-header">
 
-            <span class="section-subtitle">
+      <span class="common-subtitle">
+        Featured Villas
+      </span>
 
-                Featured Villas
+      <h2 class="common-title">
+        Find Your Dream Villa
+      </h2>
 
-            </span>
+      <p class="common-description">
+        Explore our premium villas featuring private pools,
+        spacious interiors, lush landscapes and breathtaking views.
+      </p>
 
-            <h2>
+    </div>
 
-                Find Your Dream Villa
 
-            </h2>
+    <!-- =========================
+         SLIDER
+    ========================== -->
 
-            <p>
+    <div class="villa-slider-wrapper">
 
-                Explore our premium villas featuring private pools,
-                spacious interiors, lush landscapes and breathtaking views.
+      <!-- Previous Button -->
 
-            </p>
+      <button
+        class="villa-slider-btn villa-prev-btn"
+        (click)="prevSlide()">
 
-        </div>
+        <i class="bi bi-chevron-left"></i>
 
-        <!--=========================================-->
-        <!-- SLIDER -->
-        <!--=========================================-->
+      </button>
 
-        <div class="slider-wrapper">
 
-            <!-- Previous Button -->
+      <!-- Cards -->
 
-            <button
-                class="slider-btn prev-btn"
-                (click)="prevSlide()">
+      <div class="villa-slider-container">
 
-                <i class="bi bi-chevron-left"></i>
+        <div class="villa-slider-track">
 
-            </button>
+          @for(
+            villa of villas.slice(
+              currentIndex,
+              currentIndex + cardsToShow
+            );
+            track villa.id
+          ) {
 
-            <!-- Cards -->
+            <div class="villa-card">
 
-            <div class="slider-container">
+              <!-- IMAGE -->
 
-                <div class="slider-track">
+              <div class="villa-card-image">
 
-                    @for(villa of villas.slice(currentIndex, currentIndex + cardsToShow); track villa.id){
+                <img
+                  [src]="villa.image"
+                  [alt]="villa.title">
 
-                    <div class="villa-card">
+                <span class="common-label villa-badge">
+                  {{ villa.badge }}
+                </span>
 
-                        <!-- Image -->
+              </div>
 
-                        <div class="card-image">
 
-                            <img
-                                [src]="villa.image"
-                                [alt]="villa.title">
+              <!-- CONTENT -->
 
-                            <span class="badge">
+              <div class="villa-card-content">
 
-                                {{ villa.badge }}
+                <h3 class="common-card-title">
+                  {{ villa.title }}
+                </h3>
 
-                            </span>
 
-                        </div>
+                <!-- LOCATION -->
 
-                        <!-- Content -->
+                <div class="villa-location">
 
-                        <div class="card-content">
+                  <i class="bi bi-geo-alt-fill"></i>
 
-                            <h3>
-
-                                {{ villa.title }}
-
-                            </h3>
-
-                            <div class="location">
-
-                                <i class="bi bi-geo-alt-fill"></i>
-
-                                {{ villa.location }}
-
-                            </div>
-
-                            <div class="property-info">
-
-                                <div>
-
-                                    <i class="bi bi-door-open"></i>
-
-                                    {{ villa.beds }} Beds
-
-                                </div>
-
-                                <div>
-
-                                    <i class="bi bi-droplet"></i>
-
-                                    {{ villa.baths }} Baths
-
-                                </div>
-
-                                <div>
-
-                                    <i class="bi bi-aspect-ratio"></i>
-
-                                    {{ villa.area }}
-
-                                </div>
-
-                            </div>
-
-                            <div class="price-box">
-
-                                <h4>
-
-                                    {{ villa.price }}
-
-                                </h4>
-
-                                <button class="details-btn">
-
-                                    View Details
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    }
+                  <span>
+                    {{ villa.location }}
+                  </span>
 
                 </div>
 
+
+                <!-- PROPERTY INFO -->
+
+                <div class="villa-property-info">
+
+                  <div>
+
+                    <i class="bi bi-door-open"></i>
+
+                    <span>
+                      {{ villa.beds }} Beds
+                    </span>
+
+                  </div>
+
+                  <div>
+
+                    <i class="bi bi-droplet"></i>
+
+                    <span>
+                      {{ villa.baths }} Baths
+                    </span>
+
+                  </div>
+
+                  <div>
+
+                    <i class="bi bi-aspect-ratio"></i>
+
+                    <span>
+                      {{ villa.area }}
+                    </span>
+
+                  </div>
+
+                </div>
+
+
+                <!-- PRICE -->
+
+                <div class="villa-price-box">
+
+                  <h4 class="common-card-title">
+                    {{ villa.price }}
+                  </h4>
+
+                  <button class="common-btn">
+
+                    View Details
+
+                    <i class="bi bi-arrow-right"></i>
+
+                  </button>
+
+                </div>
+
+              </div>
+
             </div>
 
-            <!-- Next Button -->
-
-            <button
-                class="slider-btn next-btn"
-                (click)="nextSlide()">
-
-                <i class="bi bi-chevron-right"></i>
-
-            </button>
+          }
 
         </div>
 
-        <!--=========================================-->
-        <!-- DOTS -->
-        <!--=========================================-->
+      </div>
 
-        <div class="slider-dots">
 
-            @for(item of villas; track item.id; let i = $index){
+      <!-- Next Button -->
 
-            <span
-                class="dot"
-                [class.active]="i === currentIndex">
-            </span>
+      <button
+        class="villa-slider-btn villa-next-btn"
+        (click)="nextSlide()">
 
-            }
+        <i class="bi bi-chevron-right"></i>
 
-        </div>
+      </button>
 
     </div>
+
+
+    <!-- =========================
+         DOTS
+    ========================== -->
+
+    <div class="villa-slider-dots">
+
+      @for(
+        item of villas;
+        track item.id;
+        let i = $index
+      ) {
+
+        <span
+          class="villa-dot"
+          [class.active]="i === currentIndex">
+        </span>
+
+      }
+
+    </div>
+
+  </div>
 
 </section>

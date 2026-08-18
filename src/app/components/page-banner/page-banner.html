@@ -1,19 +1,35 @@
 <section
   class="page-banner"
-  [style.background-image]="'linear-gradient(rgba(43,33,28,0.55), rgba(43,33,28,0.55)), url(' + background() + ')'"
+  [style.background-image]="
+    'linear-gradient(rgba(43,33,28,0.55), rgba(43,33,28,0.55)), url('
+    + background()
+    + ')'
+  "
 >
   <div class="container">
 
     <div class="banner-content">
 
-      <h1>{{ title() }}</h1>
+      <h1 class="common-title page-banner-title">
+        {{ title() }}
+      </h1>
 
-      <p>{{ subtitle() }}</p>
+      <p class="common-description page-banner-description">
+        {{ subtitle() }}
+      </p>
 
       <div class="breadcrumb">
-        <a routerLink="/">Home</a>
+
+        <a routerLink="/">
+          Home
+        </a>
+
         <span>/</span>
-        <span>{{ title() }}</span>
+
+        <span>
+          {{ title() }}
+        </span>
+
       </div>
 
     </div>

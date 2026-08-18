@@ -1,550 +1,399 @@
-/*==================================================
-COMPANY STATS
-==================================================*/
+/* =========================================================
+   COMPANY STATS
+   ========================================================= */
 
-.company-stats{
-
-    position:relative;
-
-    padding:120px 0;
-
-    background:#F8F5F1;
-
-    overflow:hidden;
+.company-stats {
+  position: relative;
+  padding: 120px 0;
+  background: #F8F5F1;
+  overflow: hidden;
 }
 
-.company-stats .container{
-
-    width:90%;
-
-    max-width:1350px;
-
-    margin:auto;
-
-    position:relative;
-
-    z-index:2;
+.company-stats .container {
+  position: relative;
+  z-index: 2;
 }
 
-/*==================================================
-HEADING
-==================================================*/
 
-.stats-heading{
+/* =========================================================
+   HEADING
+   ========================================================= */
 
-    text-align:center;
-
-    max-width:850px;
-
-    margin:0 auto 90px;
+.stats-heading {
+  max-width: 850px;
+  margin: 0 auto 90px;
+  text-align: center;
 }
 
-.stats-heading .section-subtitle{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:12px 30px;
-
-    border:2px solid #E4D4C3;
-
-    border-radius:50px;
-
-    background:#fff;
-
-    color:#B8734C;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    margin-bottom:28px;
+.stats-heading .common-subtitle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 30px;
+  border: 2px solid #E4D4C3;
+  border-radius: 50px;
+  background: var(--white);
+  margin-bottom: 28px;
 }
 
-.stats-heading h2{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:64px;
-
-    font-weight:700;
-
-    line-height:1.1;
-
-    color:#2B211C;
-
-    margin-bottom:22px;
+.stats-heading .common-title {
+  margin-bottom: 22px;
 }
 
-.stats-heading h2 span{
-
-    color:#C89B6A;
+.stats-heading .common-title span {
+  display: block;
 }
 
-.heading-line{
-
-    width:90px;
-
-    height:4px;
-
-    border-radius:20px;
-
-    background:#B8734C;
-
-    margin:0 auto 28px;
+.heading-line {
+  width: 90px;
+  height: 4px;
+  margin: 0 auto 28px;
+  background: var(--accent);
+  border-radius: 20px;
 }
 
-.stats-heading p{
-
-    font-size:18px;
-
-    line-height:1.9;
-
-    color:#666;
-
-    max-width:720px;
-
-    margin:auto;
+.stats-heading .common-description {
+  max-width: 720px;
+  margin: auto;
+  line-height: 1.9;
 }
 
-/*==================================================
-GRID
-==================================================*/
 
-.stats-grid{
+/* =========================================================
+   STATISTICS GRID
+   ========================================================= */
 
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:35px;
-
-    align-items:flex-start;
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+  align-items: flex-start;
 }
 
-/*==================================================
-CARD
-==================================================*/
 
-.stat-card{
+/* =========================================================
+   STAT CARD
+   ========================================================= */
 
-    position:relative;
-
-    padding:80px 35px 40px;
-
-    border-radius:28px;
-
-    background:#fff;
-
-    text-align:center;
-
-    box-shadow:0 25px 60px rgba(0,0,0,.08);
-
-    transition:.4s;
-
-    overflow:visible;
-
-    border:1px solid #EFE8E1;
+.stat-card {
+  position: relative;
+  padding: 80px 35px 40px;
+  background: var(--white);
+  border: 1px solid #EFE8E1;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
+  overflow: visible;
 }
 
-.stat-card:hover{
-
-    transform:translateY(-12px);
+.stat-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.15);
 }
 
-/*==================================================
-DARK CARD
-==================================================*/
 
-.dark-card{
+/* =========================================================
+   DARK CARD
+   ========================================================= */
 
-    background:#2B211C;
-
-    border:none;
-
-    height: 440px;
-}
-/*==================================================
-FLOATING ICON
-==================================================*/
-
-.stat-icon{
-
-    position:absolute;
-
-    top:-45px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:95px;
-
-    height:95px;
-
-    border-radius:50%;
-
-    background:#C89B6A;
-
-    border:5px solid #FFFFFF;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.18);
-
-    z-index:5;
+.dark-card {
+  height: 440px;
+  background: var(--primary);
+  border: none;
 }
 
-.stat-icon i{
 
-    font-size:42px;
+/* =========================================================
+   STAT ICON
+   ========================================================= */
 
-    color:#FFFFFF;
+.stat-icon {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+
+  width: 95px;
+  height: 95px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(-50%);
+
+  background: #C89B6A;
+  border: 5px solid var(--white);
+  border-radius: 50%;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+
+  z-index: 5;
+  transition: 0.4s ease;
 }
 
-/*==================================================
-DARK CARD ICON
-==================================================*/
-
-.dark-card .stat-icon{
-
-    background:#4A352A;
+.stat-icon i {
+  font-size: 42px;
+  color: var(--white);
 }
 
-.dark-card .stat-icon i{
-
-    color:#FFFFFF;
+.dark-card .stat-icon {
+  background: #4A352A;
 }
 
-/*==================================================
-NUMBER
-==================================================*/
 
-.stat-card h3{
+/* =========================================================
+   STAT NUMBER
+   ========================================================= */
 
-    margin-top:10px;
+.stat-card .common-number {
+  margin-top: 10px;
+  margin-bottom: 22px;
 
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:70px;
-
-    font-weight:700;
-
-    line-height:1;
-
-    color:#2B211C;
-
-    margin-bottom:22px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--heading);
 }
 
-.dark-card h3{
-
-    color:#FFFFFF !important;
+.dark-card .common-number {
+  color: var(--white);
 }
 
-/*==================================================
-GOLD DIVIDER
-==================================================*/
 
-.card-line{
+/* =========================================================
+   CARD DIVIDER
+   ========================================================= */
 
-    width:85px;
+.card-line {
+  position: relative;
 
-    height:4px;
+  width: 85px;
+  height: 4px;
 
-    background:#C89B6A;
+  margin: 0 auto 25px;
 
-    border-radius:30px;
-
-    margin:0 auto 25px;
-
-    position:relative;
+  background: #C89B6A;
+  border-radius: 30px;
 }
 
-.card-line::after{
+.card-line::after {
+  content: "";
 
-    content:"";
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-    position:absolute;
+  width: 12px;
+  height: 12px;
 
-    left:50%;
+  transform: translate(-50%, -50%);
 
-    top:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:12px;
-
-    height:12px;
-
-    border-radius:50%;
-
-    background:#C89B6A;
-
-    border:3px solid #F8F5F1;
+  background: #C89B6A;
+  border: 3px solid #F8F5F1;
+  border-radius: 50%;
 }
 
-/*==================================================
-TITLE
-==================================================*/
 
-.stat-card h4{
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
 
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:36px;
-
-    font-weight:700;
-
-    line-height:1.2;
-
-    color:#2B211C;
-
-    margin-bottom:18px;
+.stat-card .common-card-title {
+  margin-bottom: 18px;
 }
 
-.dark-card h4{
-
-    color:#FFFFFF !important;
+.dark-card .common-card-title {
+  color: var(--white);
 }
 
-/*==================================================
-DESCRIPTION
-==================================================*/
 
-.stat-card p{
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
 
-    font-size:16px;
-
-    line-height:1.8;
-
-    color:#666;
-
-    margin:0;
+.stat-card .common-card-subtitle {
+  margin: 0;
+  line-height: 1.8;
 }
 
-.dark-card p{
-
-    color:#E8DDD2 !important;
+.dark-card .common-card-subtitle {
+  color: #E8DDD2;
 }
 
-/*==================================================
-HOVER
-==================================================*/
 
-.stat-card:hover{
+/* =========================================================
+   CARD HOVER ICON
+   ========================================================= */
 
-    transform:translateY(-12px);
-
-    box-shadow:0 35px 70px rgba(0,0,0,.15);
+.stat-card:hover .stat-icon {
+  transform: translateX(-50%) scale(1.08) rotate(8deg);
 }
 
-.stat-card:hover .stat-icon{
 
-    transform:translateX(-50%) scale(1.08) rotate(8deg);
-}
-/*==================================================
-BOTTOM FEATURE BAR
-==================================================*/
+/* =========================================================
+   BOTTOM FEATURE BAR
+   ========================================================= */
 
-.stats-bottom{
+.stats-bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
-    margin-top:80px;
+  gap: 25px;
 
-    background:#FFFFFF;
+  margin-top: 80px;
+  padding: 35px 40px;
 
-    border-radius:30px;
+  background: var(--white);
+  border: 1px solid #EEE5DB;
+  border-radius: 30px;
 
-    padding:35px 40px;
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:25px;
-
-    box-shadow:0 25px 60px rgba(0,0,0,.08);
-
-    border:1px solid #EEE5DB;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
 }
 
-.bottom-item{
 
-    display:flex;
+/* =========================================================
+   BOTTOM ITEM
+   ========================================================= */
 
-    align-items:center;
+.bottom-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 
-    gap:18px;
-
-    transition:.35s;
+  transition: 0.35s ease;
 }
 
-.bottom-item:hover{
-
-    transform:translateY(-5px);
+.bottom-item:hover {
+  transform: translateY(-5px);
 }
 
-.bottom-item i{
 
-    width:70px;
+/* =========================================================
+   BOTTOM ICON
+   ========================================================= */
 
-    height:70px;
+.bottom-item > i {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
 
-    border-radius:50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background:#F8F0E8;
+  background: #F8F0E8;
+  color: var(--accent);
 
-    color:#B8734C;
+  border-radius: 50%;
 
-    display:flex;
+  font-size: 30px;
 
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:30px;
-
-    transition:.35s;
+  transition: 0.35s ease;
 }
 
-.bottom-item:hover i{
-
-    background:#B8734C;
-
-    color:#FFFFFF;
-
-    transform:rotate(12deg);
+.bottom-item:hover > i {
+  background: var(--accent);
+  color: var(--white);
+  transform: rotate(12deg);
 }
 
-.bottom-item h5{
 
-    font-size:22px;
+/* =========================================================
+   BOTTOM TITLE
+   ========================================================= */
 
-    font-weight:700;
-
-    color:#2B211C;
-
-    margin-bottom:6px;
+.bottom-item .common-card-title {
+  margin-bottom: 6px;
 }
 
-.bottom-item span{
 
-    font-size:15px;
+/* =========================================================
+   BOTTOM TEXT
+   ========================================================= */
 
-    color:#777;
-
-    line-height:1.6;
+.bottom-item .common-text {
+  line-height: 1.6;
 }
 
-/*==================================================
-RESPONSIVE
-==================================================*/
 
-@media(max-width:1200px){
+/* =========================================================
+   RESPONSIVE - 1200px
+   ========================================================= */
 
-    .stats-grid{
+@media (max-width: 1200px) {
 
-        grid-template-columns:repeat(2,1fr);
-    }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .stats-bottom{
-
-        grid-template-columns:repeat(2,1fr);
-    }
-
+  .stats-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media(max-width:992px){
 
-    .company-stats{
+/* =========================================================
+   RESPONSIVE - 992px
+   ========================================================= */
 
-        padding:90px 0;
-    }
+@media (max-width: 992px) {
 
-    .stats-heading h2{
+  .company-stats {
+    padding: 90px 0;
+  }
 
-        font-size:50px;
-    }
-
+  .stat-card .common-number {
+    font-size: 48px;
+  }
 }
 
-@media(max-width:768px){
 
-    .stats-grid{
+/* =========================================================
+   RESPONSIVE - 768px
+   ========================================================= */
 
-        grid-template-columns:1fr;
-    }
+@media (max-width: 768px) {
 
-    .stats-bottom{
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
 
-        grid-template-columns:1fr;
-    }
+  .stats-bottom {
+    grid-template-columns: 1fr;
+  }
 
-    .bottom-item{
+  .bottom-item {
+    flex-direction: column;
+    text-align: center;
+  }
 
-        flex-direction:column;
-
-        text-align:center;
-    }
-
-    .stats-heading h2{
-
-        font-size:40px;
-    }
-
+  .stat-card .common-number {
+    font-size: 46px;
+  }
 }
 
-@media(max-width:576px){
 
-    .company-stats{
+/* =========================================================
+   RESPONSIVE - 576px
+   ========================================================= */
 
-        padding:70px 0;
-    }
+@media (max-width: 576px) {
 
-    .company-stats .container{
+  .company-stats {
+    padding: 70px 0;
+  }
 
-        width:94%;
-    }
+  .stats-heading .common-subtitle {
+    padding: 10px 22px;
+  }
 
-    .stats-heading h2{
+  .stat-card {
+    padding: 75px 25px 35px;
+  }
 
-        font-size:34px;
-    }
-
-    .stats-heading p{
-
-        font-size:16px;
-    }
-
-    .stat-card{
-
-        padding:75px 25px 35px;
-    }
-
-    .stat-card h3{
-
-        font-size:52px;
-    }
-
-    .stat-card h4{
-
-        font-size:28px;
-    }
-
-    .bottom-item h5{
-
-        font-size:20px;
-    }
-
+  .stat-card .common-number {
+    font-size: 42px;
+  }
 }

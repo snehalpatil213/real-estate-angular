@@ -1,142 +1,95 @@
 <section class="about-story">
 
-    <div class="container">
+  <div class="container">
 
-        <div class="story-wrapper">
+    <div class="story-wrapper">
 
-            <!-- Left Content -->
+      <!-- Story Content -->
+      <div class="story-content">
 
-            <div class="story-content">
+        <span class="common-subtitle">
+          Our Story
+        </span>
 
-                <span class="section-subtitle">
+        <h2 class="common-title">
+          Building Luxury Spaces
+          <span>For Modern Families</span>
+        </h2>
 
-                    Our Story
+       
 
+        <p class="common-description">
+          At Horizon Properties, we believe a home is more than
+          just bricks and walls—it is where dreams come to life.
+          For over a decade, we have been creating premium living
+          spaces with elegance, comfort and quality.
+        </p>
+
+        <p class="common-description">
+          From thoughtfully designed residences to world-class
+          amenities, our mission is to deliver homes that inspire
+          modern lifestyles and build lasting relationships.
+        </p>
+
+
+        <!-- Features -->
+        <div class="story-features">
+
+          @for (feature of features; track feature.title) {
+
+            <div class="feature-item">
+
+              <div class="feature-icon">
+                <i
+                  class="bi"
+                  [class]="feature.icon">
+                </i>
+              </div>
+
+              <div class="feature-text">
+
+                <h4 class="common-card-title">
+                  {{ feature.title }}
+                </h4>
+
+                <span class="common-card-subtitle">
+                  {{ feature.subtitle }}
                 </span>
 
-                <h2>
-
-                    Building Luxury Spaces
-                    <span>For Modern Families</span>
-
-                </h2>
-
-                <div class="title-line"></div>
-
-                <p class="story-text">
-
-                    At Horizon Properties, we believe a home is more than
-                    just bricks and walls—it is where dreams come to life.
-                    For over a decade, we have been creating premium living
-                    spaces with elegance, comfort and quality.
-
-                </p>
-
-                <p class="story-text">
-
-                    From thoughtfully designed residences to world-class
-                    amenities, our mission is to deliver homes that inspire
-                    modern lifestyles and build lasting relationships.
-
-                </p>
-
-                <!-- Features -->
-
-                <div class="story-features">
-
-                    @for(feature of features; track feature.title){
-
-                    <div class="feature-item">
-
-                        <div class="feature-icon">
-
-                            <i class="bi" [class]="feature.icon"></i>
-
-                        </div>
-
-                        <div class="feature-text">
-
-                            <h4>
-
-                                {{ feature.title }}
-
-                            </h4>
-
-                            <span>
-
-                                {{ feature.subtitle }}
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                    }
-
-                </div>
-
-                <button class="story-btn">
-
-                    Learn More
-
-                    <i class="bi bi-arrow-right"></i>
-
-                </button>
+              </div>
 
             </div>
-                        <!-- Right Image -->
 
-            <div class="story-image">
-
-                <img
-                    src="/image/our-strory.png"
-                    alt="Luxury Building">
-
-                <!-- Experience Card -->
-
-                <!-- <div class="experience-card">
-
-                    <i class="bi bi-building"></i>
-
-                    <h3>
-
-                        15+
-
-                    </h3>
-
-                    <p>
-
-                        Years of Experience
-
-                    </p>
-
-                </div> -->
-
-                <!-- Happy Families Card -->
-
-                <!-- <div class="family-card">
-
-                    <i class="bi bi-people-fill"></i>
-
-                    <h3>
-
-                        5000+
-
-                    </h3>
-
-                    <p>
-
-                        Happy Families
-
-                    </p>
-
-                </div> -->
-
-            </div>
+          }
 
         </div>
 
+
+        <!-- Button -->
+        <button
+          type="button"
+          class="common-btn story-btn">
+
+          Learn More
+
+          <i class="bi bi-arrow-right"></i>
+
+        </button>
+
+      </div>
+
+
+      <!-- Story Image -->
+      <div class="story-image">
+
+        <img
+          src="/image/our-strory.png"
+          alt="Luxury Building">
+
+      </div>
+
     </div>
+
+  </div>
 
 </section>

@@ -2,35 +2,34 @@
 
     <div class="container">
 
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
         <div class="why-wrapper">
 
-            <!-- Left Side -->
+            <!-- LEFT CONTENT -->
 
             <div class="why-left">
 
-                <span class="section-subtitle">
-
+                <span class="common-subtitle">
                     Why Choose Us
-
                 </span>
 
-                <h2>
-
+                <h2 class="common-title">
                     Why Choose Our Apartments
-
                 </h2>
 
-                <div class="title-line"></div>
+                <div class="why-title-line"></div>
 
-                <p>
-
+                <p class="common-description">
                     We offer more than just a home. Experience unmatched comfort,
                     premium amenities, elegant interiors and a luxurious lifestyle
                     crafted for modern living.
-
                 </p>
 
-                <!-- Apartment Image -->
+
+                <!-- APARTMENT IMAGE -->
 
                 <div class="why-image">
 
@@ -40,75 +39,80 @@
 
                 </div>
 
-                <!-- Button -->
 
-                <button class="experience-btn">
+                <!-- BUTTON -->
+
+                <button
+                    type="button"
+                    class="common-btn why-experience-btn">
 
                     <i class="bi bi-building"></i>
 
-                    Experience Premium Living
+                    <span>
+                        Experience Premium Living
+                    </span>
 
                 </button>
 
             </div>
 
-            <!-- Right Side -->
+
+            <!-- RIGHT CONTENT -->
 
             <div class="why-right">
 
                 @for(feature of features; track feature.title){
 
-                <div class="feature-card">
+                    <div class="why-feature-card common-card">
 
-                    <div class="icon-box">
+                        <div class="why-feature-icon common-icon">
 
-                        <i class="bi" [class]="feature.icon"></i>
+                            <i
+                                class="bi"
+                                [class]="feature.icon">
+                            </i>
+
+                        </div>
+
+                        <h3 class="common-card-title">
+                            {{ feature.title }}
+                        </h3>
+
+                        <p class="common-card-subtitle">
+                            {{ feature.description }}
+                        </p>
+
+                        <div class="why-feature-line"></div>
 
                     </div>
-
-                    <h3>
-
-                        {{ feature.title }}
-
-                    </h3>
-
-                    <p>
-
-                        {{ feature.description }}
-
-                    </p>
-
-                    <div class="card-line"></div>
-
-                </div>
 
                 }
 
             </div>
 
         </div>
-                <!-- Bottom Banner -->
+
+
+        <!-- =========================
+             BOTTOM BANNER
+        ========================== -->
 
         <div class="why-footer">
 
-            <div class="footer-icon">
+            <div class="why-footer-icon common-icon">
 
                 <i class="bi bi-stars"></i>
 
             </div>
 
-            <div class="footer-content">
+            <div class="why-footer-content">
 
-                <h3>
-
+                <h3 class="common-card-title">
                     Your Dream Home, Our Commitment
-
                 </h3>
 
-                <p>
-
+                <p class="common-text">
                     Quality • Trust • Comfort • Luxury
-
                 </p>
 
             </div>

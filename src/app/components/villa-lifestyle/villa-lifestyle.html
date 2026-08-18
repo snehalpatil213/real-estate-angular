@@ -2,17 +2,19 @@
 
     <div class="container">
 
-        <div class="section-header">
+        <!-- SECTION HEADER -->
 
-            <span class="section-subtitle">
+        <div class="common-section-header">
+
+            <span class="common-subtitle">
                 Experience Luxury
             </span>
 
-            <h2>
+            <h2 class="common-title">
                 Live the Villa Lifestyle
             </h2>
 
-            <p>
+            <p class="common-description">
                 Every villa is crafted to offer the perfect blend of
                 elegance, comfort and privacy. Step into a world where
                 every day feels like a retreat.
@@ -21,9 +23,13 @@
         </div>
 
 
-        <div class="lifestyle-content">
+        <!-- LIFESTYLE CONTENT -->
 
-            <div class="villa-image">
+        <div class="villa-lifestyle-content">
+
+            <!-- IMAGE -->
+
+            <div class="villa-lifestyle-image">
 
                 <img
                     src="/image/villa-lifestyle.png"
@@ -32,25 +38,27 @@
             </div>
 
 
-            <div class="features-grid">
+            <!-- FEATURES -->
+
+            <div class="villa-lifestyle-features">
 
                 @for(feature of features; track feature.title) {
 
-                    <div class="feature-card">
+                    <div class="villa-lifestyle-feature">
 
-                        <div class="feature-icon">
+                        <div class="villa-lifestyle-icon">
 
                             <i class="bi {{ feature.icon }}"></i>
 
                         </div>
 
-                        <div>
+                        <div class="villa-lifestyle-feature-content">
 
-                            <h3>
+                            <h3 class="common-card-title">
                                 {{ feature.title }}
                             </h3>
 
-                            <p>
+                            <p class="common-card-subtitle">
                                 {{ feature.description }}
                             </p>
 
@@ -65,23 +73,32 @@
         </div>
 
 
-        <div class="lifestyle-cta">
+        <!-- CTA -->
 
-            <div class="cta-icon">
+        <div class="villa-lifestyle-cta">
+
+            <div class="villa-lifestyle-cta-icon">
 
                 <i class="bi bi-gem"></i>
 
             </div>
 
-            <h3>
-                Luxury is not just about a home,
-                it’s about the life you deserve.
-            </h3>
+            <div class="villa-lifestyle-cta-content">
 
-            <button>
-                Explore Villas
-                <i class="bi bi-arrow-right"></i>
-            </button>
+                <h3 class="common-card-title">
+                    Luxury is not just about a home,
+                    it’s about the life you deserve.
+                </h3>
+
+                <button class="common-btn">
+
+                    Explore Villas
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+            </div>
 
         </div>
 

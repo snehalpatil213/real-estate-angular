@@ -1,152 +1,199 @@
 <section class="featured-apartments">
 
-    <div class="container">
+  <div class="container">
 
-        <!-- Section Header -->
+    <!-- =========================
+         SECTION HEADER
+    ========================== -->
 
-        <div class="section-header">
+    <div class="common-section-header">
 
-            <span class="section-subtitle">
-                Featured Apartments
-            </span>
+      <span class="common-subtitle">
+        Featured Apartments
+      </span>
 
-            <h2>
-                Find Your Dream Apartment
-            </h2>
+      <h2 class="common-title">
+        Find Your Dream Apartment
+      </h2>
 
-            <p>
-                Explore our premium apartments with world-class amenities,
-                elegant interiors and prime locations.
-            </p>
+      <p class="common-description">
+        Explore our premium apartments with world-class amenities,
+        elegant interiors and prime locations.
+      </p>
 
-        </div>
+    </div>
 
-        <!-- Slider -->
 
-        <div class="slider-wrapper">
+    <!-- =========================
+         SLIDER
+    ========================== -->
 
-            <!-- Previous -->
+    <div class="apartment-slider-wrapper">
 
-            <button
-                class="slider-btn prev-btn"
-                (click)="prevSlide()">
+      <!-- Previous Button -->
 
-                <i class="bi bi-chevron-left"></i>
+      <button
+        class="apartment-slider-btn apartment-prev-btn"
+        (click)="prevSlide()">
 
-            </button>
+        <i class="bi bi-chevron-left"></i>
 
-            <!-- Cards -->
+      </button>
 
-            <div class="slider-container">
 
-            <div class="slider-track">
+      <!-- Cards -->
 
-                @for(apartment of apartments.slice(currentIndex, currentIndex + cardsToShow); track apartment.id){
+      <div class="apartment-slider-container">
 
-                <div class="apartment-card">
+        <div class="apartment-slider-track">
 
-                    <div class="card-image">
+          @for(
+            apartment of apartments.slice(
+              currentIndex,
+              currentIndex + cardsToShow
+            );
+            track apartment.id
+          ) {
 
-                        <img
-                            [src]="apartment.image"
-                            [alt]="apartment.title">
+            <div class="apartment-card">
 
-                        <span class="badge">
+              <!-- IMAGE -->
 
-                            {{ apartment.badge }}
+              <div class="apartment-card-image">
 
-                        </span>
+                <img
+                  [src]="apartment.image"
+                  [alt]="apartment.title">
 
-                    </div>
+                <span class="apartment-badge">
+                  {{ apartment.badge }}
+                </span>
 
-                    <div class="card-content">
+              </div>
 
-                        <h3>{{ apartment.title }}</h3>
 
-                        <div class="location">
+              <!-- CONTENT -->
 
-                            <i class="bi bi-geo-alt-fill"></i>
+              <div class="apartment-card-content">
 
-                            {{ apartment.location }}
+                <h3 class="common-card-title">
+                  {{ apartment.title }}
+                </h3>
 
-                        </div>
 
-                        <div class="property-info">
+                <!-- LOCATION -->
 
-                            <div>
+                <div class="apartment-location">
 
-                                <i class="bi bi-door-open"></i>
+                  <i class="bi bi-geo-alt-fill"></i>
 
-                                {{ apartment.beds }} Beds
-
-                            </div>
-
-                            <div>
-
-                                <i class="bi bi-droplet"></i>
-
-                                {{ apartment.baths }} Baths
-
-                            </div>
-
-                            <div>
-
-                                <i class="bi bi-aspect-ratio"></i>
-
-                                {{ apartment.area }}
-
-                            </div>
-
-                        </div>
-
-                        <div class="price-box">
-
-                            <h4>{{ apartment.price }}</h4>
-
-                            <button class="details-btn">
-
-                                View Details
-
-                            </button>
-
-                        </div>
-
-                    </div>
+                  <span>
+                    {{ apartment.location }}
+                  </span>
 
                 </div>
 
-                }
+
+                <!-- PROPERTY INFO -->
+
+                <div class="apartment-property-info">
+
+                  <div>
+
+                    <i class="bi bi-door-open"></i>
+
+                    <span>
+                      {{ apartment.beds }} Beds
+                    </span>
+
+                  </div>
+
+                  <div>
+
+                    <i class="bi bi-droplet"></i>
+
+                    <span>
+                      {{ apartment.baths }} Baths
+                    </span>
+
+                  </div>
+
+                  <div>
+
+                    <i class="bi bi-aspect-ratio"></i>
+
+                    <span>
+                      {{ apartment.area }}
+                    </span>
+
+                  </div>
+
+                </div>
+
+
+                <!-- PRICE -->
+
+                <div class="apartment-price-box">
+
+                  <h4 class="common-card-title">
+                    {{ apartment.price }}
+                  </h4>
+
+                  <button class="common-btn">
+
+                    View Details
+
+                    <i class="bi bi-arrow-right"></i>
+
+                  </button>
+
+                </div>
+
+              </div>
 
             </div>
-            </div>
 
-            <!-- Next -->
-
-            <button
-                class="slider-btn next-btn"
-                (click)="nextSlide()">
-
-                <i class="bi bi-chevron-right"></i>
-
-            </button>
+          }
 
         </div>
 
-        <!-- Dots -->
+      </div>
 
-        <div class="slider-dots">
 
-            @for(item of apartments; track item.id; let i = $index){
+      <!-- Next Button -->
 
-            <span
-                class="dot"
-                [class.active]="i === currentIndex">
-            </span>
+      <button
+        class="apartment-slider-btn apartment-next-btn"
+        (click)="nextSlide()">
 
-            }
+        <i class="bi bi-chevron-right"></i>
 
-        </div>
+      </button>
 
     </div>
+
+
+    <!-- =========================
+         DOTS
+    ========================== -->
+
+    <div class="apartment-slider-dots">
+
+      @for(
+        item of apartments;
+        track item.id;
+        let i = $index
+      ) {
+
+        <span
+          class="apartment-dot"
+          [class.active]="i === currentIndex">
+        </span>
+
+      }
+
+    </div>
+
+  </div>
 
 </section>

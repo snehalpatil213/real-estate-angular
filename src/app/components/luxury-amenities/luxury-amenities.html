@@ -2,83 +2,95 @@
 
     <div class="container">
 
-        <!-- Section Header -->
+        <!-- =========================
+             SECTION HEADER
+        ========================== -->
 
-        <div class="section-header">
+        <div class="common-section-header">
 
-            <span class="section-subtitle">
-
+            <span class="common-subtitle">
                 Luxury Amenities
-
             </span>
 
-            <h2>
-
+            <h2 class="common-title">
                 Experience Premium Living
-
             </h2>
 
-            <p>
-
+            <p class="common-description">
                 Discover world-class amenities and facilities designed
                 to elevate your lifestyle every day.
-
             </p>
 
         </div>
 
-        <!-- Amenities Grid -->
+
+        <!-- =========================
+             AMENITIES GRID
+        ========================== -->
 
         <div class="amenities-grid">
 
             @for(item of amenities; track item.title){
 
-            <div class="amenity-card">
+                <div class="amenity-card common-card">
 
-                <!-- Icon -->
+                    <!-- ICON -->
 
-                <div class="icon-box">
+                    <div class="amenity-icon common-icon">
 
-                    <i class="bi" [class]="item.icon"></i>
+                        <i
+                            class="bi"
+                            [class]="item.icon">
+                        </i>
+
+                    </div>
+
+
+                    <!-- TITLE -->
+
+                    <h3 class="common-card-title">
+
+                        {{ item.title }}
+
+                    </h3>
+
+
+                    <!-- DIVIDER -->
+
+                    <div class="amenity-line"></div>
+
+
+                    <!-- DESCRIPTION -->
+
+                    <p class="common-card-subtitle">
+
+                        {{ item.description }}
+
+                    </p>
 
                 </div>
-
-                <!-- Title -->
-
-                <h3>
-
-                    {{ item.title }}
-
-                </h3>
-
-                <div class="card-line"></div>
-
-                <!-- Description -->
-
-                <p>
-
-                    {{ item.description }}
-
-                </p>
-
-            </div>
 
             }
 
         </div>
-                <!-- Bottom Banner -->
+
+
+        <!-- =========================
+             BOTTOM BANNER
+        ========================== -->
 
         <div class="amenities-footer">
 
-            <div class="footer-icon">
+            <div class="amenities-footer-icon common-icon">
 
                 <i class="bi bi-stars"></i>
 
             </div>
 
-            <h4>
+            <h4 class="common-card-title">
 
-                Premium Amenities for a Comfortable & Luxurious Lifestyle
+                Premium Amenities for a Comfortable
+                & Luxurious Lifestyle
 
             </h4>
 

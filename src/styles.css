@@ -1,42 +1,698 @@
-/* You can add global styles to this file, and also import other style files */
-/* Google Fonts */
+/* =============GOOGLE FONT===================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap');
 
 @import 'swiper/css';
 
-/* Theme Colors */
-:root{
-  --primary:#2B211C;
-  --secondary:#3A2B25;
-  --accent:#B8734C;
-  --hover:#C8875E;
-  --bg:#F7F3EE;
-  --heading:#2C211D;
-  --text:#6B625C;
-  --border:#E8DDD3;
+/* =============THEME COLORS==================== */
+
+:root {
+
+    --primary: #2B211C;
+    --secondary: #3A2B25;
+
+    --accent: #B8734C;
+    --hover: #C8875E;
+
+    --bg: #F7F3EE;
+    --heading: #2C211D;
+    --text: #6B625C;
+    --border: #E8DDD3;
+
+    --white: #FFFFFF;
 }
 
-/* Reset */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-   
+/* =============RESET=================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
+
+html {
+    scroll-behavior: smooth;
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Cormorant Garamond', serif;
-  color: var(--heading);
+
+body {
+
+    font-family: 'Inter', sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    line-height: 1.6;
+
 }
 
-.container{
-  max-width: 1320px;
-  margin: auto;
-  padding: 0 20px;
+
+/* ================ GLOBAL HEADINGS ===================== */
+
+h1,h2,h3,h4,h5,h6 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    color: var(--heading);
+
+    font-weight: 700;
+
+}
+
+
+/* ==========COMMON SECTION HEADER============================== */
+
+.common-section-header {
+
+    max-width: 850px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+}
+
+/* =========COMMON SECTION SUBTITLE / TAG================================== */
+
+.common-subtitle {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 10px 24px;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: var(--accent);
+
+    background: var(--white);
+
+    border: 2px solid #E7D8C8;
+
+    border-radius: 50px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =========================================================
+   COMMON MAIN TITLE
+   ========================================================= */
+
+.common-title {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 45px;
+
+    font-weight: 700;
+
+    color: var(--heading);
+
+    line-height: 1.2;
+
+    margin: 0 0 15px;
+
+}
+
+
+/* =========================================================
+   COMMON DESCRIPTION
+   ========================================================= */
+
+.common-description {
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+    margin: 0 0 20px;
+
+}
+
+
+/* =========================================================
+   COMMON TEXT
+   ========================================================= */
+
+.common-text {
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    color: var(--text);
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   COMMON SMALL TEXT
+   ========================================================= */
+
+.common-small-text {
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    color: var(--text);
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   COMMON LABEL
+   ========================================================= */
+
+.common-label {
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--accent);
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   COMMON CARD NUMBER
+   ========================================================= */
+
+.common-number {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 55px;
+
+    font-weight: 700;
+
+    color: var(--heading);
+
+    line-height: 1;
+
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   COMMON CARD TITLE
+   ========================================================= */
+
+.common-card-title {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: var(--heading);
+
+    line-height: 1.2;
+
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   COMMON CARD SUBTITLE / DESCRIPTION
+   ========================================================= */
+
+.common-card-subtitle {
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   COMMON SECTION
+   ========================================================= */
+
+.common-section {
+
+    padding: 80px 0;
+
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+   ========================================================= */
+
+.common-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px 26px;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: var(--white);
+
+    background: var(--accent);
+
+    border: 1px solid var(--accent);
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.common-btn:hover {
+
+    background: var(--hover);
+
+    border-color: var(--hover);
+
+    color: var(--white);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   COMMON OUTLINE BUTTON
+   ========================================================= */
+
+.common-btn-outline {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 11px 25px;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: var(--accent);
+
+    background: transparent;
+
+    border: 1px solid var(--accent);
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.common-btn-outline:hover {
+
+    background: var(--accent);
+
+    color: var(--white);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   COMMON CARD
+   ========================================================= */
+
+.common-card {
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.common-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 30px rgba(43, 33, 28, 0.10);
+
+}
+
+
+/* =========================================================
+   COMMON BORDER
+   ========================================================= */
+
+.common-border {
+
+    border: 1px solid var(--border);
+
+}
+
+
+/* =========================================================
+   COMMON ICON
+   ========================================================= */
+
+.common-icon {
+
+    color: var(--accent);
+
+    font-size: 24px;
+
+}
+
+
+/* =========================================================
+   COMMON LINK
+   ========================================================= */
+
+.common-link {
+
+    font-family: 'Inter', sans-serif;
+
+    color: var(--accent);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.common-link:hover {
+
+    color: var(--hover);
+
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 1320px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+}
+
+
+/* =========================================================
+   TABLET - 992px
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .common-section-header {
+
+        margin-bottom: 55px;
+
+    }
+
+
+    .common-title {
+
+        font-size: 36px;
+
+    }
+
+
+    .common-number {
+
+        font-size: 50px;
+
+    }
+
+
+    .common-card-title {
+
+        font-size: 27px;
+
+    }
+
+
+    .common-card-subtitle {
+
+        font-size: 15px;
+
+    }
+
+
+    .common-section {
+
+        padding: 65px 0;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE - 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .common-section-header {
+
+        margin-bottom: 50px;
+
+    }
+
+
+    .common-subtitle {
+
+        font-size: 13px;
+
+        padding: 9px 20px;
+
+    }
+
+
+    .common-title {
+
+        font-size: 32px;
+
+    }
+
+
+    .common-number {
+
+        font-size: 46px;
+
+    }
+
+
+    .common-card-title {
+
+        font-size: 25px;
+
+    }
+
+
+    .common-description {
+
+        font-size: 15px;
+
+    }
+
+
+    .common-card-subtitle {
+
+        font-size: 15px;
+
+    }
+
+
+    .common-text {
+
+        font-size: 15px;
+
+    }
+
+
+    .common-small-text {
+
+        font-size: 13px;
+
+    }
+
+
+    .common-section {
+
+        padding: 55px 0;
+
+    }
+
+
+    .common-btn,
+    .common-btn-outline {
+
+        padding: 10px 20px;
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE - 576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .container {
+
+        padding: 0 15px;
+
+    }
+
+
+    .common-section-header {
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .common-subtitle {
+
+        font-size: 12px;
+
+        padding: 8px 18px;
+
+        letter-spacing: 1.2px;
+
+    }
+
+
+    .common-title {
+
+        font-size: 28px;
+
+    }
+
+
+    .common-number {
+
+        font-size: 42px;
+
+    }
+
+
+    .common-card-title {
+
+        font-size: 23px;
+
+    }
+
+
+    .common-card-subtitle {
+
+        font-size: 14px;
+
+    }
+
+
+    .common-description {
+
+        font-size: 14px;
+
+    }
+
+
+    .common-section {
+
+        padding: 45px 0;
+
+    }
+
 }

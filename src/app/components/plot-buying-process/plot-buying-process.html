@@ -1,54 +1,68 @@
 <section class="plot-buying-process">
 
-    <div class="container">
+  <div class="container">
 
-        <div class="section-header">
+    <!-- SECTION HEADER -->
 
-            <span class="section-subtitle">
-                Plot Buying Process
-            </span>
+    <div class="common-section-header">
 
-            <h2>
-                Simple &amp; Transparent Process
-            </h2>
+      <span class="common-subtitle">
+        Plot Buying Process
+      </span>
 
-            <p>
-                Find Your Plot. Follow the Simple Steps.
-            </p>
+      <h2 class="common-title">
+        Simple &amp; Transparent Process
+      </h2>
 
-        </div>
-
-
-        <div class="process-wrapper">
-
-            @for(step of steps; track step.number){
-
-                <div class="process-card">
-
-                    <div class="step-number">
-                        {{ step.number }}
-                    </div>
-
-                    <div class="process-icon">
-                        <i class="bi {{ step.icon }}"></i>
-                    </div>
-
-                    <h3>
-                        {{ step.title }}
-                    </h3>
-
-                    <span class="process-line"></span>
-
-                    <p>
-                        {{ step.description }}
-                    </p>
-
-                </div>
-
-            }
-
-        </div>
+      <p class="common-description">
+        Find Your Plot. Follow the Simple Steps.
+      </p>
 
     </div>
+
+
+    <!-- PROCESS -->
+
+    <div class="plot-process-wrapper">
+
+      @for(step of steps; track step.number){
+
+        <div class="plot-process-card">
+
+          <!-- STEP NUMBER -->
+
+          <div class="plot-step-number">
+            {{ step.number }}
+          </div>
+
+
+          <!-- ICON -->
+
+          <div class="plot-process-icon">
+
+            <i class="bi {{ step.icon }}"></i>
+
+          </div>
+
+
+          <!-- CONTENT -->
+
+          <h3 class="common-card-title">
+            {{ step.title }}
+          </h3>
+
+          <span class="plot-process-line"></span>
+
+          <p class="common-card-subtitle">
+            {{ step.description }}
+          </p>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
 
 </section>

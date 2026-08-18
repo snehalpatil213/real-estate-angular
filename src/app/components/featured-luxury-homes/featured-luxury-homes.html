@@ -1,164 +1,199 @@
 <section class="featured-luxury-homes">
 
-    <div class="container">
+  <div class="container">
 
-        <div class="section-header">
+    <!-- =========================
+         SECTION HEADER
+    ========================== -->
 
-            <span class="section-subtitle">
-                Featured Luxury Homes
-            </span>
+    <div class="common-section-header">
 
-            <h2>
-                Experience Exceptional Living
-            </h2>
+      <span class="common-subtitle">
+        Featured Luxury Homes
+      </span>
 
-            <p>
-                Explore our handpicked luxury homes with elegant
-                architecture, premium amenities and exclusive locations.
-            </p>
+      <h2 class="common-title">
+        Experience Exceptional Living
+      </h2>
 
-        </div>
+      <p class="common-description">
+        Explore our handpicked luxury homes with elegant
+        architecture, premium amenities and exclusive locations.
+      </p>
 
-
-        <div class="slider-wrapper">
-
-            <button
-                class="slider-btn prev-btn"
-                (click)="prevSlide()">
-
-                <i class="bi bi-chevron-left"></i>
-
-            </button>
+    </div>
 
 
-            <div class="slider-container">
+    <!-- =========================
+         SLIDER
+    ========================== -->
 
-                <div class="slider-track">
+    <div class="luxury-home-slider-wrapper">
 
-                    @for(
-                        home of luxuryHomes.slice(
-                            currentIndex,
-                            currentIndex + cardsToShow
-                        );
-                        track home.id
-                    ){
+      <!-- Previous Button -->
 
-                        <div class="luxury-home-card">
+      <button
+        class="luxury-home-slider-btn luxury-home-prev-btn"
+        (click)="prevSlide()">
 
-                            <div class="card-image">
+        <i class="bi bi-chevron-left"></i>
 
-                                <img
-                                    [src]="home.image"
-                                    [alt]="home.title">
-
-                                <span class="badge">
-                                    {{ home.badge }}
-                                </span>
-
-                            </div>
+      </button>
 
 
-                            <div class="card-content">
+      <!-- Cards -->
 
-                                <h3>
-                                    {{ home.title }}
-                                </h3>
+      <div class="luxury-home-slider-container">
 
+        <div class="luxury-home-slider-track">
 
-                                <div class="location">
+          @for(
+            home of luxuryHomes.slice(
+              currentIndex,
+              currentIndex + cardsToShow
+            );
+            track home.id
+          ) {
 
-                                    <i class="bi bi-geo-alt-fill"></i>
+            <div class="luxury-home-card">
 
-                                    {{ home.location }}
+              <!-- IMAGE -->
 
-                                </div>
+              <div class="luxury-home-card-image">
 
+                <img
+                  [src]="home.image"
+                  [alt]="home.title">
 
-                                <div class="property-info">
+                <span class="luxury-home-badge">
+                  {{ home.badge }}
+                </span>
 
-                                    <div>
-
-                                        <i class="bi bi-door-open"></i>
-
-                                        {{ home.beds }} Beds
-
-                                    </div>
-
-
-                                    <div>
-
-                                        <i class="bi bi-droplet"></i>
-
-                                        {{ home.baths }} Baths
-
-                                    </div>
+              </div>
 
 
-                                    <div>
+              <!-- CONTENT -->
 
-                                        <i class="bi bi-aspect-ratio"></i>
+              <div class="luxury-home-card-content">
 
-                                        {{ home.area }}
-
-                                    </div>
-
-                                </div>
+                <h3 class="common-card-title">
+                  {{ home.title }}
+                </h3>
 
 
-                                <div class="price-box">
+                <!-- LOCATION -->
 
-                                    <h4>
-                                        {{ home.price }}
-                                    </h4>
+                <div class="luxury-home-location">
 
+                  <i class="bi bi-geo-alt-fill"></i>
 
-                                    <button class="details-btn">
-
-                                        View Details
-
-                                    </button>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    }
+                  <span>
+                    {{ home.location }}
+                  </span>
 
                 </div>
 
+
+                <!-- PROPERTY INFO -->
+
+                <div class="luxury-home-property-info">
+
+                  <div>
+
+                    <i class="bi bi-door-open"></i>
+
+                    <span>
+                      {{ home.beds }} Beds
+                    </span>
+
+                  </div>
+
+                  <div>
+
+                    <i class="bi bi-droplet"></i>
+
+                    <span>
+                      {{ home.baths }} Baths
+                    </span>
+
+                  </div>
+
+                  <div>
+
+                    <i class="bi bi-aspect-ratio"></i>
+
+                    <span>
+                      {{ home.area }}
+                    </span>
+
+                  </div>
+
+                </div>
+
+
+                <!-- PRICE -->
+
+                <div class="luxury-home-price-box">
+
+                  <h4 class="common-card-title">
+                    {{ home.price }}
+                  </h4>
+
+                  <button class="common-btn">
+
+                    View Details
+
+                    <i class="bi bi-arrow-right"></i>
+
+                  </button>
+
+                </div>
+
+              </div>
+
             </div>
 
-
-            <button
-                class="slider-btn next-btn"
-                (click)="nextSlide()">
-
-                <i class="bi bi-chevron-right"></i>
-
-            </button>
+          }
 
         </div>
 
+      </div>
 
-        <div class="slider-dots">
 
-            @for(
-                home of luxuryHomes;
-                track home.id;
-                let i = $index
-            ){
+      <!-- Next Button -->
 
-                <span
-                    class="dot"
-                    [class.active]="i === currentIndex">
-                </span>
+      <button
+        class="luxury-home-slider-btn luxury-home-next-btn"
+        (click)="nextSlide()">
 
-            }
+        <i class="bi bi-chevron-right"></i>
 
-        </div>
+      </button>
 
     </div>
+
+
+    <!-- =========================
+         DOTS
+    ========================== -->
+
+    <div class="luxury-home-slider-dots">
+
+      @for(
+        home of luxuryHomes;
+        track home.id;
+        let i = $index
+      ) {
+
+        <span
+          class="luxury-home-dot"
+          [class.active]="i === currentIndex">
+        </span>
+
+      }
+
+    </div>
+
+  </div>
 
 </section>

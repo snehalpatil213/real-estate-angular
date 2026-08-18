@@ -1,700 +1,266 @@
-/*==================================================
-                VILLA AMENITIES
-==================================================*/
+/*=========================================
+VILLA AMENITIES
+=========================================*/
 
-.villa-amenities {
-    position: relative;
+.villa-amenities{
+    padding:120px 0;
+    background:#F8F5F1;
+    position:relative;
+    overflow:hidden;
+}
 
-    padding: 120px 0;
-
-    background: #F8F5F1;
-
-    overflow: hidden;
+.villa-amenities .container{
+    position:relative;
+    z-index:2;
+    max-width:1320px;
+    margin:auto;
+    padding:0 40px;
 }
 
 
-/*==================================================
-                BACKGROUND DECORATION
-==================================================*/
+/*=========================================
+BACKGROUND DECORATION
+=========================================*/
 
 .villa-amenities::before,
-.villa-amenities::after {
-    content: "";
-
-    position: absolute;
-
-    width: 320px;
-    height: 320px;
-
-    border-radius: 50%;
-
-    background: radial-gradient(
+.villa-amenities::after{
+    content:"";
+    position:absolute;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:radial-gradient(
         circle,
         rgba(184,115,76,.08),
         transparent 70%
     );
 }
 
-.villa-amenities::before {
-    top: -120px;
-    left: -120px;
+.villa-amenities::before{
+    top:-120px;
+    left:-120px;
 }
 
-.villa-amenities::after {
-    right: -120px;
-    bottom: -120px;
-}
-
-
-/*==================================================
-                CONTAINER
-==================================================*/
-
-.villa-amenities .container {
-    position: relative;
-    z-index: 2;
-
-    max-width: 1320px;
-
-    margin: auto;
-    padding: 0 60px;
+.villa-amenities::after{
+    right:-120px;
+    bottom:-120px;
 }
 
 
-/*==================================================
-                SECTION HEADER
-==================================================*/
+/*=========================================
+AMENITIES GRID
+=========================================*/
 
-.villa-amenities .section-header {
-    margin-bottom: 70px;
-
-    text-align: center;
-}
-
-.section-subtitle {
-    display: inline-block;
-
-    padding: 12px 30px;
-    margin-bottom: 20px;
-
-    background: #fff;
-
-    border: 2px solid #D8C2AE;
-    border-radius: 50px;
-
-    color: #8A5A3B;
-
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.villa-amenities .section-header h2 {
-    margin: 0 0 18px;
-
-    color: #2B211C;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 54px;
-    font-weight: 700;
-    line-height: 1.1;
-}
-
-.villa-amenities .section-header p {
-    max-width: 700px;
-
-    margin: auto;
-
-    color: #6B625C;
-
-    font-family: "Inter", sans-serif;
-    font-size: 17px;
-    line-height: 1.9;
+.villa-amenities-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
 }
 
 
-/*==================================================
-                AMENITIES GRID
-==================================================*/
+/*=========================================
+AMENITY CARD
+=========================================*/
 
-.amenities-grid {
-    display: grid;
+.villa-amenity-card{
+    position:relative;
+    padding:45px 35px;
+    background:#fff;
+    border:1px solid #EFE6DD;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    overflow:hidden;
+    transition:.4s ease;
+}
 
-    grid-template-columns: repeat(3, 1fr);
+.villa-amenity-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:#B8734C;
+    transform:scaleX(0);
+    transform-origin:center;
+    transition:.4s ease;
+}
 
-    gap: 35px;
+.villa-amenity-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 55px rgba(0,0,0,.14);
+}
+
+.villa-amenity-card:hover::before{
+    transform:scaleX(1);
 }
 
 
-/*==================================================
-                AMENITY CARD
-==================================================*/
+/*=========================================
+ICON
+=========================================*/
 
-.amenity-card {
-    position: relative;
-
-    padding: 45px 35px;
-
-    background: #fff;
-
-    border: 1px solid #EFE6DD;
-    border-radius: 30px;
-
-    text-align: center;
-
-    box-shadow: 0 15px 40px rgba(0,0,0,.08);
-
-    overflow: hidden;
-
-    transition: .4s ease;
+.villa-amenity-icon{
+    width:90px;
+    height:90px;
+    margin:0 auto 25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#F6EEE7;
+    border-radius:50%;
+    transition:.4s ease;
 }
 
-.amenity-card::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 5px;
-
-    background: #B8734C;
-
-    transform: scaleX(0);
-    transform-origin: center;
-
-    transition: .4s ease;
+.villa-amenity-icon i{
+    color:#B8734C;
+    font-size:40px;
+    transition:.4s ease;
 }
 
-.amenity-card:hover {
-    transform: translateY(-10px);
-
-    box-shadow: 0 25px 55px rgba(0,0,0,.14);
+.villa-amenity-card:hover .villa-amenity-icon{
+    background:#B8734C;
+    transform:rotate(8deg) scale(1.08);
 }
 
-.amenity-card:hover::before {
-    transform: scaleX(1);
+.villa-amenity-card:hover .villa-amenity-icon i{
+    color:#fff;
 }
 
 
-/*==================================================
-                ICON
-==================================================*/
+/*=========================================
+CONTENT
+=========================================*/
 
-.amenity-icon {
-    width: 90px;
-    height: 90px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin: 0 auto 25px;
-
-    background: #F6EEE7;
-
-    border-radius: 50%;
-
-    transition: .4s ease;
-}
-
-.amenity-icon i {
-    color: #B8734C;
-
-    font-size: 40px;
-
-    transition: .4s ease;
-}
-
-.amenity-card:hover .amenity-icon {
-    background: #B8734C;
-
-    transform: rotate(8deg) scale(1.08);
-}
-
-.amenity-card:hover .amenity-icon i {
-    color: #fff;
+.villa-amenity-content p{
+    min-height:85px;
+    margin-bottom:25px;
 }
 
 
-/*==================================================
-                CONTENT
-==================================================*/
+/*=========================================
+RESPONSIVE
+=========================================*/
 
-.amenity-content h3 {
-    margin: 0 0 18px;
+@media(max-width:1200px){
 
-    color: #2B211C;
+    .villa-amenities{
+        padding:90px 0;
+    }
 
-    font-family: "Cormorant Garamond", serif;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.2;
-}
+    .villa-amenities .container{
+        padding:0 30px;
+    }
 
-.amenity-content p {
-    min-height: 85px;
+    .villa-amenities-grid{
+        gap:25px;
+    }
 
-    margin: 0 0 25px;
+    .villa-amenity-card{
+        padding:35px 25px;
+    }
 
-    color: #6B625C;
+    .villa-amenity-icon{
+        width:80px;
+        height:80px;
+    }
 
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    line-height: 1.8;
-}
-
-
-/*==================================================
-                CARD LINE
-==================================================*/
-
-.card-line {
-    display: block;
-
-    width: 65px;
-    height: 4px;
-
-    margin: auto;
-
-    background: #B8734C;
-
-    border-radius: 20px;
-
-    transition: .35s ease;
-}
-
-.amenity-card:hover .card-line {
-    width: 100px;
-}
-
-
-/*==================================================
-                LARGE DESKTOP
-                1401px+
-==================================================*/
-
-@media (min-width: 1401px) {
-
-    .villa-amenities .container {
-        max-width: 1400px;
+    .villa-amenity-icon i{
+        font-size:34px;
     }
 }
 
 
-/*==================================================
-                DESKTOP
-                1201px - 1400px
-==================================================*/
+/*=========================================
+TABLET
+=========================================*/
 
-@media (max-width: 1400px) {
+@media(max-width:1024px){
 
-    .villa-amenities .container {
-        max-width: 1200px;
-        padding: 0 50px;
+    .villa-amenities{
+        padding:80px 0;
     }
 
-    .amenities-grid {
-        gap: 28px;
+    .villa-amenities-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .amenity-card {
-        padding: 40px 28px;
+    .villa-amenity-card{
+        padding:35px 25px;
     }
 
-    .amenity-content h3 {
-        font-size: 26px;
+    .villa-amenity-content p{
+        min-height:auto;
     }
 }
 
 
-/*==================================================
-                LAPTOP
-                1025px - 1200px
-==================================================*/
+/*=========================================
+MOBILE
+=========================================*/
 
-@media (max-width: 1200px) {
+@media(max-width:768px){
 
-    .villa-amenities {
-        padding: 90px 0;
+    .villa-amenities{
+        padding:70px 0;
     }
 
-    .villa-amenities .container {
-        padding: 0 40px;
+    .villa-amenities .container{
+        padding:0 20px;
     }
 
-    .villa-amenities .section-header {
-        margin-bottom: 55px;
+    .villa-amenities-grid{
+        grid-template-columns:1fr;
+        gap:20px;
     }
 
-    .villa-amenities .section-header h2 {
-        font-size: 48px;
+    .villa-amenity-card{
+        padding:30px 20px;
+        border-radius:22px;
     }
 
-    .villa-amenities .section-header p {
-        font-size: 16px;
+    .villa-amenity-icon{
+        width:75px;
+        height:75px;
+        margin-bottom:20px;
     }
 
-    .amenities-grid {
-        gap: 25px;
+    .villa-amenity-icon i{
+        font-size:32px;
     }
 
-    .amenity-card {
-        padding: 35px 25px;
-    }
-
-    .amenity-icon {
-        width: 80px;
-        height: 80px;
-    }
-
-    .amenity-icon i {
-        font-size: 34px;
-    }
-
-    .amenity-content h3 {
-        font-size: 24px;
-    }
-
-    .amenity-content p {
-        font-size: 14px;
+    .villa-amenity-content p{
+        min-height:auto;
     }
 }
 
 
-/*==================================================
-                TABLET
-                769px - 1024px
-==================================================*/
+/*=========================================
+SMALL MOBILE
+=========================================*/
 
-@media (max-width: 1024px) {
+@media(max-width:576px){
 
-    .villa-amenities {
-        padding: 80px 0;
+    .villa-amenities{
+        padding:60px 0;
     }
 
-    .villa-amenities .container {
-        padding: 0 35px;
+    .villa-amenities .container{
+        padding:0 15px;
     }
 
-    .villa-amenities .section-header {
-        margin-bottom: 45px;
+    .villa-amenity-card{
+        padding:25px 18px;
+        border-radius:20px;
     }
 
-    .villa-amenities .section-header h2 {
-        font-size: 44px;
+    .villa-amenity-icon{
+        width:65px;
+        height:65px;
     }
 
-    .amenities-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-
-    .amenity-card {
-        padding: 35px 25px;
-    }
-
-    .amenity-content p {
-        min-height: auto;
-    }
-}
-
-
-/*==================================================
-                SMALL TABLET
-                601px - 768px
-==================================================*/
-
-@media (max-width: 768px) {
-
-    .villa-amenities {
-        padding: 70px 0;
-    }
-
-    .villa-amenities .container {
-        padding: 0 25px;
-    }
-
-    .villa-amenities .section-header {
-        margin-bottom: 40px;
-    }
-
-    .section-subtitle {
-        padding: 10px 22px;
-        font-size: 12px;
-    }
-
-    .villa-amenities .section-header h2 {
-        font-size: 40px;
-    }
-
-    .villa-amenities .section-header p {
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-    .amenities-grid {
-        gap: 20px;
-    }
-
-    .amenity-card {
-        padding: 30px 20px;
-        border-radius: 22px;
-    }
-
-    .amenity-icon {
-        width: 75px;
-        height: 75px;
-
-        margin-bottom: 20px;
-    }
-
-    .amenity-icon i {
-        font-size: 32px;
-    }
-
-    .amenity-content h3 {
-        font-size: 23px;
-    }
-
-    .amenity-content p {
-        font-size: 14px;
-        line-height: 1.7;
-    }
-}
-
-
-/*==================================================
-                MOBILE
-                600px
-==================================================*/
-
-@media (max-width: 600px) {
-
-    .villa-amenities {
-        padding: 60px 0;
-    }
-
-    .villa-amenities .container {
-        padding: 0 20px;
-    }
-
-    .villa-amenities .section-header {
-        margin-bottom: 35px;
-    }
-
-    .section-subtitle {
-        padding: 8px 18px;
-        font-size: 10px;
-        letter-spacing: 1.5px;
-    }
-
-    .villa-amenities .section-header h2 {
-        font-size: 34px;
-    }
-
-    .villa-amenities .section-header p {
-        font-size: 13px;
-        line-height: 1.7;
-    }
-
-    .amenities-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .amenity-card {
-        padding: 30px 20px;
-        border-radius: 20px;
-    }
-
-    .amenity-icon {
-        width: 70px;
-        height: 70px;
-    }
-
-    .amenity-icon i {
-        font-size: 29px;
-    }
-
-    .amenity-content h3 {
-        font-size: 25px;
-    }
-
-    .amenity-content p {
-        min-height: auto;
-        font-size: 13px;
-    }
-
-    .card-line {
-        width: 55px;
-    }
-}
-
-
-/*==================================================
-                MOBILE
-                430px
-==================================================*/
-
-@media (max-width: 430px) {
-
-    .villa-amenities {
-        padding: 55px 0;
-    }
-
-    .villa-amenities .container {
-        padding: 0 17px;
-    }
-
-    .section-subtitle {
-        padding: 7px 15px;
-        font-size: 9px;
-    }
-
-    .villa-amenities .section-header h2 {
-        font-size: 30px;
-    }
-
-    .villa-amenities .section-header p {
-        font-size: 12px;
-    }
-
-    .amenity-card {
-        padding: 25px 18px;
-    }
-
-    .amenity-icon {
-        width: 65px;
-        height: 65px;
-    }
-
-    .amenity-icon i {
-        font-size: 27px;
-    }
-
-    .amenity-content h3 {
-        font-size: 22px;
-    }
-
-    .amenity-content p {
-        font-size: 12px;
-    }
-}
-
-
-/*==================================================
-                SMALL MOBILE
-                375px
-==================================================*/
-
-@media (max-width: 375px) {
-
-    .villa-amenities {
-        padding: 50px 0;
-    }
-
-    .villa-amenities .container {
-        padding: 0 14px;
-    }
-
-    .section-subtitle {
-        font-size: 8px;
-        letter-spacing: 1px;
-    }
-
-    .villa-amenities .section-header h2 {
-        font-size: 27px;
-    }
-
-    .villa-amenities .section-header p {
-        font-size: 11px;
-    }
-
-    .amenity-card {
-        padding: 23px 15px;
-    }
-
-    .amenity-icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    .amenity-icon i {
-        font-size: 25px;
-    }
-
-    .amenity-content h3 {
-        font-size: 20px;
-    }
-
-    .amenity-content p {
-        font-size: 11px;
-    }
-
-    .card-line {
-        width: 50px;
-        height: 3px;
-    }
-}
-
-
-/*==================================================
-                VERY SMALL MOBILE
-                320px
-==================================================*/
-
-@media (max-width: 320px) {
-
-    .villa-amenities {
-        padding: 45px 0;
-    }
-
-    .villa-amenities .container {
-        padding: 0 12px;
-    }
-
-    .section-subtitle {
-        padding: 6px 12px;
-        font-size: 7px;
-    }
-
-    .villa-amenities .section-header h2 {
-        font-size: 24px;
-    }
-
-    .villa-amenities .section-header p {
-        font-size: 10px;
-    }
-
-    .amenity-card {
-        padding: 20px 13px;
-    }
-
-    .amenity-icon {
-        width: 55px;
-        height: 55px;
-    }
-
-    .amenity-icon i {
-        font-size: 23px;
-    }
-
-    .amenity-content h3 {
-        font-size: 18px;
-    }
-
-    .amenity-content p {
-        font-size: 10px;
-        line-height: 1.6;
-    }
-
-    .card-line {
-        width: 45px;
-        height: 3px;
+    .villa-amenity-icon i{
+        font-size:27px;
     }
 }

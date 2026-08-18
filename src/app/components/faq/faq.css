@@ -1,1080 +1,974 @@
-/*==================================================
-                FAQ SECTION
-==================================================*/
+/* =========================================================
+   FAQ SECTION
+   ========================================================= */
 
 .faq-section {
-    padding: 100px 0;
-    background: #F7F3EE;
-    overflow: hidden;
+  padding: 100px 0;
+  background: var(--bg);
+  overflow: hidden;
 }
 
 .faq-section .container {
-    max-width: 1320px;
-    margin: auto;
-    padding: 0 60px;
+  max-width: 1320px;
+  margin: auto;
+  padding: 0 60px;
 }
 
 
-/*==================================================
-                HEADER
-==================================================*/
+/* =========================================================
+   FAQ HEADER
+   ========================================================= */
 
 .faq-header {
-    text-align: center;
-    margin-bottom: 70px;
+  text-align: center;
+  margin-bottom: 70px;
 }
 
-.faq-header .section-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+.faq-header .common-subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 
-    padding: 12px 22px;
+  padding: 12px 22px;
 
-    border: 1px solid rgba(184,115,76,.25);
-    border-radius: 40px;
+  border: 1px solid rgba(184, 115, 76, 0.25);
+  border-radius: 40px;
 
-    background: rgba(184,115,76,.08);
-    color: #B8734C;
-
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+  background: rgba(184, 115, 76, 0.08);
 }
 
-.faq-header h2 {
-    margin: 25px 0 22px;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 50px;
-    font-weight: 600;
-    line-height: 1.08;
-
-    color: #2B211C;
+.faq-header .common-title {
+  margin: 25px 0 22px;
 }
 
-.faq-header p {
-    max-width: 680px;
-    margin: auto;
-
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    line-height: 1.9;
-
-    color: #6B625C;
+.faq-header .common-description {
+  max-width: 680px;
+  margin: auto;
 }
 
 
-/*==================================================
-                FAQ GRID
-==================================================*/
+/* Subtitle Lines */
+
+.faq-header .line {
+  width: 35px;
+  height: 1px;
+  background: var(--accent);
+}
+
+
+/* =========================================================
+   FAQ GRID
+   ========================================================= */
 
 .faq-wrapper {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+  align-items: start;
 }
 
 .faq-left,
 .faq-right {
-    width: 100%;
+  width: 100%;
 }
 
 
-/*==================================================
-                FAQ ITEM
-==================================================*/
+/* =========================================================
+   FAQ ITEM
+   ========================================================= */
 
 .faq-item {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 
-    background: #fff;
-    border: 1px solid #DDB58C;
-    border-radius: 20px;
+  background: var(--white);
+  border: 1px solid #DDB58C;
+  border-radius: 20px;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
 
-    transition: .35s ease;
+  transition: 0.35s ease;
 }
 
 .faq-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 .faq-item.active {
-    border-color: #C48A58;
-    box-shadow: 0 20px 40px rgba(184,115,76,.12);
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px rgba(184, 115, 76, 0.12);
 }
 
 
-/*==================================================
-                QUESTION
-==================================================*/
+/* =========================================================
+   FAQ QUESTION
+   ========================================================= */
 
 .faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    gap: 20px;
-    padding: 24px 28px;
+  gap: 20px;
+  padding: 24px 28px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .question-left {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    flex: 1;
-    min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  flex: 1;
+  min-width: 0;
 }
 
-.question-left h3 {
-    margin: 0;
-
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-
-    color: #2B211C;
+.question-left .faq-question-title {
+  margin: 0;
+  font-size: 20px;
 }
 
 
-/*==================================================
-                TOGGLE BUTTON
-==================================================*/
+/* =========================================================
+   TOGGLE BUTTON
+   ========================================================= */
 
 .faq-toggle {
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
 
-    border: none;
-    border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background: #4B3225;
-    color: #fff;
+  border: none;
+  border-radius: 50%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: var(--secondary);
+  color: var(--white);
 
-    font-size: 18px;
+  font-size: 18px;
 
-    cursor: pointer;
-    transition: .35s ease;
+  cursor: pointer;
+  transition: 0.35s ease;
 }
 
 .faq-item.active .faq-toggle {
-    background: #B8734C;
+  background: var(--accent);
 }
 
 
-/*==================================================
-                RIGHT ICON
-==================================================*/
+/* =========================================================
+   RIGHT ICON
+   ========================================================= */
 
 .faq-icon {
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    font-size: 28px;
-    color: #4B3225;
+  font-size: 28px;
+  color: var(--secondary);
 }
 
 
-/*==================================================
-                ANSWER
-==================================================*/
+/* =========================================================
+   FAQ ANSWER
+   ========================================================= */
 
 .faq-answer {
-    padding: 0 92px 28px;
+  padding: 0 92px 28px;
 }
 
-.faq-answer p {
-    margin: 0;
-
-    font-family: "Inter", sans-serif;
-    font-size: 17px;
-    line-height: 1.9;
-
-    color: #6B625C;
+.faq-answer .common-description {
+  margin: 0;
 }
 
 
-/*==================================================
-                HELP CARD
-==================================================*/
+/* =========================================================
+   HELP CARD
+   ========================================================= */
 
 .help-card {
-    background: #3A2B25;
-    border: 1px solid #B8734C;
-    border-radius: 24px;
+  overflow: hidden;
 
-    overflow: hidden;
+  background: var(--secondary);
+  border: 1px solid var(--accent);
+  border-radius: 24px;
 
-    box-shadow: 0 25px 50px rgba(43,33,28,.18);
+  box-shadow: 0 25px 50px rgba(43, 33, 28, 0.18);
 
-    transition: .35s ease;
+  transition: 0.35s ease;
 }
 
 .help-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 35px 70px rgba(43,33,28,.25);
+  transform: translateY(-6px);
+  box-shadow: 0 35px 70px rgba(43, 33, 28, 0.25);
 }
 
 
-/*==================================================
-                HELP IMAGE
-==================================================*/
+/* =========================================================
+   HELP IMAGE
+   ========================================================= */
 
 .help-card img {
-    width: 100%;
-    height: 285px;
+  width: 100%;
+  height: 285px;
 
-    object-fit: cover;
-    display: block;
+  display: block;
+
+  object-fit: cover;
 }
 
 
-/*==================================================
-                HELP CONTENT
-==================================================*/
+/* =========================================================
+   HELP CONTENT
+   ========================================================= */
 
 .help-content {
-    position: relative;
+  position: relative;
 
-    padding: 70px 35px 35px;
+  padding: 70px 35px 35px;
 
-    text-align: center;
+  text-align: center;
+}
+
+.help-content .help-title {
+  margin: -50px 0 20px;
+
+  color: #F6E8D8;
 }
 
 
-/*==================================================
-                FLOATING ICON
-==================================================*/
+/* =========================================================
+   HELP ICON
+   ========================================================= */
 
 .help-icon {
-    position: absolute;
+  position: absolute;
 
-    top: -39px;
-    left: 50%;
+  top: -39px;
+  left: 50%;
 
-    transform: translateX(-50%);
+  transform: translateX(-50%);
 
-    width: 78px;
-    height: 78px;
+  width: 78px;
+  height: 78px;
 
-    border: 6px solid #3A2B25;
-    border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background: linear-gradient(
-        135deg,
-        #C58A57,
-        #E4B06D
-    );
+  border: 6px solid var(--secondary);
+  border-radius: 50%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: linear-gradient(
+    135deg,
+    #C58A57,
+    #E4B06D
+  );
 
-    color: #fff;
-    font-size: 34px;
+  color: var(--white);
+  font-size: 34px;
 }
 
 
-/*==================================================
-                HELP TITLE
-==================================================*/
-
-.help-content h3 {
-    margin: -50px 0 20px;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 40px;
-    font-weight: 600;
-
-    color: #F6E8D8;
-}
-
-
-/*==================================================
-                DIVIDER
-==================================================*/
+/* =========================================================
+   DIVIDER
+   ========================================================= */
 
 .divider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    gap: 12px;
-    margin-bottom: 25px;
+  gap: 12px;
+  margin-bottom: 25px;
 }
 
 .divider span {
-    width: 70px;
-    height: 1px;
+  width: 70px;
+  height: 1px;
 
-    background: #C58A57;
+  background: #C58A57;
 }
 
 .divider i {
-    color: #C58A57;
-    font-size: 10px;
+  color: #C58A57;
+  font-size: 10px;
 }
 
 
-/*==================================================
-                HELP DESCRIPTION
-==================================================*/
+/* =========================================================
+   HELP DESCRIPTION
+   ========================================================= */
 
-.help-content p {
-    margin: 0 0 25px;
-
-    font-family: "Inter", sans-serif;
-    font-size: 17px;
-    line-height: 1.8;
-
-    color: #DDD0C6;
+.help-content .common-description {
+  margin: 0 0 25px;
+  color: #DDD0C6;
 }
 
 
-/*==================================================
-                CONSULTATION BUTTON
-==================================================*/
+/* =========================================================
+   CONSULTATION BUTTON
+   ========================================================= */
 
-.help-content button {
-    width: 100%;
-    height: 60px;
+.help-content .common-btn {
+  width: 100%;
+  height: 60px;
 
-    border: none;
-    border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 
-    background: linear-gradient(
-        90deg,
-        #C58A57,
-        #E4B06D
-    );
+  border-radius: 14px;
 
-    color: #fff;
-
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
-    cursor: pointer;
-
-    transition: .35s ease;
+  background: linear-gradient(
+    90deg,
+    #C58A57,
+    #E4B06D
+  );
 }
 
-.help-content button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(197,138,87,.30);
+.help-content .common-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(197, 138, 87, 0.30);
 }
 
 
-/*==================================================
-                HELP FEATURES
-==================================================*/
+/* =========================================================
+   HELP FEATURES
+   ========================================================= */
 
 .help-features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 
-    margin-top: 35px;
-    padding-top: 25px;
+  margin-top: 35px;
+  padding-top: 25px;
 
-    border-top: 1px solid rgba(255,255,255,.10);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .help-features div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .help-features i {
-    font-size: 28px;
-    color: #E4B06D;
+  color: #E4B06D;
+  font-size: 28px;
 }
 
 .help-features span {
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    line-height: 1.4;
-
-    color: #F5E9DE;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #F5E9DE;
 }
 
 
-/*==================================================
-                LARGE DESKTOP
-                1401px+
-==================================================*/
-
-@media (min-width: 1401px) {
-
-    .faq-section .container {
-        max-width: 1400px;
-    }
-}
-
-
-/*==================================================
-                DESKTOP
-                1201px - 1400px
-==================================================*/
+/* =========================================================
+   DESKTOP - 1400px
+   ========================================================= */
 
 @media (max-width: 1400px) {
 
-    .faq-section .container {
-        max-width: 1200px;
-        padding: 0 50px;
-    }
+  .faq-section .container {
+    max-width: 1200px;
+    padding: 0 50px;
+  }
 
-    .faq-wrapper {
-        gap: 40px;
-    }
+  .faq-wrapper {
+    gap: 40px;
+  }
 
-    .faq-header h2 {
-        font-size: 47px;
-    }
+  .help-card img {
+    height: 260px;
+  }
 
-    .help-card img {
-        height: 260px;
-    }
+  .help-content {
+    padding: 65px 28px 30px;
+  }
 
-    .help-content {
-        padding: 65px 28px 30px;
-    }
+  .help-content .help-title {
+    font-size: 36px;
+  }
 
-    .help-content h3 {
-        font-size: 36px;
-    }
 }
 
 
-/*==================================================
-                LAPTOP
-                1025px - 1200px
-==================================================*/
+/* =========================================================
+   LAPTOP - 1200px
+   ========================================================= */
 
 @media (max-width: 1200px) {
 
-    .faq-section {
-        padding: 90px 0;
-    }
+  .faq-section {
+    padding: 90px 0;
+  }
 
-    .faq-section .container {
-        padding: 0 40px;
-    }
+  .faq-section .container {
+    padding: 0 40px;
+  }
 
-    .faq-wrapper {
-        grid-template-columns: 1.6fr 1fr;
-        gap: 30px;
-    }
+  .faq-wrapper {
+    grid-template-columns: 1.6fr 1fr;
+    gap: 30px;
+  }
 
-    .faq-header {
-        margin-bottom: 55px;
-    }
+  .faq-header {
+    margin-bottom: 55px;
+  }
 
-    .faq-header h2 {
-        font-size: 44px;
-    }
+  .faq-question {
+    padding: 20px 22px;
+  }
 
-    .faq-header p {
-        font-size: 16px;
-    }
+  .question-left {
+    gap: 15px;
+  }
 
-    .faq-question {
-        padding: 20px 22px;
-    }
+  .question-left .faq-question-title {
+    font-size: 17px;
+  }
 
-    .question-left {
-        gap: 15px;
-    }
+  .faq-answer {
+    padding: 0 78px 24px;
+  }
 
-    .question-left h3 {
-        font-size: 17px;
-    }
+  .faq-icon {
+    font-size: 24px;
+  }
 
-    .faq-answer {
-        padding: 0 78px 24px;
-    }
+  .help-card img {
+    height: 230px;
+  }
 
-    .faq-answer p {
-        font-size: 15px;
-    }
+  .help-content {
+    padding: 60px 22px 25px;
+  }
 
-    .faq-icon {
-        font-size: 24px;
-    }
+  .help-content .help-title {
+    font-size: 32px;
+  }
 
-    .help-card img {
-        height: 230px;
-    }
+  .help-content .common-description {
+    font-size: 14px;
+  }
 
-    .help-content {
-        padding: 60px 22px 25px;
-    }
+  .help-content .common-btn {
+    height: 55px;
+  }
 
-    .help-content h3 {
-        font-size: 32px;
-    }
+  .help-features {
+    gap: 8px;
+  }
 
-    .help-content p {
-        font-size: 14px;
-    }
+  .help-features i {
+    font-size: 23px;
+  }
 
-    .help-content button {
-        height: 55px;
-        font-size: 15px;
-    }
+  .help-features span {
+    font-size: 11px;
+  }
 
-    .help-features {
-        gap: 8px;
-    }
-
-    .help-features i {
-        font-size: 23px;
-    }
-
-    .help-features span {
-        font-size: 11px;
-    }
 }
 
 
-/*==================================================
-                TABLET
-                769px - 1024px
-==================================================*/
+/* =========================================================
+   TABLET - 1024px
+   ========================================================= */
 
 @media (max-width: 1024px) {
 
-    .faq-section {
-        padding: 80px 0;
-    }
+  .faq-section {
+    padding: 80px 0;
+  }
 
-    .faq-section .container {
-        padding: 0 40px;
-    }
+  .faq-section .container {
+    padding: 0 40px;
+  }
 
-    .faq-wrapper {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
+  .faq-wrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 
-    .faq-left,
-    .faq-right {
-        max-width: 700px;
-        margin: auto;
-    }
+  .faq-left,
+  .faq-right {
+    max-width: 700px;
+    margin: auto;
+  }
 
-    .faq-header h2 {
-        font-size: 48px;
-    }
+  .help-card img {
+    height: 300px;
+  }
 
-    .faq-header p {
-        font-size: 16px;
-    }
+  .help-content {
+    padding: 70px 35px 35px;
+  }
 
-    .help-card img {
-        height: 300px;
-    }
+  .help-content .help-title {
+    font-size: 40px;
+  }
 
-    .help-content {
-        padding: 70px 35px 35px;
-    }
+  .help-content .common-description {
+    font-size: 16px;
+  }
 
-    .help-content h3 {
-        font-size: 40px;
-    }
+  .help-content .common-btn {
+    font-size: 17px;
+  }
 
-    .help-content p {
-        font-size: 16px;
-    }
+  .help-features span {
+    font-size: 13px;
+  }
 
-    .help-content button {
-        font-size: 17px;
-    }
-
-    .help-features span {
-        font-size: 13px;
-    }
 }
 
 
-/*==================================================
-                SMALL TABLET
-                601px - 768px
-==================================================*/
+/* =========================================================
+   TABLET / MOBILE - 768px
+   ========================================================= */
 
 @media (max-width: 768px) {
 
-    .faq-section {
-        padding: 70px 0;
-    }
+  .faq-section {
+    padding: 70px 0;
+  }
 
-    .faq-section .container {
-        padding: 0 25px;
-    }
+  .faq-section .container {
+    padding: 0 25px;
+  }
 
-    .faq-header {
-        margin-bottom: 45px;
-    }
+  .faq-header {
+    margin-bottom: 45px;
+  }
 
-    .faq-header .section-tag {
-        font-size: 12px;
-        padding: 10px 18px;
-    }
+  .faq-header .common-subtitle {
+    font-size: 12px;
+    padding: 10px 18px;
+  }
 
-    .faq-header h2 {
-        font-size: 42px;
-        line-height: 1.12;
-    }
+  .faq-wrapper {
+    gap: 40px;
+  }
 
-    .faq-header p {
-        font-size: 15px;
-        line-height: 1.7;
-    }
+  .faq-question {
+    padding: 18px 20px;
+  }
 
-    .faq-wrapper {
-        gap: 40px;
-    }
+  .question-left {
+    gap: 13px;
+  }
 
-    .faq-question {
-        padding: 18px 20px;
-    }
+  .question-left .faq-question-title {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 
-    .question-left {
-        gap: 13px;
-    }
+  .faq-toggle {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    font-size: 16px;
+  }
 
-    .question-left h3 {
-        font-size: 16px;
-        line-height: 1.5;
-    }
+  .faq-icon {
+    font-size: 22px;
+  }
 
-    .faq-toggle {
-        width: 38px;
-        height: 38px;
-        min-width: 38px;
-        font-size: 16px;
-    }
+  .faq-answer {
+    padding: 0 70px 22px;
+  }
 
-    .faq-icon {
-        font-size: 22px;
-    }
+  .faq-answer .common-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 
-    .faq-answer {
-        padding: 0 70px 22px;
-    }
+  .help-card img {
+    height: 280px;
+  }
 
-    .faq-answer p {
-        font-size: 14px;
-        line-height: 1.7;
-    }
+  .help-content {
+    padding: 65px 28px 30px;
+  }
 
-    .help-card img {
-        height: 280px;
-    }
+  .help-content .help-title {
+    font-size: 36px;
+  }
 
-    .help-content {
-        padding: 65px 28px 30px;
-    }
-
-    .help-content h3 {
-        font-size: 36px;
-    }
 }
 
 
-/*==================================================
-                MOBILE
-                600px
-==================================================*/
+/* =========================================================
+   MOBILE - 600px
+   ========================================================= */
 
 @media (max-width: 600px) {
 
-    .faq-section {
-        padding: 60px 0;
-    }
+  .faq-section {
+    padding: 60px 0;
+  }
 
-    .faq-section .container {
-        padding: 0 20px;
-    }
+  .faq-section .container {
+    padding: 0 20px;
+  }
 
-    .faq-header {
-        margin-bottom: 35px;
-    }
+  .faq-header {
+    margin-bottom: 35px;
+  }
 
-    .faq-header .section-tag {
-        font-size: 10px;
-        padding: 9px 14px;
-        letter-spacing: 1.5px;
-    }
+  .faq-header .common-subtitle {
+    font-size: 10px;
+    padding: 9px 14px;
+    letter-spacing: 1.5px;
+  }
 
-    .faq-header h2 {
-        font-size: 36px;
-        margin: 20px 0 18px;
-    }
+  .faq-header .common-title {
+    margin: 20px 0 18px;
+  }
 
-    .faq-header p {
-        font-size: 14px;
-    }
+  .faq-wrapper {
+    gap: 35px;
+  }
 
-    .faq-wrapper {
-        gap: 35px;
-    }
+  .faq-item {
+    border-radius: 16px;
+    margin-bottom: 14px;
+  }
 
-    .faq-item {
-        border-radius: 16px;
-        margin-bottom: 14px;
-    }
+  .faq-question {
+    padding: 17px 16px;
+    gap: 10px;
+  }
 
-    .faq-question {
-        padding: 17px 16px;
-        gap: 10px;
-    }
+  .question-left {
+    gap: 10px;
+  }
 
-    .question-left {
-        gap: 10px;
-    }
+  .question-left .faq-question-title {
+    font-size: 14px;
+    line-height: 1.45;
+  }
 
-    .question-left h3 {
-        font-size: 14px;
-        line-height: 1.45;
-    }
+  .faq-toggle {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    font-size: 14px;
+  }
 
-    .faq-toggle {
-        width: 34px;
-        height: 34px;
-        min-width: 34px;
-        font-size: 14px;
-    }
+  .faq-icon {
+    font-size: 19px;
+  }
 
-    .faq-icon {
-        font-size: 19px;
-    }
+  .faq-answer {
+    padding: 0 60px 18px;
+  }
 
-    .faq-answer {
-        padding: 0 60px 18px;
-    }
+  .faq-answer .common-description {
+    font-size: 13px;
+    line-height: 1.7;
+  }
 
-    .faq-answer p {
-        font-size: 13px;
-        line-height: 1.7;
-    }
+  .help-card {
+    border-radius: 20px;
+  }
 
-    .help-card {
-        border-radius: 20px;
-    }
+  .help-card img {
+    height: 230px;
+  }
 
-    .help-card img {
-        height: 230px;
-    }
+  .help-content {
+    padding: 60px 20px 25px;
+  }
 
-    .help-content {
-        padding: 60px 20px 25px;
-    }
+  .help-icon {
+    width: 68px;
+    height: 68px;
+    top: -34px;
 
-    .help-icon {
-        width: 68px;
-        height: 68px;
-        top: -34px;
+    font-size: 28px;
+    border-width: 5px;
+  }
 
-        font-size: 28px;
-        border-width: 5px;
-    }
+  .help-content .help-title {
+    font-size: 32px;
+    margin-top: -42px;
+  }
 
-    .help-content h3 {
-        font-size: 32px;
-        margin-top: -42px;
-    }
+  .divider {
+    margin-bottom: 20px;
+  }
 
-    .divider {
-        margin-bottom: 20px;
-    }
+  .divider span {
+    width: 55px;
+  }
 
-    .divider span {
-        width: 55px;
-    }
+  .help-content .common-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 
-    .help-content p {
-        font-size: 14px;
-        line-height: 1.7;
-    }
+  .help-content .common-btn {
+    height: 54px;
+    font-size: 14px;
+  }
 
-    .help-content button {
-        height: 54px;
-        font-size: 14px;
-    }
+  .help-features {
+    gap: 8px;
+    margin-top: 28px;
+    padding-top: 20px;
+  }
 
-    .help-features {
-        gap: 8px;
-        margin-top: 28px;
-        padding-top: 20px;
-    }
+  .help-features i {
+    font-size: 22px;
+  }
 
-    .help-features i {
-        font-size: 22px;
-    }
+  .help-features span {
+    font-size: 11px;
+  }
 
-    .help-features span {
-        font-size: 11px;
-    }
 }
 
 
-/*==================================================
-                MOBILE
-                430px
-==================================================*/
+/* =========================================================
+   MOBILE - 430px
+   ========================================================= */
 
 @media (max-width: 430px) {
 
-    .faq-section {
-        padding: 55px 0;
-    }
+  .faq-section {
+    padding: 55px 0;
+  }
 
-    .faq-section .container {
-        padding: 0 17px;
-    }
+  .faq-section .container {
+    padding: 0 17px;
+  }
 
-    .faq-header .section-tag {
-        font-size: 9px;
-        padding: 8px 12px;
-    }
+  .faq-header .common-subtitle {
+    font-size: 9px;
+    padding: 8px 12px;
+  }
 
-    .faq-header h2 {
-        font-size: 32px;
-    }
+  .faq-question {
+    padding: 15px 13px;
+  }
 
-    .faq-header p {
-        font-size: 13px;
-    }
+  .question-left {
+    gap: 8px;
+  }
 
-    .faq-question {
-        padding: 15px 13px;
-    }
+  .question-left .faq-question-title {
+    font-size: 13px;
+  }
 
-    .question-left {
-        gap: 8px;
-    }
+  .faq-toggle {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
 
-    .question-left h3 {
-        font-size: 13px;
-    }
+  .faq-icon {
+    font-size: 17px;
+  }
 
-    .faq-toggle {
-        width: 32px;
-        height: 32px;
-        min-width: 32px;
-    }
+  .faq-answer {
+    padding: 0 52px 17px;
+  }
 
-    .faq-icon {
-        font-size: 17px;
-    }
+  .faq-answer .common-description {
+    font-size: 12px;
+  }
 
-    .faq-answer {
-        padding: 0 52px 17px;
-    }
+  .help-card img {
+    height: 210px;
+  }
 
-    .faq-answer p {
-        font-size: 12px;
-    }
+  .help-content {
+    padding: 55px 17px 22px;
+  }
 
-    .help-card img {
-        height: 210px;
-    }
+  .help-icon {
+    width: 62px;
+    height: 62px;
+    top: -31px;
+    font-size: 25px;
+  }
 
-    .help-content {
-        padding: 55px 17px 22px;
-    }
+  .help-content .help-title {
+    font-size: 29px;
+    margin-top: -38px;
+  }
 
-    .help-icon {
-        width: 62px;
-        height: 62px;
-        top: -31px;
+  .help-content .common-description {
+    font-size: 13px;
+  }
 
-        font-size: 25px;
-    }
+  .help-content .common-btn {
+    font-size: 13px;
+  }
 
-    .help-content h3 {
-        font-size: 29px;
-        margin-top: -38px;
-    }
+  .help-features i {
+    font-size: 20px;
+  }
 
-    .help-content p {
-        font-size: 13px;
-    }
+  .help-features span {
+    font-size: 10px;
+  }
 
-    .help-content button {
-        font-size: 13px;
-    }
-
-    .help-features i {
-        font-size: 20px;
-    }
-
-    .help-features span {
-        font-size: 10px;
-    }
 }
 
 
-/*==============SMALL MOBILE 375px======================*/
+/* =========================================================
+   SMALL MOBILE - 375px
+   ========================================================= */
 
 @media (max-width: 375px) {
 
-    .faq-section {
-        padding: 50px 0;
-    }
+  .faq-section {
+    padding: 50px 0;
+  }
 
-    .faq-section .container {
-        padding: 0 14px;
-    }
+  .faq-section .container {
+    padding: 0 14px;
+  }
 
-    .faq-header h2 {
-        font-size: 29px;
-    }
+  .question-left .faq-question-title {
+    font-size: 12px;
+  }
 
-    .faq-header p {
-        font-size: 12px;
-    }
+  .faq-toggle {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    font-size: 12px;
+  }
 
-    .question-left h3 {
-        font-size: 12px;
-    }
+  .faq-icon {
+    font-size: 16px;
+  }
 
-    .faq-toggle {
-        width: 30px;
-        height: 30px;
-        min-width: 30px;
-        font-size: 12px;
-    }
+  .faq-answer {
+    padding: 0 48px 15px;
+  }
 
-    .faq-icon {
-        font-size: 16px;
-    }
+  .faq-answer .common-description {
+    font-size: 11.5px;
+  }
 
-    .faq-answer {
-        padding: 0 48px 15px;
-    }
+  .help-card img {
+    height: 190px;
+  }
 
-    .faq-answer p {
-        font-size: 11.5px;
-    }
+  .help-content .help-title {
+    font-size: 27px;
+  }
 
-    .help-card img {
-        height: 190px;
-    }
+  .help-content .common-description {
+    font-size: 12px;
+  }
 
-    .help-content h3 {
-        font-size: 27px;
-    }
+  .help-features span {
+    font-size: 9px;
+  }
 
-    .help-content p {
-        font-size: 12px;
-    }
-
-    .help-features span {
-        font-size: 9px;
-    }
 }
 
 
-/*=========== VERY SMALL MOBILE320px==================================*/
+/* =========================================================
+   VERY SMALL MOBILE - 320px
+   ========================================================= */
 
 @media (max-width: 320px) {
 
-    .faq-section {
-        padding: 45px 0;
-    }
+  .faq-section {
+    padding: 45px 0;
+  }
 
-    .faq-section .container {
-        padding: 0 12px;
-    }
+  .faq-section .container {
+    padding: 0 12px;
+  }
 
-    .faq-header .section-tag {
-        font-size: 8px;
-        padding: 7px 10px;
-    }
+  .faq-header .common-subtitle {
+    font-size: 8px;
+    padding: 7px 10px;
+  }
 
-    .faq-header h2 {
-        font-size: 26px;
-    }
+  .faq-question {
+    padding: 13px 11px;
+  }
 
-    .faq-header p {
-        font-size: 11px;
-    }
+  .question-left .faq-question-title {
+    font-size: 11px;
+  }
 
-    .faq-question {
-        padding: 13px 11px;
-    }
+  .faq-toggle {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 11px;
+  }
 
-    .question-left h3 {
-        font-size: 11px;
-    }
-.faq-toggle {
-        width: 28px;
-        height: 28px;
-        min-width: 28px;
-        font-size: 11px;
-    }
-   .faq-icon {
-        font-size: 14px;
-    }
-   .faq-answer {
-        padding: 0 42px 14px;
-    }
-   .faq-answer p {
-        font-size: 10.5px;
-    }
-   .help-card img {
-        height: 170px;
-    }
-    .help-content {
-        padding: 50px 14px 20px;
-    }
-    .help-icon {
-        width: 56px;
-        height: 56px;
-        top: -28px;
-        font-size: 22px;
-    }
-    .help-content h3 {
-        font-size: 24px;
-    }
-   .help-content p {
-        font-size: 11px;
-    }
-   .help-content button {
-        height: 48px;
-        font-size: 11px;
-    }
-    .help-features {
-        gap: 5px;
-    }
-   .help-features i {
-        font-size: 17px;
-    }
-   .help-features span {
-        font-size: 8px;
-    }
+  .faq-icon {
+    font-size: 14px;
+  }
+
+  .faq-answer {
+    padding: 0 42px 14px;
+  }
+
+  .faq-answer .common-description {
+    font-size: 10.5px;
+  }
+
+  .help-card img {
+    height: 170px;
+  }
+
+  .help-content {
+    padding: 50px 14px 20px;
+  }
+
+  .help-icon {
+    width: 56px;
+    height: 56px;
+    top: -28px;
+    font-size: 22px;
+  }
+
+  .help-content .help-title {
+    font-size: 24px;
+  }
+
+  .help-content .common-description {
+    font-size: 11px;
+  }
+
+  .help-content .common-btn {
+    height: 48px;
+    font-size: 11px;
+  }
+
+  .help-features {
+    gap: 5px;
+  }
+
+  .help-features i {
+    font-size: 17px;
+  }
+
+  .help-features span {
+    font-size: 8px;
+  }
+
 }

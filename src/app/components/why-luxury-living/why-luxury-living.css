@@ -3,88 +3,14 @@ WHY LUXURY LIVING
 =========================================*/
 
 .why-luxury-living{
-
     padding:120px 0;
-
     background:#FFFFFF;
 }
 
-
 .why-luxury-living .container{
-
     width:92%;
-
     max-width:1320px;
-
     margin:auto;
-}
-
-
-/*=========================================
-SECTION HEADER
-=========================================*/
-
-.section-header{
-
-    max-width:780px;
-
-    margin:0 auto 65px;
-
-    text-align:center;
-}
-
-
-.section-subtitle{
-
-    display:inline-block;
-
-    padding:11px 28px;
-
-    background:#F8F5F1;
-
-    border:1px solid #D8C2AE;
-
-    border-radius:50px;
-
-    color:#B8734C;
-
-    font-size:13px;
-
-    font-weight:600;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    margin-bottom:18px;
-}
-
-
-.section-header h2{
-
-    margin:0 0 18px;
-
-    color:#2B211C;
-
-    font-size:52px;
-
-    font-weight:700;
-
-    line-height:1.2;
-}
-
-
-.section-header p{
-
-    max-width:680px;
-
-    margin:auto;
-
-    color:#6B625C;
-
-    font-size:17px;
-
-    line-height:1.8;
 }
 
 
@@ -92,12 +18,9 @@ SECTION HEADER
 BENEFITS GRID
 =========================================*/
 
-.benefits-grid{
-
+.why-luxury-benefits{
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:25px;
 }
 
@@ -106,44 +29,30 @@ BENEFITS GRID
 BENEFIT CARD
 =========================================*/
 
-.benefit-card{
-
+.why-luxury-benefit-card{
     position:relative;
-
     min-height:290px;
-
     padding:40px 28px;
 
     background:#F8F5F1;
-
     border:1px solid #E9DED3;
-
     border-radius:25px;
 
     text-align:center;
 
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
-
     justify-content:center;
 
     overflow:hidden;
-
     transition:.4s ease;
 }
 
-
-.benefit-card:hover{
-
+.why-luxury-benefit-card:hover{
     transform:translateY(-10px);
-
     background:#FFFFFF;
-
     box-shadow:0 20px 45px rgba(0,0,0,.10);
-
     border-color:#D8C2AE;
 }
 
@@ -152,32 +61,22 @@ BENEFIT CARD
 TOP ACCENT
 =========================================*/
 
-.benefit-card::before{
-
+.why-luxury-benefit-card::before{
     content:"";
-
     position:absolute;
-
     top:0;
-
     left:0;
-
     width:100%;
-
     height:4px;
 
     background:#B8734C;
 
     transform:scaleX(0);
-
     transform-origin:left;
-
     transition:.4s ease;
 }
 
-
-.benefit-card:hover::before{
-
+.why-luxury-benefit-card:hover::before{
     transform:scaleX(1);
 }
 
@@ -186,48 +85,34 @@ TOP ACCENT
 ICON
 =========================================*/
 
-.benefit-icon{
-
+.why-luxury-benefit-icon{
     width:82px;
-
     height:82px;
 
     margin-bottom:22px;
 
     border-radius:50%;
-
     background:#FFFFFF;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     transition:.4s ease;
 }
 
-
-.benefit-icon i{
-
+.why-luxury-benefit-icon i{
     color:#B8734C;
-
     font-size:35px;
-
     transition:.4s ease;
 }
 
-
-.benefit-card:hover .benefit-icon{
-
+.why-luxury-benefit-card:hover .why-luxury-benefit-icon{
     background:#B8734C;
-
     transform:scale(1.08);
 }
 
-
-.benefit-card:hover .benefit-icon i{
-
+.why-luxury-benefit-card:hover .why-luxury-benefit-icon i{
     color:#FFFFFF;
 }
 
@@ -236,15 +121,8 @@ ICON
 TITLE
 =========================================*/
 
-.benefit-card h3{
-
+.why-luxury-benefit-card .common-card-title{
     margin:0 0 13px;
-
-    color:#2B211C;
-
-    font-size:23px;
-
-    font-weight:700;
 }
 
 
@@ -252,24 +130,19 @@ TITLE
 LINE
 =========================================*/
 
-.benefit-line{
-
+.why-luxury-benefit-line{
     width:45px;
-
     height:3px;
 
     margin-bottom:16px;
 
     background:#B8734C;
-
     border-radius:20px;
 
     transition:.35s ease;
 }
 
-
-.benefit-card:hover .benefit-line{
-
+.why-luxury-benefit-card:hover .why-luxury-benefit-line{
     width:75px;
 }
 
@@ -278,15 +151,8 @@ LINE
 DESCRIPTION
 =========================================*/
 
-.benefit-card p{
-
+.why-luxury-benefit-card .common-card-subtitle{
     margin:0;
-
-    color:#6B625C;
-
-    font-size:14px;
-
-    line-height:1.7;
 }
 
 
@@ -296,10 +162,8 @@ TABLET
 
 @media(max-width:1100px){
 
-    .benefits-grid{
-
+    .why-luxury-benefits{
         grid-template-columns:repeat(2,1fr);
-
         gap:22px;
     }
 
@@ -313,36 +177,16 @@ MOBILE
 @media(max-width:768px){
 
     .why-luxury-living{
-
         padding:80px 0;
     }
 
-    .section-header{
-
-        margin-bottom:50px;
-    }
-
-    .section-header h2{
-
-        font-size:40px;
-    }
-
-    .section-header p{
-
-        font-size:15px;
-    }
-
-    .benefits-grid{
-
+    .why-luxury-benefits{
         grid-template-columns:1fr;
-
         gap:20px;
     }
 
-    .benefit-card{
-
+    .why-luxury-benefit-card{
         min-height:auto;
-
         padding:35px 25px;
     }
 
@@ -356,37 +200,20 @@ SMALL MOBILE
 @media(max-width:480px){
 
     .why-luxury-living{
-
         padding:70px 0;
     }
 
-    .section-header h2{
-
-        font-size:32px;
+    .why-luxury-living .container{
+        width:94%;
     }
 
-    .section-subtitle{
-
-        padding:9px 20px;
-
-        font-size:11px;
-    }
-
-    .benefit-icon{
-
+    .why-luxury-benefit-icon{
         width:72px;
-
         height:72px;
     }
 
-    .benefit-icon i{
-
+    .why-luxury-benefit-icon i{
         font-size:30px;
-    }
-
-    .benefit-card h3{
-
-        font-size:21px;
     }
 
 }

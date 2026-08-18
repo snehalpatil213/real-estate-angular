@@ -1,427 +1,376 @@
-/*==================================================
-                FEATURED PLOTS
-==================================================*/
+/* =========================================================
+   FEATURED PLOTS
+   ========================================================= */
 
 .featured-plots {
     padding: 120px 0;
-    background: #F8F5F1;
+    background: var(--bg);
     overflow: hidden;
 }
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
 
 .featured-plots .container {
     width: 100%;
     max-width: 1320px;
     margin: auto;
-    padding: 0 60px;
 }
 
 
-/*==================================================
-                SECTION HEADER
-==================================================*/
+/* =========================================================
+   SECTION HEADER
+   GLOBAL CLASSES USED:
+   common-section-header
+   common-subtitle
+   common-title
+   common-description
+   ========================================================= */
 
-.featured-plots .section-header {
-    margin-bottom: 60px;
-    text-align: center;
-}
-
-.featured-plots .section-subtitle {
-    display: inline-block;
-
-    padding: 12px 30px;
-    margin-bottom: 18px;
-
-    background: #fff;
-
-    border: 2px solid #D8C2AE;
-    border-radius: 50px;
-
-    color: #B8734C;
-
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.featured-plots .section-header h2 {
-    margin: 0 0 20px;
-
-    color: #2B211C;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 52px;
-    font-weight: 700;
-    line-height: 1.1;
-}
-
-.featured-plots .section-header p {
-    max-width: 700px;
-    margin: auto;
-
-    color: #6B625C;
-
-    font-family: "Inter", sans-serif;
-    font-size: 17px;
-    line-height: 1.8;
+.featured-plots .common-section-header {
+    max-width: 750px;
+    margin: 0 auto 70px;
 }
 
 
-/*==================================================
-                SLIDER
-==================================================*/
+/* =========================================================
+   SLIDER WRAPPER
+   ========================================================= */
 
-.slider-wrapper {
+.plot-slider-wrapper {
+    position: relative;
+
     display: flex;
     align-items: center;
-    gap: 25px;
 
-    position: relative;
+    gap: 25px;
 }
 
-.slider-container {
+
+/* =========================================================
+   SLIDER CONTAINER
+   ========================================================= */
+
+.plot-slider-container {
     flex: 1;
     min-width: 0;
+
     overflow: hidden;
 }
 
-.slider-track {
+
+/* =========================================================
+   SLIDER TRACK
+   ========================================================= */
+
+.plot-slider-track {
     display: grid;
+
     grid-template-columns: repeat(3, minmax(0, 1fr));
+
     gap: 30px;
 }
 
 
-/*==================================================
-                PLOT CARD
-==================================================*/
+/* =========================================================
+   PLOT CARD
+   ========================================================= */
 
 .plot-card {
-    background: #fff;
+    background: var(--white);
+
+    border: 1px solid var(--border);
 
     border-radius: 25px;
+
     overflow: hidden;
 
-    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+    box-shadow:
+        0 12px 35px rgba(43, 33, 28, 0.08);
 
-    transition: .4s ease;
+    transition: all 0.4s ease;
 }
 
 .plot-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(0,0,0,.15);
+
+    box-shadow:
+        0 25px 50px rgba(43, 33, 28, 0.15);
 }
 
 
-/*==================================================
-                IMAGE
-==================================================*/
+/* =========================================================
+   CARD IMAGE
+   ========================================================= */
 
-.card-image {
+.plot-card-image {
     position: relative;
-    overflow: hidden;
-}
 
-.card-image img {
     width: 100%;
     height: 260px;
 
-    display: block;
-    object-fit: cover;
-
-    transition: .5s ease;
+    overflow: hidden;
 }
 
-.plot-card:hover .card-image img {
+.plot-card-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.plot-card:hover
+.plot-card-image img {
     transform: scale(1.08);
 }
 
 
-/*==================================================
-                BADGE
-==================================================*/
+/* =========================================================
+   PLOT BADGE
+   ========================================================= */
 
-.plot-card .badge {
+.plot-badge {
     position: absolute;
-    top: 20px;
-    left: 20px;
+
+    top: 18px;
+    left: 18px;
 
     padding: 8px 18px;
 
-    background: #B8734C;
-    color: #fff;
+    background: var(--accent);
+    color: var(--white);
 
     border-radius: 30px;
 
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 600;
+
+    letter-spacing: 0.5px;
 }
 
 
-/*==================================================
-                CARD CONTENT
-==================================================*/
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
 
-.plot-card .card-content {
+.plot-card-content {
     padding: 28px;
 }
 
-.plot-card .card-content h3 {
-    margin: 0 0 15px;
 
-    color: #2B211C;
+/* =========================================================
+   CARD TITLE
+   GLOBAL CLASS:
+   common-card-title
+   ========================================================= */
 
-    font-family: "Cormorant Garamond", serif;
-    font-size: 27px;
-    font-weight: 700;
-    line-height: 1.2;
+.plot-card-content .common-card-title {
+    margin-bottom: 15px;
 }
 
 
-/*==================================================
-                LOCATION
-==================================================*/
+/* =========================================================
+   LOCATION
+   ========================================================= */
 
-.plot-card .location {
+.plot-location {
     display: flex;
     align-items: center;
+
     gap: 8px;
 
     margin-bottom: 22px;
 
-    color: #6B625C;
+    color: var(--text);
 
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
 }
 
-.plot-card .location i {
-    color: #B8734C;
+.plot-location i {
+    color: var(--accent);
+
+    font-size: 16px;
+
     flex-shrink: 0;
 }
 
 
-/*==================================================
-                PROPERTY INFO
-==================================================*/
+/* =========================================================
+   PLOT INFORMATION
+   ========================================================= */
 
-.plot-card .property-info {
+.plot-property-info {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
+
+    gap: 10px;
 
     padding: 18px 0;
+
     margin-bottom: 25px;
 
-    border-top: 1px solid #ECE4DB;
-    border-bottom: 1px solid #ECE4DB;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
-.plot-card .property-info div {
+.plot-property-info div {
     display: flex;
     align-items: center;
-    gap: 7px;
 
-    color: #555;
+    gap: 6px;
 
-    font-family: "Inter", sans-serif;
+    color: var(--text);
+
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
 }
 
-.plot-card .property-info i {
-    color: #B8734C;
+.plot-property-info i {
+    color: var(--accent);
+
     font-size: 16px;
 }
 
 
-/*==================================================
-                PRICE
-==================================================*/
+/* =========================================================
+   PRICE BOX
+   ========================================================= */
 
-.plot-card .price-box {
+.plot-price-box {
     display: flex;
+
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+
+    gap: 15px;
 }
 
-.plot-card .price-box h4 {
+
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.plot-price-box .common-card-title {
     margin: 0;
 
-    color: #B8734C;
+    color: var(--accent);
 
-    font-family: "Inter", sans-serif;
     font-size: 27px;
-    font-weight: 700;
-
-    white-space: nowrap;
-}
-
-.plot-card .price-label {
-    margin-right: auto;
-
-    color: #6B625C;
-
-    font-family: "Inter", sans-serif;
-    font-size: 11px;
 
     white-space: nowrap;
 }
 
 
-/*==================================================
-                DETAILS BUTTON
-==================================================*/
+/* =========================================================
+   VIEW DETAILS
+   GLOBAL CLASS:
+   common-btn
+   ========================================================= */
 
-.plot-card .details-btn {
-    padding: 12px 20px;
-
-    border: none;
-    border-radius: 10px;
-
-    background: #B8734C;
-    color: #fff;
-
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-
-    cursor: pointer;
+.plot-price-box .common-btn {
+    padding: 10px 20px;
 
     white-space: nowrap;
-
-    transition: .35s ease;
-}
-
-.plot-card .details-btn:hover {
-    background: #9E5F3D;
-    transform: translateY(-2px);
 }
 
 
-/*==================================================
-                SLIDER BUTTONS
-==================================================*/
+/* =========================================================
+   SLIDER BUTTON
+   ========================================================= */
 
-.slider-btn {
+.plot-slider-btn {
     width: 55px;
     height: 55px;
+
+    min-width: 55px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    flex-shrink: 0;
-
     border: none;
     border-radius: 50%;
 
-    background: #fff;
-    color: #B8734C;
+    background: var(--white);
+    color: var(--accent);
 
-    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
 
     cursor: pointer;
 
-    transition: .35s ease;
+    transition: all 0.35s ease;
+
+    flex-shrink: 0;
 }
 
-.slider-btn i {
+.plot-slider-btn i {
     font-size: 22px;
 }
 
-.slider-btn:hover {
-    background: #B8734C;
-    color: #fff;
+.plot-slider-btn:hover {
+    background: var(--accent);
+
+    color: var(--white);
 
     transform: scale(1.08);
 }
 
 
-/*==================================================
-                SLIDER DOTS
-==================================================*/
+/* =========================================================
+   DOTS
+   ========================================================= */
 
-.slider-dots {
+.plot-slider-dots {
     display: flex;
+
     justify-content: center;
     align-items: center;
-    gap: 12px;
+
+    gap: 10px;
 
     margin-top: 40px;
 }
 
-.dot {
+.plot-dot {
     width: 12px;
     height: 12px;
 
-    background: #D8C2AE;
-
     border-radius: 50%;
+
+    background: var(--border);
 
     cursor: pointer;
 
-    transition: .35s ease;
+    transition: all 0.35s ease;
 }
 
-.dot.active {
-    width: 35px;
-
-    background: #B8734C;
+.plot-dot.active {
+    width: 34px;
 
     border-radius: 30px;
+
+    background: var(--accent);
+}
+
+.plot-dot:hover {
+    background: var(--accent);
 }
 
 
-/*==================================================
-                LARGE DESKTOP
-                1401px+
-==================================================*/
-
-@media (min-width: 1401px) {
-
-    .featured-plots .container {
-        max-width: 1400px;
-    }
-}
-
-
-/*==================================================
-                DESKTOP
-                1201px - 1400px
-==================================================*/
-
-@media (max-width: 1400px) {
-
-    .featured-plots .container {
-        max-width: 1200px;
-        padding: 0 50px;
-    }
-
-    .slider-track {
-        gap: 25px;
-    }
-
-    .plot-card .card-content {
-        padding: 25px;
-    }
-
-    .plot-card .card-content h3 {
-        font-size: 25px;
-    }
-
-    .plot-card .price-box h4 {
-        font-size: 24px;
-    }
-}
-
-
-/*==================================================
-                LAPTOP
-                1025px - 1200px
-==================================================*/
+/* =========================================================
+   LAPTOP
+   1025px - 1200px
+   ========================================================= */
 
 @media (max-width: 1200px) {
 
@@ -429,65 +378,50 @@
         padding: 90px 0;
     }
 
-    .featured-plots .container {
-        padding: 0 40px;
-    }
-
-    .featured-plots .section-header {
-        margin-bottom: 50px;
-    }
-
-    .featured-plots .section-header h2 {
-        font-size: 46px;
-    }
-
-    .featured-plots .section-header p {
-        font-size: 16px;
-    }
-
-    .slider-wrapper {
+    .plot-slider-wrapper {
         gap: 18px;
     }
 
-    .slider-track {
+    .plot-slider-track {
         gap: 20px;
     }
 
-    .slider-btn {
-        width: 50px;
-        height: 50px;
-    }
-
-    .card-image img {
+    .plot-card-image {
         height: 230px;
     }
 
-    .plot-card .card-content {
+    .plot-card-content {
         padding: 22px;
     }
 
-    .plot-card .card-content h3 {
-        font-size: 23px;
+    .plot-card-content .common-card-title {
+        font-size: 24px;
     }
 
-    .plot-card .property-info {
-        gap: 12px;
+    .plot-property-info {
+        gap: 7px;
     }
 
-    .plot-card .price-box {
-        flex-wrap: wrap;
+    .plot-property-info div {
+        font-size: 11px;
     }
 
-    .plot-card .price-label {
-        margin-right: 0;
+    .plot-price-box .common-card-title {
+        font-size: 24px;
+    }
+
+    .plot-slider-btn {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
     }
 }
 
 
-/*==================================================
-                TABLET
-                769px - 1024px
-==================================================*/
+/* =========================================================
+   TABLET
+   769px - 1024px
+   ========================================================= */
 
 @media (max-width: 1024px) {
 
@@ -495,66 +429,45 @@
         padding: 80px 0;
     }
 
-    .featured-plots .container {
-        padding: 0 35px;
-    }
+    .plot-slider-track {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
 
-    .featured-plots .section-header {
-        margin-bottom: 45px;
-    }
-
-    .featured-plots .section-header h2 {
-        font-size: 43px;
-    }
-
-    .slider-wrapper {
-        gap: 15px;
-    }
-
-    .slider-track {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 25px;
     }
 
-    .card-image img {
+    .plot-card-image {
         height: 240px;
     }
 
-    .plot-card .card-content {
-        padding: 24px;
+    .plot-card-content {
+        padding: 22px;
     }
 
-    .plot-card .card-content h3 {
-        font-size: 25px;
+    .plot-property-info {
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
     }
 
-    .plot-card .property-info {
-        gap: 15px;
-    }
-
-    .plot-card .price-box {
+    .plot-price-box {
         flex-wrap: wrap;
     }
 
-    .plot-card .details-btn {
-        width: 100%;
-    }
-
-    .plot-card .price-label {
-        margin-right: 0;
-    }
-
-    .slider-btn {
+    .plot-slider-btn {
         width: 48px;
         height: 48px;
+        min-width: 48px;
     }
 }
 
 
-/*==================================================
-                SMALL TABLET
-                601px - 768px
-==================================================*/
+/* =========================================================
+   MOBILE TABLET
+   601px - 768px
+   ========================================================= */
 
 @media (max-width: 768px) {
 
@@ -562,80 +475,59 @@
         padding: 70px 0;
     }
 
-    .featured-plots .container {
-        padding: 0 25px;
-    }
-
-    .featured-plots .section-header {
+    .featured-plots
+    .common-section-header {
         margin-bottom: 40px;
     }
 
-    .featured-plots .section-subtitle {
-        padding: 10px 22px;
-        font-size: 12px;
-    }
-
-    .featured-plots .section-header h2 {
-        font-size: 39px;
-    }
-
-    .featured-plots .section-header p {
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-    .slider-wrapper {
+    .plot-slider-wrapper {
         gap: 10px;
     }
 
-    .slider-track {
+    .plot-slider-track {
         grid-template-columns: 1fr;
+
         gap: 20px;
     }
 
-    .card-image img {
+    .plot-card-image {
         height: 280px;
     }
 
-    .plot-card .card-content {
-        padding: 25px;
+    .plot-card-content {
+        padding: 24px;
     }
 
-    .plot-card .card-content h3 {
-        font-size: 27px;
+    .plot-card-content .common-card-title {
+        font-size: 26px;
     }
 
-    .plot-card .property-info {
-        gap: 20px;
+    .plot-property-info {
+        justify-content: flex-start;
+
+        gap: 18px;
     }
 
-    .plot-card .price-box {
+    .plot-price-box {
         flex-wrap: nowrap;
     }
 
-    .plot-card .price-label {
-        margin-right: auto;
+    .plot-slider-btn {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
     }
 
-    .plot-card .details-btn {
-        width: auto;
-    }
-
-    .slider-btn {
-        width: 45px;
-        height: 45px;
-    }
-
-    .slider-btn i {
-        font-size: 19px;
+    .plot-slider-btn i {
+        font-size: 18px;
     }
 }
 
 
-/*==================================================
-                MOBILE
-                600px
-==================================================*/
+/* =========================================================
+   MOBILE
+   max 600px
+   ========================================================= */
 
 @media (max-width: 600px) {
 
@@ -643,145 +535,128 @@
         padding: 60px 0;
     }
 
-    .featured-plots .container {
-        padding: 0 20px;
-    }
-
-    .featured-plots .section-header {
-        margin-bottom: 35px;
-    }
-
-    .featured-plots .section-subtitle {
-        padding: 8px 18px;
-        font-size: 10px;
-        letter-spacing: 1.5px;
-    }
-
-    .featured-plots .section-header h2 {
-        font-size: 34px;
-        line-height: 1.15;
-    }
-
-    .featured-plots .section-header p {
-        font-size: 13px;
-        line-height: 1.7;
-    }
-
-    .slider-wrapper {
+    .plot-slider-wrapper {
         display: block;
+
+        position: relative;
     }
 
-    .slider-container {
-        width: 100%;
-    }
-
-    .slider-track {
+    .plot-slider-track {
         grid-template-columns: 1fr;
-    }
-
-    .card-image img {
-        height: 240px;
     }
 
     .plot-card {
         border-radius: 20px;
     }
 
-    .plot-card .badge {
+    .plot-card-image {
+        height: 240px;
+    }
+
+    .plot-badge {
         top: 15px;
         left: 15px;
 
         padding: 7px 15px;
+
         font-size: 10px;
     }
 
-    .plot-card .card-content {
+    .plot-card-content {
         padding: 20px;
     }
 
-    .plot-card .card-content h3 {
-        font-size: 24px;
+    .plot-card-content .common-card-title {
+        font-size: 23px;
     }
 
-    .plot-card .location {
+    .plot-location {
         font-size: 12px;
+
         margin-bottom: 18px;
     }
 
-    .plot-card .property-info {
+    .plot-property-info {
         gap: 12px;
+
         padding: 15px 0;
+
         margin-bottom: 20px;
     }
 
-    .plot-card .property-info div {
-        font-size: 11px;
-    }
-
-    .plot-card .property-info i {
-        font-size: 14px;
-    }
-
-    .plot-card .price-box {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .plot-card .price-box h4 {
-        font-size: 22px;
-    }
-
-    .plot-card .price-label {
+    .plot-property-info div {
         font-size: 10px;
     }
 
-    .plot-card .details-btn {
+    .plot-property-info i {
+        font-size: 14px;
+    }
+
+    .plot-price-box {
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    .plot-price-box .common-card-title {
+        font-size: 21px;
+    }
+
+    .plot-price-box .common-btn {
         width: 100%;
+
+        justify-content: center;
+
         padding: 11px 18px;
+
         font-size: 12px;
     }
 
-    .slider-btn {
+    .plot-slider-btn {
         position: absolute;
+
         top: 120px;
+
         z-index: 5;
 
-        width: 42px;
-        height: 42px;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
     }
 
-    .prev-btn {
-        left: 10px;
+    .plot-prev-btn {
+        left: 8px;
     }
 
-    .next-btn {
-        right: 10px;
+    .plot-next-btn {
+        right: 8px;
     }
 
-    .slider-btn i {
-        font-size: 17px;
+    .plot-slider-btn i {
+        font-size: 16px;
     }
 
-    .slider-dots {
+    .plot-slider-dots {
         margin-top: 25px;
+
         gap: 8px;
     }
 
-    .dot {
+    .plot-dot {
         width: 9px;
         height: 9px;
     }
 
-    .dot.active {
+    .plot-dot.active {
         width: 28px;
     }
 }
 
 
-/*==================================================
-                MOBILE
-                430px
-==================================================*/
+/* =========================================================
+   SMALL MOBILE
+   max 430px
+   ========================================================= */
 
 @media (max-width: 430px) {
 
@@ -789,72 +664,52 @@
         padding: 55px 0;
     }
 
-    .featured-plots .container {
-        padding: 0 17px;
-    }
-
-    .featured-plots .section-subtitle {
-        padding: 7px 15px;
-        font-size: 9px;
-    }
-
-    .featured-plots .section-header h2 {
-        font-size: 30px;
-    }
-
-    .featured-plots .section-header p {
-        font-size: 12px;
-    }
-
-    .card-image img {
+    .plot-card-image {
         height: 220px;
     }
 
-    .plot-card .card-content {
+    .plot-card-content {
         padding: 18px;
     }
 
-    .plot-card .card-content h3 {
-        font-size: 22px;
+    .plot-card-content .common-card-title {
+        font-size: 21px;
     }
 
-    .plot-card .location {
+    .plot-location {
         font-size: 11px;
     }
 
-    .plot-card .property-info {
-        gap: 10px;
+    .plot-property-info {
+        gap: 9px;
     }
 
-    .plot-card .property-info div {
-        font-size: 10px;
+    .plot-property-info div {
+        font-size: 9px;
     }
 
-    .plot-card .price-box h4 {
-        font-size: 20px;
+    .plot-price-box .common-card-title {
+        font-size: 19px;
     }
 
-    .plot-card .details-btn {
+    .plot-price-box .common-btn {
         font-size: 11px;
     }
 
-    .slider-btn {
-        top: 110px;
+    .plot-slider-btn {
+        top: 105px;
 
-        width: 38px;
-        height: 38px;
-    }
-
-    .slider-btn i {
-        font-size: 15px;
+        width: 37px;
+        height: 37px;
+        min-width: 37px;
     }
 }
 
 
-/*==================================================
-                SMALL MOBILE
-                375px
-==================================================*/
+/* =========================================================
+   VERY SMALL MOBILE
+   max 375px
+   ========================================================= */
 
 @media (max-width: 375px) {
 
@@ -862,72 +717,58 @@
         padding: 50px 0;
     }
 
-    .featured-plots .container {
-        padding: 0 14px;
-    }
-
-    .featured-plots .section-header h2 {
-        font-size: 27px;
-    }
-
-    .featured-plots .section-header p {
-        font-size: 11px;
-    }
-
-    .card-image img {
+    .plot-card-image {
         height: 200px;
     }
 
-    .plot-card .card-content {
+    .plot-card-content {
         padding: 16px;
     }
 
-    .plot-card .card-content h3 {
-        font-size: 20px;
+    .plot-card-content .common-card-title {
+        font-size: 19px;
     }
 
-    .plot-card .location {
+    .plot-location {
         font-size: 10px;
     }
 
-    .plot-card .property-info {
-        gap: 8px;
+    .plot-property-info {
+        gap: 7px;
     }
 
-    .plot-card .property-info div {
-        font-size: 9px;
+    .plot-property-info div {
+        font-size: 8px;
     }
 
-    .plot-card .price-box h4 {
-        font-size: 18px;
+    .plot-price-box .common-card-title {
+        font-size: 17px;
     }
 
-    .plot-card .price-label {
-        font-size: 9px;
-    }
+    .plot-price-box .common-btn {
+        padding: 9px 14px;
 
-    .plot-card .details-btn {
-        padding: 10px 15px;
         font-size: 10px;
     }
 
-    .slider-btn {
-        top: 100px;
+    .plot-slider-btn {
+        top: 95px;
 
-        width: 35px;
-        height: 35px;
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
     }
 
-    .slider-dots {
-        margin-top: 20px;
+    .plot-slider-btn i {
+        font-size: 14px;
     }
 }
 
 
-/*==================================================
-                VERY SMALL MOBILE
-                320px
-==================================================*/
+/* =========================================================
+   EXTRA SMALL
+   max 320px
+   ========================================================= */
 
 @media (max-width: 320px) {
 
@@ -935,77 +776,58 @@
         padding: 45px 0;
     }
 
-    .featured-plots .container {
-        padding: 0 12px;
-    }
-
-    .featured-plots .section-subtitle {
-        padding: 6px 12px;
-        font-size: 8px;
-    }
-
-    .featured-plots .section-header h2 {
-        font-size: 24px;
-    }
-
-    .featured-plots .section-header p {
-        font-size: 10px;
-    }
-
-    .card-image img {
+    .plot-card-image {
         height: 180px;
     }
 
-    .plot-card .card-content {
+    .plot-card-content {
         padding: 14px;
     }
 
-    .plot-card .card-content h3 {
-        font-size: 18px;
+    .plot-card-content .common-card-title {
+        font-size: 17px;
     }
 
-    .plot-card .location {
+    .plot-location {
         font-size: 9px;
     }
 
-    .plot-card .property-info {
-        gap: 6px;
+    .plot-property-info {
+        gap: 5px;
     }
 
-    .plot-card .property-info div {
-        font-size: 8px;
+    .plot-property-info div {
+        font-size: 7px;
     }
 
-    .plot-card .price-box h4 {
-        font-size: 16px;
+    .plot-price-box .common-card-title {
+        font-size: 15px;
     }
 
-    .plot-card .price-label {
-        font-size: 8px;
-    }
+    .plot-price-box .common-btn {
+        padding: 8px 11px;
 
-    .plot-card .details-btn {
-        padding: 9px 12px;
         font-size: 9px;
     }
 
-    .slider-btn {
-        top: 90px;
+    .plot-slider-btn {
+        top: 85px;
 
-        width: 32px;
-        height: 32px;
+        width: 31px;
+        height: 31px;
+        min-width: 31px;
     }
 
-    .slider-btn i {
-        font-size: 13px;
+    .plot-slider-btn i {
+        font-size: 12px;
     }
 
-    .dot {
+    .plot-dot {
         width: 8px;
         height: 8px;
     }
 
-    .dot.active {
-        width: 24px;
+    .plot-dot.active {
+        width: 23px;
     }
 }

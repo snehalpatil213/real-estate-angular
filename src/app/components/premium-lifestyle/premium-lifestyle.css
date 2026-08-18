@@ -3,86 +3,14 @@ PREMIUM LIFESTYLE
 =========================================*/
 
 .premium-lifestyle{
-
     padding:120px 0;
-
     background:#F8F5F1;
 }
 
-
 .premium-lifestyle .container{
-
     width:92%;
-
     max-width:1320px;
-
     margin:auto;
-}
-
-
-/*=========================================
-SECTION HEADER
-=========================================*/
-
-.section-header{
-
-    text-align:center;
-
-    max-width:750px;
-
-    margin:0 auto 60px;
-}
-
-
-.section-subtitle{
-
-    display:inline-block;
-
-    padding:11px 28px;
-
-    border:1px solid #D8C2AE;
-
-    border-radius:50px;
-
-    background:#FFFFFF;
-
-    color:#B8734C;
-
-    font-size:13px;
-
-    font-weight:600;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    margin-bottom:18px;
-}
-
-
-.section-header h2{
-
-    margin:0 0 18px;
-
-    color:#2B211C;
-
-    font-size:52px;
-
-    font-weight:700;
-
-    line-height:1.2;
-}
-
-
-.section-header p{
-
-    margin:0 auto;
-
-    color:#6B625C;
-
-    font-size:17px;
-
-    line-height:1.8;
 }
 
 
@@ -90,12 +18,9 @@ SECTION HEADER
 AMENITIES GRID
 =========================================*/
 
-.amenities-grid{
-
+.premium-lifestyle-grid{
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:25px;
 }
 
@@ -104,26 +29,19 @@ AMENITIES GRID
 AMENITY CARD
 =========================================*/
 
-.amenity-card{
-
+.premium-lifestyle-card{
     min-height:260px;
-
     padding:35px 25px;
 
     background:#FFFFFF;
-
     border:1px solid #E9DED3;
-
     border-radius:24px;
 
     text-align:center;
 
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
-
     justify-content:center;
 
     box-shadow:0 10px 30px rgba(0,0,0,.06);
@@ -131,13 +49,9 @@ AMENITY CARD
     transition:.4s ease;
 }
 
-
-.amenity-card:hover{
-
+.premium-lifestyle-card:hover{
     transform:translateY(-8px);
-
     box-shadow:0 20px 45px rgba(0,0,0,.12);
-
     border-color:#D8C2AE;
 }
 
@@ -146,10 +60,8 @@ AMENITY CARD
 ICON
 =========================================*/
 
-.amenity-icon{
-
+.premium-lifestyle-icon{
     width:75px;
-
     height:75px;
 
     margin-bottom:20px;
@@ -159,94 +71,64 @@ ICON
     background:#F6EEE7;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     transition:.4s ease;
 }
 
-
-.amenity-icon i{
-
+.premium-lifestyle-icon i{
     color:#B8734C;
-
     font-size:32px;
-
     transition:.4s ease;
 }
 
-
-.amenity-card:hover .amenity-icon{
-
+.premium-lifestyle-card:hover .premium-lifestyle-icon{
     background:#B8734C;
-
     transform:scale(1.08);
 }
 
-
-.amenity-card:hover .amenity-icon i{
-
+.premium-lifestyle-card:hover .premium-lifestyle-icon i{
     color:#FFFFFF;
 }
 
 
 /*=========================================
-TITLE
+CARD TITLE
 =========================================*/
 
-.amenity-card h3{
-
+.premium-lifestyle-card .common-card-title{
     margin:0 0 12px;
-
-    color:#2B211C;
-
-    font-size:22px;
-
-    font-weight:700;
 }
 
 
 /*=========================================
-LINE
+CARD LINE
 =========================================*/
 
-.amenity-line{
-
+.premium-lifestyle-line{
     width:45px;
-
     height:3px;
 
     margin-bottom:15px;
 
     background:#B8734C;
-
     border-radius:20px;
 
     transition:.35s ease;
 }
 
-
-.amenity-card:hover .amenity-line{
-
+.premium-lifestyle-card:hover .premium-lifestyle-line{
     width:75px;
 }
 
 
 /*=========================================
-DESCRIPTION
+CARD DESCRIPTION
 =========================================*/
 
-.amenity-card p{
-
+.premium-lifestyle-card .common-card-subtitle{
     margin:0;
-
-    color:#6B625C;
-
-    font-size:14px;
-
-    line-height:1.7;
 }
 
 
@@ -254,14 +136,11 @@ DESCRIPTION
 BOTTOM BANNER
 =========================================*/
 
-.lifestyle-banner{
-
+.premium-lifestyle-banner{
     margin-top:55px;
-
     padding:45px 35px;
 
     background:#2B211C;
-
     border-radius:28px;
 
     text-align:center;
@@ -270,10 +149,12 @@ BOTTOM BANNER
 }
 
 
-.banner-icon{
+/*=========================================
+BANNER ICON
+=========================================*/
 
+.premium-lifestyle-banner-icon{
     width:65px;
-
     height:65px;
 
     margin:0 auto 18px;
@@ -283,33 +164,24 @@ BOTTOM BANNER
     background:#C89B6A;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 }
 
-
-.banner-icon i{
-
+.premium-lifestyle-banner-icon i{
     color:#FFFFFF;
-
     font-size:28px;
 }
 
 
-.lifestyle-banner h3{
+/*=========================================
+BANNER TITLE
+=========================================*/
 
+.premium-lifestyle-banner .common-card-title{
     max-width:750px;
-
     margin:auto;
-
     color:#FFFFFF;
-
-    font-size:30px;
-
-    font-weight:700;
-
     line-height:1.4;
 }
 
@@ -320,10 +192,8 @@ TABLET
 
 @media(max-width:1100px){
 
-    .amenities-grid{
-
+    .premium-lifestyle-grid{
         grid-template-columns:repeat(2,1fr);
-
     }
 
 }
@@ -336,57 +206,22 @@ MOBILE
 @media(max-width:768px){
 
     .premium-lifestyle{
-
         padding:80px 0;
-
     }
 
-    .section-header{
-
-        margin-bottom:50px;
-
-    }
-
-    .section-header h2{
-
-        font-size:40px;
-
-    }
-
-    .section-header p{
-
-        font-size:15px;
-
-    }
-
-    .amenities-grid{
-
+    .premium-lifestyle-grid{
         grid-template-columns:1fr;
-
         gap:20px;
-
     }
 
-    .amenity-card{
-
+    .premium-lifestyle-card{
         min-height:auto;
-
         padding:35px 25px;
-
     }
 
-    .lifestyle-banner{
-
+    .premium-lifestyle-banner{
         margin-top:45px;
-
         padding:40px 25px;
-
-    }
-
-    .lifestyle-banner h3{
-
-        font-size:25px;
-
     }
 
 }
@@ -399,43 +234,25 @@ SMALL MOBILE
 @media(max-width:480px){
 
     .premium-lifestyle{
-
         padding:70px 0;
-
     }
 
-    .section-header h2{
-
-        font-size:32px;
-
+    .premium-lifestyle .container{
+        width:94%;
     }
 
-    .section-subtitle{
-
-        padding:9px 20px;
-
-        font-size:11px;
-
-    }
-
-    .amenity-icon{
-
+    .premium-lifestyle-icon{
         width:70px;
-
         height:70px;
-
     }
 
-    .amenity-icon i{
-
+    .premium-lifestyle-icon i{
         font-size:29px;
-
     }
 
-    .lifestyle-banner h3{
-
-        font-size:22px;
-
+    .premium-lifestyle-banner{
+        padding:35px 20px;
+        border-radius:22px;
     }
 
 }

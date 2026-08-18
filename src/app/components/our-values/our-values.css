@@ -1,627 +1,514 @@
-/*==================================================
-OUR VALUES
-==================================================*/
+/* =========================================================
+   OUR VALUES
+   ========================================================= */
 
-.our-values{
+.our-values {
+  position: relative;
 
-    padding:120px 0;
+  padding: 120px 0;
 
-    background:linear-gradient(
-        180deg,
-        #FCFAF7 0%,
-        #F6F1EB 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #FCFAF7 0%,
+    #F6F1EB 100%
+  );
 
-    position:relative;
-
-    overflow:hidden;
+  overflow: hidden;
 }
 
-.our-values::before{
 
-    content:"";
+/* =========================================================
+   BACKGROUND SHAPES
+   ========================================================= */
 
-    position:absolute;
+.our-values::before {
+  content: "";
 
-    top:-180px;
+  position: absolute;
 
-    left:-180px;
+  top: -180px;
+  left: -180px;
 
-    width:420px;
+  width: 420px;
+  height: 420px;
 
-    height:420px;
+  border-radius: 50%;
 
-    border-radius:50%;
-
-    background:rgba(200,155,106,.08);
+  background: rgba(200, 155, 106, 0.08);
 }
 
-.our-values::after{
+.our-values::after {
+  content: "";
 
-    content:"";
+  position: absolute;
 
-    position:absolute;
+  right: -150px;
+  bottom: -150px;
 
-    right:-150px;
+  width: 360px;
+  height: 360px;
 
-    bottom:-150px;
+  border-radius: 50%;
 
-    width:360px;
-
-    height:360px;
-
-    border-radius:50%;
-
-    background:rgba(43,33,28,.04);
+  background: rgba(43, 33, 28, 0.04);
 }
 
-.our-values .container{
 
-    width:92%;
+/* =========================================================
+   CONTAINER
+   ========================================================= */
 
-    max-width:1400px;
+.our-values .container {
+  position: relative;
+  z-index: 2;
 
-    margin:auto;
-
-    position:relative;
-
-    z-index:2;
+  width: 100%;
+  max-width: 1400px;
 }
 
-/*==================================================
-SECTION HEADER
-==================================================*/
 
-.values-header{
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
 
-    text-align:center;
+.values-header {
+  max-width: 850px;
 
-    max-width:850px;
+  margin: 0 auto 90px;
 
-    margin:0 auto 90px;
+  text-align: center;
 }
 
-.section-subtitle{
+.values-header .common-subtitle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    display:inline-flex;
+  padding: 12px 30px;
 
-    align-items:center;
+  background: var(--white);
 
-    justify-content:center;
+  border: 1px solid #DDBA96;
+  border-radius: 50px;
 
-    padding:12px 30px;
-
-    border-radius:50px;
-
-    border:1px solid #DDBA96;
-
-    background:#FFFFFF;
-
-    color:#B8734C;
-
-    font-size:14px;
-
-    font-weight:600;
-
-    letter-spacing:3px;
-
-    text-transform:uppercase;
-
-    margin-bottom:24px;
+  margin-bottom: 24px;
 }
 
-.values-header h2{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:68px;
-
-    font-weight:700;
-
-    line-height:1.08;
-
-    color:#2B211C;
-
-    margin-bottom:20px;
+.values-header .common-title {
+  margin-bottom: 20px;
 }
 
-.values-header h2 span{
+.values-header .common-description {
+  max-width: 720px;
 
-    display:block;
+  margin: auto;
 
-    color:#C89B6A;
+  line-height: 1.9;
 }
 
-.heading-line{
 
-    width:90px;
+/* =========================================================
+   VALUES GRID
+   ========================================================= */
 
-    height:4px;
+.values-grid {
+  display: grid;
 
-    background:#C89B6A;
+  grid-template-columns: repeat(4, 1fr);
 
-    border-radius:50px;
+  gap: 34px;
 
-    margin:0 auto 28px;
+  align-items: stretch;
 }
 
-.values-header p{
 
-    max-width:720px;
+/* =========================================================
+   VALUE CARD
+   ========================================================= */
 
-    margin:auto;
+.value-card {
+  position: relative;
 
-    font-size:18px;
+  min-height: 500px;
 
-    line-height:1.9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    color:#666666;
+  padding: 85px 35px 40px;
+
+  background: var(--white);
+
+  border: 1px solid rgba(200, 155, 106, 0.18);
+  border-radius: 30px;
+
+  text-align: center;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.06),
+    0 35px 80px rgba(0, 0, 0, 0.04);
+
+  overflow: visible;
+
+  transition: all 0.45s ease;
 }
 
-/*==================================================
-VALUES GRID
-==================================================*/
 
-.values-grid{
+/* =========================================================
+   CARD TOP LINE
+   ========================================================= */
 
-    display:grid;
+.value-card::before {
+  content: "";
 
-    grid-template-columns:repeat(4,1fr);
+  position: absolute;
 
-    gap:34px;
+  top: 0;
+  left: 0;
 
-    align-items:stretch;
-}
-/*==================================================
-VALUE CARD
-==================================================*/
+  width: 100%;
+  height: 5px;
 
-.value-card{
+  background: linear-gradient(
+    90deg,
+    #B8734C,
+    #D9A979
+  );
 
-    position:relative;
+  transform: scaleX(0);
 
-    background:#FFFFFF;
+  transform-origin: left;
 
-    border-radius:30px;
-
-    padding:85px 35px 40px;
-
-    min-height:500px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    text-align:center;
-
-    overflow:visible;
-
-    border:1px solid rgba(200,155,106,.18);
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.06),
-        0 35px 80px rgba(0,0,0,.04);
-
-    transition:all .45s ease;
+  transition: 0.4s ease;
 }
 
-.value-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:5px;
-
-    background:linear-gradient(
-        90deg,
-        #B8734C,
-        #D9A979
-    );
-
-    transform:scaleX(0);
-
-    transform-origin:left;
-
-    transition:.4s;
+.value-card:hover::before {
+  transform: scaleX(1);
 }
 
-.value-card:hover::before{
+.value-card:hover {
+  transform: translateY(-15px);
 
-    transform:scaleX(1);
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.12);
 }
 
-.value-card:hover{
 
-    transform:translateY(-15px);
+/* =========================================================
+   VALUE ICON
+   ========================================================= */
 
-    box-shadow:
-        0 25px 70px rgba(0,0,0,.12);
+.value-icon {
+  position: absolute;
+
+  top: -48px;
+  left: 50%;
+
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(-50%);
+
+  background: var(--accent);
+
+  border: 6px solid var(--white);
+  border-radius: 50%;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+  transition: 0.4s ease;
 }
 
-/*==================================================
-FLOATING ICON
-==================================================*/
-
-.value-icon{
-
-    position:absolute;
-
-    top:-48px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:100px;
-
-    height:100px;
-
-    border-radius:50%;
-
-    background:#B8734C;
-
-    border:6px solid #FFFFFF;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-
-    transition:.4s ease;
+.value-icon i {
+  font-size: 42px;
+  color: var(--white);
 }
 
-.value-icon i{
+.value-card:hover .value-icon {
+  transform: translateX(-50%) rotate(8deg) scale(1.08);
 
-    font-size:42px;
-
-    color:#FFFFFF;
+  background: var(--primary);
 }
 
-.value-card:hover .value-icon{
 
-    transform:translateX(-50%) rotate(8deg) scale(1.08);
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
 
-    background:#2B211C;
+.value-card .common-card-title {
+  min-height: 55px;
+
+  margin-bottom: 18px;
 }
 
-/*==================================================
-TITLE
-==================================================*/
 
-.value-card h3{
+/* =========================================================
+   CARD LINE
+   ========================================================= */
 
-    font-family:'Cormorant Garamond',serif;
+.value-card .card-line {
+  width: 75px;
+  height: 4px;
 
-    font-size:38px;
+  margin-bottom: 28px;
 
-    color:#2B211C;
+  background: #C89B6A;
 
-    margin-bottom:18px;
+  border-radius: 50px;
 
-    min-height:55px;
+  transition: 0.35s ease;
 }
 
-/*==================================================
-DIVIDER
-==================================================*/
-
-.card-line{
-
-    width:75px;
-
-    height:4px;
-
-    border-radius:50px;
-
-    background:#C89B6A;
-
-    margin-bottom:28px;
-
-    transition:.35s;
+.value-card:hover .card-line {
+  width: 120px;
 }
 
-.value-card:hover .card-line{
 
-    width:120px;
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.value-card .common-card-subtitle {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 35px;
+
+  line-height: 1.9;
 }
 
-/*==================================================
-DESCRIPTION
-==================================================*/
 
-.value-card p{
+/* =========================================================
+   BUILDING ART
+   ========================================================= */
 
-    font-size:17px;
+.building-art {
+  width: 100%;
 
-    line-height:1.9;
+  padding-top: 25px;
 
-    color:#666666;
+  display: flex;
+  justify-content: center;
 
-    flex:1;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    margin-bottom:35px;
+  border-top: 1px solid #EFE5DB;
 }
 
-/*==================================================
-BOTTOM ICON
-==================================================*/
+.building-art i {
+  font-size: 52px;
 
-.building-art{
+  color: #C89B6A;
 
-    width:100%;
-
-    padding-top:25px;
-
-    border-top:1px solid #EFE5DB;
-
-    display:flex;
-
-    justify-content:center;
+  transition: 0.4s ease;
 }
 
-.building-art i{
+.value-card:hover .building-art i {
+  transform: translateY(-6px);
 
-    font-size:52px;
-
-    color:#C89B6A;
-
-    transition:.4s;
+  color: var(--accent);
 }
 
-.value-card:hover .building-art i{
 
-    transform:translateY(-6px);
+/* =========================================================
+   VALUES QUOTE
+   ========================================================= */
 
-    color:#B8734C;
-}
-/*==================================================
-QUOTE SECTION
-==================================================*/
+.values-quote {
+  position: relative;
 
-.values-quote{
+  margin-top: 90px;
 
-    position:relative;
+  padding: 70px 60px;
 
-    margin-top:90px;
+  background: linear-gradient(
+    135deg,
+    #2B211C 0%,
+    #3B2D26 100%
+  );
 
-    padding:70px 60px;
+  border-radius: 35px;
 
-    background:linear-gradient(
-        135deg,
-        #2B211C 0%,
-        #3B2D26 100%
-    );
+  text-align: center;
 
-    border-radius:35px;
+  overflow: hidden;
 
-    overflow:hidden;
-
-    text-align:center;
-
-    box-shadow:0 30px 80px rgba(0,0,0,.18);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
 }
 
-.values-quote::before{
 
-    content:"";
+/* =========================================================
+   QUOTE BACKGROUND
+   ========================================================= */
 
-    position:absolute;
+.values-quote::before {
+  content: "";
 
-    width:320px;
+  position: absolute;
 
-    height:320px;
+  width: 320px;
+  height: 320px;
 
-    top:-160px;
+  top: -160px;
+  right: -120px;
 
-    right:-120px;
+  border-radius: 50%;
 
-    border-radius:50%;
-
-    background:rgba(255,255,255,.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
-.values-quote::after{
+.values-quote::after {
+  content: "";
 
-    content:"";
+  position: absolute;
 
-    position:absolute;
+  width: 240px;
+  height: 240px;
 
-    width:240px;
+  left: -80px;
+  bottom: -120px;
 
-    height:240px;
+  border-radius: 50%;
 
-    left:-80px;
-
-    bottom:-120px;
-
-    border-radius:50%;
-
-    background:rgba(200,155,106,.12);
+  background: rgba(200, 155, 106, 0.12);
 }
 
-.quote-icon{
 
-    width:90px;
+/* =========================================================
+   QUOTE ICON
+   ========================================================= */
 
-    height:90px;
+.quote-icon {
+  width: 90px;
+  height: 90px;
 
-    margin:0 auto 30px;
+  margin: 0 auto 30px;
 
-    border-radius:50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background:#C89B6A;
+  background: #C89B6A;
 
-    display:flex;
+  border-radius: 50%;
 
-    align-items:center;
-
-    justify-content:center;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.18);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
 }
 
-.quote-icon i{
+.quote-icon i {
+  font-size: 38px;
 
-    font-size:38px;
-
-    color:#FFFFFF;
+  color: var(--white);
 }
 
-.values-quote blockquote{
 
-    max-width:900px;
+/* =========================================================
+   QUOTE TEXT
+   ========================================================= */
 
-    margin:auto;
+.values-quote blockquote {
+  max-width: 900px;
 
-    font-family:'Cormorant Garamond',serif;
+  margin: auto;
 
-    font-size:38px;
+  font-family: 'Cormorant Garamond', serif;
 
-    line-height:1.6;
+  font-size: 38px;
+  font-weight: 700;
 
-    color:#FFFFFF;
+  line-height: 1.6;
 
-    font-style:italic;
+  color: var(--white);
+
+  font-style: italic;
 }
 
-/*==================================================
-RESPONSIVE
-==================================================*/
 
-@media(max-width:1200px){
+/* =========================================================
+   RESPONSIVE - 1200px
+   ========================================================= */
 
-    .values-grid{
+@media (max-width: 1200px) {
 
-        grid-template-columns:repeat(2,1fr);
-    }
-
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media(max-width:992px){
 
-    .our-values{
+/* =========================================================
+   RESPONSIVE - 992px
+   ========================================================= */
 
-        padding:90px 0;
-    }
+@media (max-width: 992px) {
 
-    .values-header h2{
-
-        font-size:52px;
-    }
-
+  .our-values {
+    padding: 90px 0;
+  }
 }
 
-@media(max-width:768px){
 
-    .values-grid{
+/* =========================================================
+   RESPONSIVE - 768px
+   ========================================================= */
 
-        grid-template-columns:1fr;
-    }
+@media (max-width: 768px) {
 
-    .value-card{
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
 
-        min-height:auto;
-    }
+  .value-card {
+    min-height: auto;
+  }
 
-    .values-header{
+  .values-header {
+    margin-bottom: 60px;
+  }
 
-        margin-bottom:60px;
-    }
+  .values-quote {
+    padding: 50px 30px;
+  }
 
-    .values-header h2{
-
-        font-size:42px;
-    }
-
-    .values-quote{
-
-        padding:50px 30px;
-    }
-
-    .values-quote blockquote{
-
-        font-size:28px;
-    }
-
+  .values-quote blockquote {
+    font-size: 28px;
+  }
 }
 
-@media(max-width:576px){
 
-    .our-values{
+/* =========================================================
+   RESPONSIVE - 576px
+   ========================================================= */
 
-        padding:70px 0;
-    }
+@media (max-width: 576px) {
 
-    .our-values .container{
+  .our-values {
+    padding: 70px 0;
+  }
 
-        width:94%;
-    }
+  .values-header .common-subtitle {
+    padding: 10px 22px;
+  }
 
-    .section-subtitle{
+  .value-card {
+    padding: 80px 25px 35px;
+  }
 
-        font-size:13px;
+  .value-icon {
+    width: 85px;
+    height: 85px;
+  }
 
-        padding:10px 22px;
-    }
+  .value-icon i {
+    font-size: 34px;
+  }
 
-    .values-header h2{
-
-        font-size:34px;
-    }
-
-    .values-header p{
-
-        font-size:16px;
-    }
-
-    .value-card{
-
-        padding:80px 25px 35px;
-    }
-
-    .value-icon{
-
-        width:85px;
-
-        height:85px;
-    }
-
-    .value-icon i{
-
-        font-size:34px;
-    }
-
-    .value-card h3{
-
-        font-size:30px;
-    }
-
-    .value-card p{
-
-        font-size:16px;
-    }
-
-    .values-quote blockquote{
-
-        font-size:24px;
-    }
-
+  .values-quote blockquote {
+    font-size: 24px;
+  }
 }

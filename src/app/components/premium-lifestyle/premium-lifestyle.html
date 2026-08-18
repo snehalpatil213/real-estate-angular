@@ -2,17 +2,19 @@
 
     <div class="container">
 
-        <div class="section-header">
+        <!-- SECTION HEADER -->
 
-            <span class="section-subtitle">
+        <div class="common-section-header">
+
+            <span class="common-subtitle">
                 Luxury Amenities
             </span>
 
-            <h2>
+            <h2 class="common-title">
                 Experience Premium Living
             </h2>
 
-            <p>
+            <p class="common-description">
                 Discover world-class amenities and facilities
                 designed to elevate your lifestyle every day.
             </p>
@@ -20,25 +22,27 @@
         </div>
 
 
-        <div class="amenities-grid">
+        <!-- AMENITIES -->
+
+        <div class="premium-lifestyle-grid">
 
             @for(amenity of amenities; track amenity.title) {
 
-                <div class="amenity-card">
+                <div class="premium-lifestyle-card">
 
-                    <div class="amenity-icon">
+                    <div class="premium-lifestyle-icon">
 
                         <i class="bi {{ amenity.icon }}"></i>
 
                     </div>
 
-                    <h3>
+                    <h3 class="common-card-title">
                         {{ amenity.title }}
                     </h3>
 
-                    <span class="amenity-line"></span>
+                    <span class="premium-lifestyle-line"></span>
 
-                    <p>
+                    <p class="common-card-subtitle">
                         {{ amenity.description }}
                     </p>
 
@@ -49,15 +53,17 @@
         </div>
 
 
-        <div class="lifestyle-banner">
+        <!-- BANNER -->
 
-            <div class="banner-icon">
+        <div class="premium-lifestyle-banner">
+
+            <div class="premium-lifestyle-banner-icon">
 
                 <i class="bi bi-stars"></i>
 
             </div>
 
-            <h3>
+            <h3 class="common-card-title">
                 Premium Amenities for a Comfortable &amp;
                 Luxurious Lifestyle
             </h3>

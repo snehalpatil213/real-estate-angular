@@ -1,566 +1,387 @@
-/*==================================================
-ABOUT STORY
-==================================================*/
+/* =========================================================
+   ABOUT STORY
+   ========================================================= */
 
-.about-story{
-    padding:120px 0;
-    background:#FDFBF8;
-    overflow:hidden;
+.about-story {
+  padding: 120px 0;
+  background: #FDFBF8;
+  overflow: hidden;
 }
 
-.about-story .container{
-    width:90%;
-    max-width:1320px;
-    margin:auto;
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.story-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
 }
 
-/*==================================================
-LAYOUT
-==================================================*/
-
-.story-wrapper{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:90px;
-
-    align-items:center;
+.story-content {
+  max-width: 620px;
 }
 
-/*==================================================
-LEFT CONTENT
-==================================================*/
 
-.story-content{
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
 
-    max-width:620px;
+.about-story .common-subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 28px;
+
+  border: 2px solid #E6D4C3;
+  border-radius: 50px;
+
+  background: var(--white);
+
+  margin-bottom: 25px;
 }
 
-.section-subtitle{
 
-    display:inline-flex;
+/* =========================================================
+   TITLE
+   ========================================================= */
 
-    align-items:center;
-
-    gap:12px;
-
-    padding:12px 28px;
-
-    border:2px solid #E6D4C3;
-
-    border-radius:50px;
-
-    color:#B8734C;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    margin-bottom:25px;
-
-    background:#fff;
+.about-story .common-title {
+  margin-bottom: 25px;
 }
 
-.story-content h2{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:64px;
-
-    line-height:1.08;
-
-    font-weight:700;
-
-    color:#2B211C;
-
-    margin-bottom:25px;
+.about-story .common-title span {
+  display: block;
 }
 
-.story-content h2 span{
 
-    display:block;
+/* =========================================================
+   TITLE LINE
+   ========================================================= */
 
-    color:#C89B6A;
+.title-line {
+  width: 95px;
+  height: 4px;
+
+  margin-bottom: 35px;
+
+  background: var(--accent);
+  border-radius: 20px;
 }
 
-.title-line{
 
-    width:95px;
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
 
-    height:4px;
-
-    border-radius:20px;
-
-    background:#B8734C;
-
-    margin-bottom:35px;
+.story-content .common-description {
+  margin-bottom: 28px;
 }
 
-.story-text{
 
-    font-size:18px;
+/* =========================================================
+   FEATURES
+   ========================================================= */
 
-    line-height:1.95;
+.story-features {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 
-    color:#666;
-
-    margin-bottom:28px;
+  margin-top: 45px;
 }
 
-/*==================================================
-FEATURE LIST
-==================================================*/
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
 
-.story-features{
+  padding-bottom: 22px;
 
-    margin-top:45px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:22px;
+  border-bottom: 1px solid #ECECEC;
 }
 
-.feature-item{
 
-    display:flex;
+/* =========================================================
+   FEATURE ICON
+   ========================================================= */
 
-    align-items:center;
+.feature-icon {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
 
-    gap:22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    padding-bottom:22px;
+  border-radius: 50%;
 
-    border-bottom:1px solid #ECECEC;
+  background: #C89B6A;
+  color: var(--white);
+
+  transition: 0.35s ease;
 }
 
-.feature-icon{
-
-    width:72px;
-
-    height:72px;
-
-    border-radius:50%;
-
-    background:#C89B6A;
-
-    color:#fff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    flex-shrink:0;
-
-    transition:.35s;
+.feature-item:hover .feature-icon {
+  transform: rotate(10deg) scale(1.08);
+  background: var(--primary);
 }
 
-.feature-item:hover .feature-icon{
-
-    transform:rotate(10deg) scale(1.08);
-
-    background:#2B211C;
+.feature-icon i {
+  font-size: 30px;
 }
 
-.feature-icon i{
 
-    font-size:30px;
+/* =========================================================
+   FEATURE TEXT
+   ========================================================= */
+
+.feature-text .common-card-title {
+  margin-bottom: 6px;
 }
 
-.feature-text h4{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:38px;
-
-    color:#2B211C;
-
-    margin-bottom:6px;
+.feature-text .common-card-subtitle {
+  display: block;
 }
 
-.feature-text span{
 
-    font-size:17px;
+/* =========================================================
+   BUTTON
+   ========================================================= */
 
-    color:#666;
-}
-/*==================================================
-RIGHT IMAGE
-==================================================*/
-
-.story-image{
-
-    position:relative;
-
-    width:100%;
-
-    height:720px;
-
-    border-radius:35px;
-
-    overflow:visible;
+.story-btn {
+  margin-top: 45px;
 }
 
-.story-image img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    display:block;
-
-    border-radius:35px;
-
-    box-shadow:0 30px 70px rgba(0,0,0,.18);
-
-    transition:.5s ease;
+.story-btn i {
+  transition: 0.35s ease;
 }
 
-.story-image:hover img{
-
-    transform:scale(1.03);
+.story-btn:hover i {
+  transform: translateX(8px);
 }
 
-/*==================================================
-EXPERIENCE CARD
-==================================================*/
 
-.experience-card{
+/* =========================================================
+   STORY IMAGE
+   ========================================================= */
 
-    position:absolute;
+.story-image {
+  position: relative;
 
-    top:55px;
+  width: 100%;
+  height: 720px;
 
-    left:-55px;
-
-    width:230px;
-
-    padding:35px 25px;
-
-    background:#fff;
-
-    border-radius:25px;
-
-    text-align:center;
-
-    box-shadow:0 25px 60px rgba(0,0,0,.12);
-
-    z-index:5;
-
-    transition:.35s;
+  border-radius: 35px;
+  overflow: visible;
 }
 
-.experience-card:hover{
+.story-image img {
+  width: 100%;
+  height: 100%;
 
-    transform:translateY(-10px);
+  display: block;
+  object-fit: cover;
+
+  border-radius: 35px;
+
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.18);
+
+  transition: 0.5s ease;
 }
 
-.experience-card i{
-
-    font-size:42px;
-
-    color:#C89B6A;
-
-    margin-bottom:18px;
+.story-image:hover img {
+  transform: scale(1.03);
 }
 
-.experience-card h3{
 
-    font-family:'Cormorant Garamond',serif;
+/* =========================================================
+   EXPERIENCE CARD
+   ========================================================= */
 
-    font-size:56px;
+.experience-card {
+  position: absolute;
 
-    color:#2B211C;
+  top: 55px;
+  left: -55px;
 
-    margin-bottom:8px;
+  width: 230px;
+  padding: 35px 25px;
+
+  background: var(--white);
+  border-radius: 25px;
+
+  text-align: center;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+
+  z-index: 5;
+
+  transition: 0.35s ease;
 }
 
-.experience-card p{
-
-    font-size:18px;
-
-    color:#666;
-
-    line-height:1.5;
+.experience-card:hover {
+  transform: translateY(-10px);
 }
 
-/*==================================================
-HAPPY FAMILY CARD
-==================================================*/
-
-.family-card{
-
-    position:absolute;
-
-    right:-55px;
-
-    bottom:55px;
-
-    width:250px;
-
-    padding:35px 25px;
-
-    background:#2B211C;
-
-    border-radius:25px;
-
-    text-align:center;
-
-    color:#fff;
-
-    box-shadow:0 25px 60px rgba(0,0,0,.18);
-
-    z-index:5;
-
-    transition:.35s;
+.experience-card i {
+  font-size: 42px;
+  color: #C89B6A;
+  margin-bottom: 18px;
 }
 
-.family-card:hover{
 
-    transform:translateY(-10px);
+/* =========================================================
+   HAPPY FAMILY CARD
+   ========================================================= */
+
+.family-card {
+  position: absolute;
+
+  right: -55px;
+  bottom: 55px;
+
+  width: 250px;
+  padding: 35px 25px;
+
+  background: var(--primary);
+  border-radius: 25px;
+
+  text-align: center;
+  color: var(--white);
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+
+  z-index: 5;
+
+  transition: 0.35s ease;
 }
 
-.family-card i{
-
-    font-size:42px;
-
-    color:#D8B48C;
-
-    margin-bottom:18px;
+.family-card:hover {
+  transform: translateY(-10px);
 }
 
-.family-card h3{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:54px;
-
-    color:#fff;
-
-    margin-bottom:10px;
+.family-card i {
+  font-size: 42px;
+  color: #D8B48C;
+  margin-bottom: 18px;
 }
 
-.family-card p{
 
-    font-size:18px;
+/* =========================================================
+   RESPONSIVE - 1200px
+   ========================================================= */
 
-    color:#F4F4F4;
+@media (max-width: 1200px) {
 
-    line-height:1.5;
-}
-/*==================================================
-LEARN MORE BUTTON
-==================================================*/
+  .story-wrapper {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
 
-.story-btn{
+  .story-content {
+    max-width: 100%;
+    text-align: center;
+  }
 
-    margin-top:45px;
+  .title-line {
+    margin: 0 auto 35px;
+  }
 
-    display:inline-flex;
+  .story-btn {
+    margin: 45px auto 0;
+  }
 
-    align-items:center;
+  .story-features {
+    align-items: center;
+  }
 
-    gap:14px;
+  .story-image {
+    height: 650px;
+  }
 
-    padding:18px 38px;
+  .experience-card {
+    left: 20px;
+  }
 
-    background:#2B211C;
-
-    color:#fff;
-
-    border:none;
-
-    border-radius:14px;
-
-    font-size:16px;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.35s ease;
-
-    box-shadow:0 18px 40px rgba(0,0,0,.15);
-}
-
-.story-btn i{
-
-    font-size:18px;
-
-    transition:.35s;
+  .family-card {
+    right: 20px;
+  }
 }
 
-.story-btn:hover{
 
-    background:#C89B6A;
+/* =========================================================
+   RESPONSIVE - 992px
+   ========================================================= */
 
-    transform:translateY(-6px);
+@media (max-width: 992px) {
+
+  .about-story {
+    padding: 90px 0;
+  }
+
+  .story-image {
+    height: 550px;
+  }
 }
 
-.story-btn:hover i{
 
-    transform:translateX(8px);
+/* =========================================================
+   RESPONSIVE - 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+    border-bottom: none;
+  }
+
+  .story-content .common-description {
+    line-height: 1.8;
+  }
+
+  .story-image {
+    height: auto;
+  }
+
+  .story-image img {
+    height: 420px;
+  }
+
+  .experience-card,
+  .family-card {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 
-/*==================================================
-RESPONSIVE
-==================================================*/
 
-@media(max-width:1200px){
+/* =========================================================
+   RESPONSIVE - 576px
+   ========================================================= */
 
-    .story-wrapper{
+@media (max-width: 576px) {
 
-        grid-template-columns:1fr;
+  .about-story {
+    padding: 70px 0;
+  }
 
-        gap:70px;
-    }
+  .about-story .container {
+    padding: 0 20px;
+  }
 
-    .story-content{
+  .about-story .common-subtitle {
+    padding: 10px 22px;
+  }
 
-        max-width:100%;
-
-        text-align:center;
-    }
-
-    .title-line{
-
-        margin:0 auto 35px;
-    }
-
-    .story-btn{
-
-        margin:45px auto 0;
-    }
-
-    .story-features{
-
-        align-items:center;
-    }
-
-    .story-image{
-
-        height:650px;
-    }
-
-    .experience-card{
-
-        left:20px;
-    }
-
-    .family-card{
-
-        right:20px;
-    }
-
-}
-
-@media(max-width:992px){
-
-    .about-story{
-
-        padding:90px 0;
-    }
-
-    .story-content h2{
-
-        font-size:52px;
-    }
-
-    .story-image{
-
-        height:550px;
-    }
-
-}
-
-@media(max-width:768px){
-
-    .story-content h2{
-
-        font-size:40px;
-    }
-
-    .story-text{
-
-        font-size:16px;
-    }
-
-    .feature-item{
-
-        flex-direction:column;
-
-        text-align:center;
-
-        border-bottom:none;
-    }
-
-    .feature-text h4{
-
-        font-size:30px;
-    }
-
-    .story-image{
-
-        height:auto;
-    }
-
-    .story-image img{
-
-        height:420px;
-    }
-
-    .experience-card,
-    .family-card{
-
-        position:static;
-
-        width:100%;
-
-        margin-top:20px;
-    }
-
-}
-
-@media(max-width:576px){
-
-    .about-story{
-
-        padding:70px 0;
-    }
-
-    .about-story .container{
-
-        width:94%;
-    }
-
-    .section-subtitle{
-
-        font-size:13px;
-
-        padding:10px 22px;
-    }
-
-    .story-content h2{
-
-        font-size:34px;
-    }
-
-    .story-btn{
-
-        width:100%;
-
-        justify-content:center;
-    }
-
+  .story-btn {
+    width: 100%;
+  }
 }

@@ -1,141 +1,147 @@
 <section class="testimonials">
 
-    <div class="container">
+  <div class="container">
 
-        <!--=========================
-            SECTION HEADING
-        ==========================-->
+    <!--=========================
+        SECTION HEADING
+    =========================-->
 
-        <div class="section-heading">
+    <div class="section-heading">
 
-            <span class="section-tag">
-                Client Testimonials
-            </span>
+      <span class="common-subtitle">
+        Client Testimonials
+      </span>
 
-            <h2>
-                What Our Happy Clients Say
-            </h2>
+      <h2 class="common-title">
+        What Our Happy Clients Say
+      </h2>
 
-            <p>
-                Discover why hundreds of families and investors trust
-                Horizon Properties for buying, selling and investing in
-                premium real estate.
-            </p>
+      <p class="common-description">
+        Discover why hundreds of families and investors trust
+        Horizon Properties for buying, selling and investing in
+        premium real estate.
+      </p>
 
-        </div>
+    </div>
 
-        <!--=========================
-            SLIDER
-        ==========================-->
 
-        <div class="testimonial-slider">
+    <!--=========================
+        SLIDER
+    =========================-->
 
-            <!-- Previous Button -->
+    <div class="testimonial-slider">
 
-            <button
-                class="slider-btn prev"
-                (click)="previousSlide()">
+      <!-- Previous Button -->
 
-                <i class="bi bi-arrow-left"></i>
+      <button
+        type="button"
+        class="slider-btn prev"
+        (click)="previousSlide()">
 
-            </button>
+        <i class="bi bi-arrow-left"></i>
 
-            <!-- Cards -->
+      </button>
 
-            <div class="slider-wrapper">
 
-                <div
-                    class="testimonial-card"
-                    *ngFor="let item of visibleTestimonials">
+      <!-- Cards -->
 
-                    <!-- Quote -->
+      <div class="slider-wrapper">
 
-                    <div class="quote-icon">
+        <div
+          class="testimonial-card"
+          *ngFor="let item of visibleTestimonials">
 
-                        <i class="bi bi-quote"></i>
+          <!-- Quote -->
 
-                    </div>
+          <div class="quote-icon">
 
-                    <!-- Stars -->
+            <i class="bi bi-quote"></i>
 
-                    <div class="stars">
+          </div>
 
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
 
-                    </div>
+          <!-- Stars -->
 
-                    <!-- Review -->
+          <div class="stars">
 
-                    <p class="review">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
 
-                        {{ item.review }}
+          </div>
 
-                    </p>
 
-                    <!-- Client -->
+          <!-- Review -->
 
-                    <div class="client">
+          <p class="common-card-subtitle review">
 
-                        <img
-                            [src]="item.image"
-                            [alt]="item.name">
+            {{ item.review }}
 
-                        <div>
+          </p>
 
-                            <h4>
 
-                                {{ item.name }}
+          <!-- Client -->
 
-                            </h4>
+          <div class="client">
 
-                            <span>
+            <img
+              [src]="item.image"
+              [alt]="item.name">
 
-                                {{ item.role }}
 
-                            </span>
+            <div>
 
-                        </div>
+              <h4 class="common-card-title">
 
-                    </div>
+                {{ item.name }}
 
-                </div>
+              </h4>
+
+              <span class="common-small-text">
+
+                {{ item.role }}
+
+              </span>
 
             </div>
 
-            <!-- Next Button -->
-
-            <button
-                class="slider-btn next"
-                (click)="nextSlide()">
-
-                <i class="bi bi-arrow-right"></i>
-
-            </button>
+          </div>
 
         </div>
 
-        <!--=========================
-            PAGINATION
-        ==========================-->
+      </div>
 
-        <div class="pagination">
 
-            <span
+      <!-- Next Button -->
 
-                *ngFor="let item of testimonials; let i = index"
+      <button
+        type="button"
+        class="slider-btn next"
+        (click)="nextSlide()">
 
-                [class.active]="i === currentIndex"
+        <i class="bi bi-arrow-right"></i>
 
-                (click)="goToSlide(i)">
-
-            </span>
-
-        </div>
+      </button>
 
     </div>
+
+
+    <!--=========================
+        PAGINATION
+    =========================-->
+
+    <div class="pagination">
+
+      <span
+        *ngFor="let item of testimonials; let i = index"
+        [class.active]="i === currentIndex"
+        (click)="goToSlide(i)">
+      </span>
+
+    </div>
+
+  </div>
 
 </section>
